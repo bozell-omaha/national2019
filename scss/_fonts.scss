@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'TDA Sans';
+    src:  url('fonts/TDASansScreen-Light.woff2') format('woff2'),
+               url('fonts/TDASansScreen-Light.woff') format('woff'),
+               url('fonts/TDASansScreen-Light.ttf') format('truetype');
+    font-weight: 300;
+  }
+
+@font-face {
+    font-family: 'TDA Sans';
+    src:  url('fonts/TDASansScreen-Roman.woff2') format('woff2'),
+               url('fonts/TDASansScreen-Roman.woff') format('woff'),
+               url('fonts/TDASansScreen-Roman.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'TDA Sans';
+    src:  url('fonts/TDASansScreen-Medium.woff2') format('woff2'),
+               url('fonts/TDASansScreen-Medium.woff') format('woff'),
+               url('fonts/TDASansScreen-Medium.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'TDA Sans';
+    src:  url('fonts/TDASansScreen-Bold.woff2') format('woff2'),
+               url('fonts/TDASansScreen-Bold.woff') format('woff'),
+               url('fonts/TDASansScreen-Bold.ttf') format('truetype');
+    font-weight: 700;
+}

@@ -1,0 +1,18 @@
+.drop-in {
+    margin-top: 72px;
+    @include media-query($medium-up) {
+        width: 690px;
+    }
+    @include media-query($large-up) {
+        margin-top: 144px;
+    }
+    &__wrapper {
+        padding: 0 16px;
+    }
+
+    &__guide-wrapper {
+        @include media-query($medium-up) {
+            width: 70%;
+        }
+    }
+}

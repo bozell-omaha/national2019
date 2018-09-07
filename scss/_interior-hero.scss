@@ -1,0 +1,63 @@
+.interior-hero {
+    position: relative;
+
+    &__pattern {
+        position: absolute;
+            top: 15vh;
+            right: 64px;
+        width: 85%;
+        height: 70vh;
+        z-index: -1;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__img {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        width: 85%;
+        height: 40vh;
+        align-self: flex-end;
+        margin-left: auto;
+        @include media-query($large-up) {
+            height: 70vh;
+        }
+    }
+
+    &__title {
+        position: absolute;
+            bottom: 24px;
+            left: -10%;
+        width: 100%;
+        background: $white;
+        margin: 0;
+        padding: 16px 16px 16px 0;
+        @include media-query($medium-up) {
+            bottom: 72px;
+            left: -104px;
+            text-align: left;
+            padding: 24px;
+            width: initial;
+        }
+    }
+
+    &__copy {
+        width: 100%;
+        @include media-query($large-up) {
+            display: flex;
+            justify-content: center;
+            margin-top: 64px;
+        }
+
+        &-wrapper {
+            padding: 0 16px;
+            width: 100%;
+            max-width: 690px;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="7px" viewBox="0 0 50 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mobile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home" transform="translate(-110.000000, -3291.000000)" fill-rule="nonzero">
+            <g id="Speakers" transform="translate(0.000000, 2480.000000)">
+                <g id="Speakers---nav" transform="translate(93.000000, 772.000000)">
+                    <g id="Prev---btn" transform="translate(0.000000, 18.000000)">
+                        <g id="arrow" transform="translate(41.500000, 24.500000) rotate(-180.000000) translate(-41.500000, -24.500000) translate(16.000000, 20.000000)">
+                            <path d="M0.5,4.5 L46.5,4.5" id="Line-2" stroke="#202020" stroke-linecap="square"></path>
+                            <polygon id="Rectangle-3" fill="#202020" transform="translate(46.500000, 4.500000) rotate(-45.000000) translate(-46.500000, -4.500000) " points="49 2 49 7 44 7"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,82 @@
+.overlap {
+    position: relative;
+    width: 100%;
+    margin-top: 72px;
+    @include media-query($large-up) {
+        margin-top: 144px;
+    }
+
+    &__heading {
+        width: 100%;
+        padding: 0 16px;
+        text-align: center;
+    }
+
+    &__content {
+        @include media-query($large-up) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__img {
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 300px;
+        @include media-query($medium) {
+            height: 400px;
+        }
+        @include media-query($large-up) {
+            height: 550px;
+            width: 60%;
+            order: 1;
+        }
+
+        &--switch {
+            @include media-query($large-up) {
+                height: 550px;
+                width: 60%;
+                order: 0;
+            }
+        }
+
+        &--venue {
+            @include media-query($large-up) {
+                align-self: flex-end;
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__copy {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        @include media-query($large-up) {
+            padding: 32px 32px 32px 0;
+            width: 40%;
+            background: $white;
+            transform: translateX(20%);
+        }
+        &--switch {
+            @include media-query($large-up) {
+                padding: 32px 0 32px 32px;
+                transform: translateX(-20%);
+            }
+        }
+        &--venue {
+            @include media-query($large-up) {
+                position: absolute;
+                margin-top: 150px;
+                width: 50%;
+                padding: 32px;
+            }
+        }
+    }
+
+    &__cta {
+        align-self: flex-end;
+        margin-top: 48px;
+    }
+}

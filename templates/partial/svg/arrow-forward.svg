@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="arrow-forward" width="5px" height="10px" viewBox="0 0 5 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Material/Icons black/arrow forward</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.54">
+        <g id="sidebar-nav" transform="translate(-286.000000, -296.000000)" fill="#000000">
+            <g id="Material/Icons-black/arrow-drop-down" transform="translate(288.000000, 301.000000) rotate(-90.000000) translate(-288.000000, -301.000000) translate(276.000000, 289.000000)">
+                <polygon id="Shape" points="7 10 12 15 17 10"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

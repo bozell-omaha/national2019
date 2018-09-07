@@ -1,0 +1,32 @@
+{% for section in post.get_field('lincx_events')  %}
+
+<section class="kv-section lincx-events">
+    <div class="guide-wrapper lincx-events__guide-wrapper">
+        <div class="guide"></div>
+    </div>
+    <div class="kv-section__wrapper lincx-events__wrapper">
+        <div class="kv-group lincx-group">
+            <h1 class="kv-group__heading">{{section.heading}}</h1>
+            <div class="kv-group__wrapper">
+            {% for event in section.event %}
+                <div class="kv-event">
+                    <div class="kv-event__title">
+                        <h3>{{event.title}}</h3>
+                    </div>
+                    <div class="kv-event__desc">
+                        <p>{{event.description}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+            <div class="kv-group__cta">
+                <a href="" class="cta overlap__cta">
+                    <span>View agenda</span>
+                    {% include 'partial/svg/right-arrow.svg' %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endfor %}

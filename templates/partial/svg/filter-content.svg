@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="12px" viewBox="0 0 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>filter-content</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="mobile-explorations^JH" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="agenda" transform="translate(-266.000000, -579.000000)" fill="#000000">
+            <g id="filter-control" transform="translate(0.000000, 556.000000)">
+                <g id="Material/Icons-black/arrow-forward" transform="translate(266.000000, 23.000000)">
+                    <path d="M0,2 L18,2 L18,0 L0,0 L0,2 Z M3,7 L15.001,7 L15.001,5 L3,5 L3,7 Z M7,12 L11,12 L11,10 L7,10 L7,12 Z" id="filter-content"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,217 @@
+.ones {
+    position: relative;
+    margin-top: 96px;
+
+    &__pattern {
+        position: absolute;
+            top: 56px;
+            right: 0;
+        width: 100%;
+        max-width: 1024px;
+        height: 600px;
+    }
+
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    &__main-img {
+        position: relative;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            @include media-query($medium) {
+                height: 400px;
+            }
+            @include media-query($large-up) {
+                width: 60%;
+                height: 400px;
+            }
+        }
+    }
+
+    &__copy-wrapper {
+        padding: 0 16px;
+        @include media-query($medium) {
+            padding: 0 24px;
+        }
+        @include media-query($large-up) {
+            padding: 0;
+            display: flex;
+        }
+    }
+
+    &__copy {
+        @include media-query($large-up) {
+            width: 60%;
+        }
+    }
+
+    &__small-img {
+        display: none;
+        @include media-query($large-up) {
+            display: block;
+            width: 40%;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    }
+
+    &__cta {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+}
+
+.ones-topics {
+    padding: 0 16px;
+    @include media-query($medium) {
+        padding: 0 24px;
+    }
+    @include media-query($medium-up) {
+        margin-top: 56px;
+        display: flex;
+        flex-wrap: wrap;
+
+        h3 {
+            width: 100%;
+            margin-bottom: 42px;
+        }
+    }
+
+    &__topic-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        @include media-query($medium-up) {
+            width: 50%;
+            align-content: flex-start;
+        }
+    }
+
+    &__topic {
+        width: 100%;
+        text-decoration: none;
+        margin: 4px 0;
+        font-weight: 300;
+        color: $bodyCopy;
+        transition: all 0.4s ease-in-out;
+        @include media-query($medium-up) {
+            margin: 8px 0;
+        }
+
+        &.active {
+            font-weight: 600;
+            transform: translateX(24px);
+
+            &::before {
+                content: '';
+                position: absolute;
+                    top: 9px;
+                    left: -40px;
+                width: 32px;
+                height: 2px;
+                background: #CCCCCC;
+            }
+        }
+    }
+
+    &__content-wrapper {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        @include media-query($medium-up) {
+            width: 50%;
+            height: 300px;
+        }
+    }
+
+
+    &__content {
+        position: absolute;
+            top: 0;
+            left: 0;
+
+        &-title {
+            font-weight: 600;
+            @include media-query($medium-up) {
+                margin-top: 0;
+            }
+        }
+
+        &-copy {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+.video-shoot,
+.focus-groups {
+    margin-top: 72px;
+    @include media-query($large-up) {
+        margin-top: 144px;
+    }
+}
+
+.else {
+    position: relative;
+    margin: 72px 0;
+    @include media-query($large-up) {
+        margin: 144px 0;
+    }
+
+    &__pattern {
+        position: absolute;
+            top: 56px;
+            left: 0;
+        width: 100%;
+        max-width: 1024px;
+        height: 600px;
+        z-index: -1;
+    }
+
+    &__guide-wrapper {
+        @include media-query($medium-up) {
+            width: 80%;
+            text-align: right;
+        }
+    }
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__wrapper {
+        padding: 0 16px;
+        @include media-query($medium-up) {
+            display: flex;
+            margin-top: 32px;
+        }
+        @include media-query($medium) {
+            flex-direction: column;
+        }
+    }
+
+    &__content {
+        margin: 48px 0;
+        @include media-query($medium) {
+            margin: 0;
+            padding: 0 24px;
+        }
+        @include media-query($large-up) {
+            margin: 48px 24px;
+        }
+    }
+}

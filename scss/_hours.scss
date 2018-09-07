@@ -1,0 +1,128 @@
+.hours {
+    position: relative;
+
+    background: $offWhite;
+    padding-top: 104px;
+    margin-top: 96px;
+    @include media-query($large-up) {
+        width: 90%;
+    }
+
+    &--hotel {
+        padding: 104px 0;
+    }
+
+    &__wrapper {
+        padding: 0 16px;
+        @include media-query($medium-up) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &--hotel {
+            @include media-query($medium-up) {
+                width: 75%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__title {
+        @include media-query($medium) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        @include media-query($large-up) {
+            width: 30%;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        h3 {
+            margin-top: 8px;
+            @include media-query($medium) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__container {
+        @include media-query($medium) {
+            width: 100%;
+        }
+        @include media-query($large-up) {
+            width: 70%;
+            padding-left: 112px;
+        }
+    }
+
+    &__card-wrapper {
+        @include media-query($medium-up) {
+            display: flex;
+        }
+    }
+
+    &__note {
+        font-weight: 300;
+        width: 100%;
+        margin-top: 48px;
+        @include media-query($large-up) {
+            margin-left: 12px;
+            width: 75%;
+        }
+
+        &--hotel {
+            margin-top: 0;
+            width: 100%;
+        }
+    }
+
+    &__cta-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 40px 0;
+        @include media-query($medium-up) {
+            padding: 40px 56px 56px;
+        }
+    }
+}
+
+.hours-card {
+    background: $white;
+    padding: 24px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 165px;
+    border-radius: 4px;
+    margin: 16px 0;
+    @include media-query($medium-up) {
+        margin: 0 12px;
+        width: 30%;
+        max-width: 224px;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    &__day {
+        font-size: 21px;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    &__date {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    &__time {
+        font-size: 20px;
+        font-weight: 700;
+        color: $coreGreen;
+        margin: 16px 0 0;
+    }
+}

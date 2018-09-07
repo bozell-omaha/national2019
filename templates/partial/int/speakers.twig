@@ -1,0 +1,53 @@
+<section class="speakers">
+    <h1 class="speakers__heading">Featured Keynote Speakers</h1>
+    <div class="speakers__wrapper">
+    {% for speaker in speakers %}
+        {% if speaker.keynote == 'featured' %}
+        <div class="speaker">
+            <img class="speaker__img" src="{{TimberImage(speaker.image)}}" alt="">
+            <div class="speaker-info">
+                <span class="speaker-info__name">{{speaker.name}}</span>
+                <span class="speaker-info__title">{{speaker.position}}</span>
+            </div>
+            <a href="{{speaker.link}}" class="speaker__link"></a>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</section>
+
+<section class="speakers">
+    <h1 class="speakers__heading">Showcase Keynote Showcase</h1>
+    <div class="speakers__wrapper">
+    {% for speaker in speakers %}
+        {% if speaker.keynote == 'showcase' %}
+        <div class="speaker">
+            <img class="speaker__img" src="{{TimberImage(speaker.image)}}" alt="">
+            <div class="speaker-info">
+                <span class="speaker-info__name">{{speaker.name}}</span>
+                <span class="speaker-info__title">{{speaker.position}}</span>
+            </div>
+            <a href="{{speaker.link}}" class="speaker__link"></a>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</section>
+
+<section class="speakers">
+    <h1 class="speakers__heading">Executive Keynote Executive</h1>
+    <div class="speakers__wrapper">
+    {% for speaker in speakers %}
+        {% if speaker.keynote == 'executive' %}
+        <div class="speaker">
+            <img class="speaker__img" src="{{TimberImage(speaker.image)}}" alt="">
+            <div class="speaker-info">
+                <span class="speaker-info__name">{{speaker.name}}</span>
+                <span class="speaker-info__title">{{speaker.position}}</span>
+            </div>
+            <a href="{{speaker.link}}" class="speaker__link"></a>
+        </div>
+        {% endif %}
+    {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,36 @@
+.slide-menu {
+    display: none;
+    @include media-query($large-up) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        z-index: 4;
+        position: fixed;
+            top: 0;
+            left: 336px;
+        height: 100vh;
+        background: $pine;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-100%);
+    }
+
+    &__back {
+        position: absolute;
+            top: 24px;
+            right: 24px;
+        display: flex;
+        align-items: center;
+        padding: 0 24px;
+        color: #9B9B9B;
+        font-weight: 700;
+        &:hover {
+            cursor: pointer;
+        }
+
+        span {
+            margin-left: 16px;
+        }
+    }
+}

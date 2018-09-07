@@ -1,0 +1,12 @@
+{
+  "name": "WPCodeKit",
+  "author": "bradDouglas",
+  "version": "1.0.0",
+  "license": "GPL-2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
+  }
+}

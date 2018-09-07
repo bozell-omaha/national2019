@@ -1,0 +1,46 @@
+<div class="footer__reminders">
+    <div class="footer__reminders-content">
+        <a href="">Key reminders and deadlines here</a>
+        <p>Last Day To Register for Conference: <strong>Friday, Dec 14</strong></p>
+    </div>
+</div>
+
+<div class="footer__reserve">
+    <div class="footer__reserve-left">
+        <h1>Reserve your spot</h1>
+        <h3>Don’t miss out on the excitement</h3>
+        <p>There’s tons of fun and learning in store for you at National LINC 2019. Secure your spot today.</p>
+    </div>
+    <div class="footer__reserve-right">
+        <div class="days-left">
+            <span>DAYS LEFT</span>
+            {% set end = '2019-10-24' %}
+            {% set difference = date(end|date('Y/m/d')).diff(date('now'|date('Y/m/d'))) %}
+            {% set leftDays = difference.days %}
+            {% if leftDays == 1 %}
+                <strong>1</strong>
+            {% else %}
+                <strong>{{leftDays}}</strong>
+            {% endif %}
+        </div>
+
+        <div class="mobile-cta-wrapper footer__btn">
+            <a class="btn">Register Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="footer-legal">
+    <div class="footer-legal__wrapper">
+        <div class="footer-legal__copy">
+            <p>TD Ameritrade Institutional, Division of TD Ameritrade, Inc., member FINRA/SIPC. TD Ameritrade is a trademark jointly owned by TD Ameritrade IP Company, Inc. and the Toronto-Dominion Bank.</p>
+            <p>This is not an offer or solicitation in any jurisdiction where we are not authorized to do business or where such offer or solicitation would be contrary to the local laws and regulations of that jurisdiction, including, but not limited to persons residing in Australia, Canada, Hong Kong, Japan, Saudi Arabia, Singapore, UK, and the countries of the European Union.</p>
+            <p>© 2018 TD Ameritrade IP Company, Inc. All rights reserved.</p>
+            <p>Used with permission. Distributed by: TD Ameritrade, Inc., 200 South 108 Ave., Omaha, NE 68154</p>
+            <p>TDAI 9083 07/18</p>
+        </div>
+        <div class="footer-legal__logo">
+            {% include 'partial/svg/tdai-logo.svg' %}
+        </div>
+    </div>
+</div>

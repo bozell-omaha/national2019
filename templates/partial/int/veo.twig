@@ -1,0 +1,24 @@
+<section class="overlap quest">
+    <div class="guide-wrapper">
+        <div class="guide"></div>
+    </div>
+    <h1 class="overlap__heading">
+        {{post.get_field('analyzer_heading')}}
+    </h1>
+    <div class="overlap__content">
+        <div class="overlap__img" style="background-image: url('{{ TimberImage(post.get_field('analyzer_image')).src }}')"></div>
+        <div class="overlap__copy">
+            {{post.get_field('analyzer_content')}}
+        </div>
+    </div>
+</section>
+
+<section class="drop-in">
+    <div class="drop-in__wrapper">
+        <div class="guide-wrapper drop-in__guide-wrapper">
+            <div class="guide"></div>
+        </div>
+        <h1 class="drop-in__heading">Drop in anytime</h1>
+        <p class="drop-in__copy">Impromptu consultations are welcome. Our Strategic Relationship Consultants will be on-hand in the center of the Veo Village at the Tech Consulting Counter waiting for you to stop by to chat about your technology needs. </p>
+    </div>
+</section>

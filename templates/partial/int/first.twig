@@ -1,0 +1,21 @@
+<section class="kv-section">
+    <div class="guide-wrapper">
+        <div class="guide"></div>
+    </div>
+    <div class="kv-section__wrapper">
+        <div class="kv-group">
+            <div class="kv-group__wrapper">
+            {% for step in post.get_field('steps') %}
+                <div class="kv-event">
+                    <div class="kv-event__title">
+                        <h3>0{{loop.index}}. {{step.title}}</h3>
+                    </div>
+                    <div class="kv-event__desc">
+                        <p>{{step.description}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

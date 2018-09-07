@@ -1,0 +1,133 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 72px;
+    @include media-query($large-up) {
+        padding-left: 120px;
+    }
+
+    &__reminders {
+        background: $mint;
+        @include media-query($large-up) {
+            width: 80%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &-content {
+            padding: 24px 16px;
+            text-align: center;
+            font-size: 16px;
+            @include media-query($large-up) {
+                width: 70%;
+                padding: 48px 32px;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                font-size: 24px;
+                text-align: left;
+            }
+
+            a {
+                text-decoration: none;
+                color: $pine;
+                font-size: inherit;
+            }
+
+            p {
+                color: $pine;
+                font-size: inherit;
+                margin-bottom: 0;
+                @include media-query($large-up) {
+                    margin: 0 0 0 48px;
+                }
+            }
+        }
+    }
+
+    &__reserve {
+        width: 100%;
+        background: $offWhite;
+        padding: 24px 16px;
+        @include media-query($large-up) {
+            display: flex;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &-left {
+            @include media-query($large-up) {
+                width: 50%;
+                padding: 115px;
+            }
+        }
+
+        &-right {
+            @include media-query($large-up) {
+                width: 50%;
+                padding: 115px;
+            }
+        }
+    }
+
+    &__btn {
+        margin-bottom: 48px;
+        @include media-query($large-up) {
+
+        }
+
+        a {
+            @include media-query($large-up) {
+                font-size: 18px;
+                width: 400px;
+                height: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.days-left {
+    margin: 48px 0;
+    text-align: center;
+    font-size: 18px;
+
+    strong {
+        font-size: 32px;
+        margin-left: 24px;
+    }
+}
+
+.footer-legal {
+    padding: 64px 0;
+    &__wrapper {
+        padding: 0 16px;
+        width: 100%;
+        @include media-query($medium) {
+            padding: 0 24px;
+        }
+        @include media-query($large-up) {
+            padding: 0 56px;
+        }
+    }
+
+    &__copy {
+
+        p {
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: -0.33px;
+            color: #6A6A6A;
+        }
+    }
+
+    &__logo {
+        margin-top: 32px;
+    }
+}

@@ -1,0 +1,34 @@
+<section class="hours">
+    <div class="hours__wrapper">
+        <div class="hours__title">
+            <div class="hours__title-wrapper">
+                <span>{{post.title}}</span>
+                <h3>HOURS</h3>
+            </div>
+        </div>
+        <div class="hours__container">
+            <div class="hours__card-wrapper">
+                {% for day in post.get_field('hours') %}
+                    <div class="hours-card">
+                        <p class="hours-card__day">{{ day.day|date('l') }}</p>
+                        <p class="hours-card__date">{{day.day}}</p>
+                        {% for time in day.time %}
+                            <p class="hours-card__time">{{ time.time }}</p>
+                        {% endfor %}
+                    </div>
+                {% endfor %}
+            </div>
+
+            <p class="hours__note">{{post.get_field('hours_note')}}</p>
+        </div>
+
+        <div class="hours__cta-container">
+            <a href="#" class="cta">
+                <span>Register now</span>
+                {% include 'partial/svg/right-arrow.svg' %}
+            </a>
+        </div>
+
+    </div>
+</section>
+

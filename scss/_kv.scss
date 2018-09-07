@@ -1,0 +1,57 @@
+.kv-section {
+    position: relative;
+    margin-top: 72px;
+    @include media-query($large-up) {
+        margin-top: 144px;
+    }
+    &__wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 1056px;
+        margin: 0 auto;
+    }
+}
+
+.kv-group {
+
+    &__heading {
+        text-align: center;
+    }
+
+    &__wrapper {
+        padding: 0 16px;
+        margin-top: 48px;
+    }
+
+    &__cta {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.kv-event {
+    margin-top: 56px;
+
+    @include media-query($medium-up) {
+        display: flex;
+    }
+
+    &__title {
+        @include media-query($medium-up) {
+            width: 40%;
+        }
+
+        h3 {
+            font-size: 18px;
+            @include media-query($medium-up) {
+                width: 75%;
+            }
+        }
+    }
+
+    &__desc {
+        @include media-query($medium-up) {
+            width: 60%;
+        }
+    }
+}

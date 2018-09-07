@@ -1,0 +1,101 @@
+{% include 'partial/hours.twig' %}
+
+<section class="ones">
+    <div class="pattern ones__pattern"></div>
+    <div class="ones__wrapper">
+        <div class="ones__main-img">
+            <img src="{{ TimberImage(post.get_field('1_1_image')).src }}" alt="">
+        </div>
+        <div class="ones__copy-wrapper">
+            <div class="ones__copy">
+                {{post.get_field('1_1_content')}}
+            </div>
+            <div class="ones__small-img">
+                <img src="{{ TimberImage(post.get_field('1_1_small_image')).src }}" alt="">
+            </div>
+        </div>
+        <div class="ones-topics">
+            <h3>Business consulting lounge key topics</h3>
+            <div class="ones-topics__topic-wrapper">
+            {% for topic in post.get_field('topic') %}
+                <a href="#" data-index="{{loop.index}}" class="ones-topics__topic {% if loop.first %}active{% endif %}">{{topic.title}}</a>
+            {% endfor %}
+            </div>
+            <div class="ones-topics__content-wrapper">
+            {% for topic in post.get_field('topic') %}
+                <div class="ones-topics__content {% if loop.first %}active{% endif %}" data-index="{{loop.index}}">
+                    <p class="ones-topics__content-title">{{topic.title}}</p>
+                    <p class="ones-topics__content-copy">{{topic.description}}</p>
+                </div>
+            {% endfor %}
+            </div>
+            <div class="ones__cta">
+                <a href="#" class="cta">
+                    <span>Register now</span>
+                    {% include 'partial/svg/right-arrow.svg' %}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="overlap video-shoot">
+    <div class="guide-wrapper">
+        <div class="guide video-shoot__guide"></div>
+    </div>
+    <h1 class="overlap__heading">
+        {{post.get_field('video_shoots_heading')}}
+    </h1>
+    <div class="overlap__content">
+        <div class="overlap__img" style="background-image: url('{{ TimberImage(post.get_field('video_shoots_image')).src }}')"></div>
+        <div class="overlap__copy">
+            {{post.get_field('video_shoots_content')}}
+            <a href="" class="cta overlap__cta">
+                <span>View agenda</span>
+                {% include 'partial/svg/right-arrow.svg' %}
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="overlap focus-groups">
+    <div class="guide-wrapper">
+        <div class="guide focus-groups__guide"></div>
+    </div>
+    <h1 class="overlap__heading">
+        {{post.get_field('focus_groups_heading')}}
+    </h1>
+    <div class="overlap__content">
+        <div class="overlap__img overlap__img--switch" style="background-image: url('{{ TimberImage(post.get_field('focus_groups_image')).src }}')"></div>
+        <div class="overlap__copy overlap__copy--switch">
+            {{post.get_field('focus_groups_content')}}
+            <a href="" class="cta overlap__cta">
+                <span>View agenda</span>
+                {% include 'partial/svg/right-arrow.svg' %}
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="else">
+    <div class="pattern else__pattern"></div>
+    <div class="guide-wrapper else__guide-wrapper">
+        <div class="guide else__guide"></div>
+    </div>
+    <h1 class="else__heading">What else?</h1>
+    <div class="else__wrapper">
+        <div class="else__content">
+            <h3>Coffee talks with experts</h3>
+            <p>Meet with industry experts and pick their brains about what matters most to you and your business.</p>
+        </div>
+        <div class="else__content">
+            <h3>Professional headshots</h3>
+            <p>Ready to put your best face forward? Stop by and have a professional photo taken.</p>
+        </div>
+        <div class="else__content">
+            <h3>Ideation workshops</h3>
+            <p>Join interactive sessions to take a deeper dive into timely and relevant topics that can help you grow your business.</p>
+            <p>Looking for products and demos you learn about in the BCL? Swing by Veo Village for hands-on inspiration.</p>
+        </div>
+    </div>
+</section>

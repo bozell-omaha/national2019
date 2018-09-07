@@ -1,0 +1,6 @@
+.large-nav {
+    display: none;
+    @include media-query($large-up) {
+        display: block;
+    }
+}

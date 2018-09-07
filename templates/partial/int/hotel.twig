@@ -1,0 +1,49 @@
+<section class="hours hours--hotel">
+    <div class="hours__wrapper hours__wrapper--hotel">
+        <div class="hours__title">
+            <div class="hours__title-wrapper">
+                <h3>Please do not call the hotel directly to reserve your room.</h3>
+            </div>
+        </div>
+        <div class="hours__container">
+            <p class="hours__note hours__note--hotel">Registrations for National LINC 2017 that require hotel rooms must be submitted by Friday, November 11, 2016 to guarantee a room within the conference block. Should our hotel block be sold out prior to November 11, this site will be updated.</p>
+        </div>
+    </div>
+</section>
+
+<section class="overlap home-venue">
+    <div class="guide-wrapper">
+        <div class="guide"></div>
+    </div>
+    <h1 class="overlap__heading">
+        {{post.get_field('hotel_heading')}}
+    </h1>
+    {% include 'partial/svg/knockout.svg' %}
+    <div class="overlap__content">
+        <div class="overlap__img overlap__img--venue" style="background-image: url('{{ TimberImage(post.get_field('hotel_image')).src }}')"></div>
+        <div class="overlap__copy overlap__copy--venue">
+            {{post.get_field('hotel_content')}}
+            <a href="" class="cta overlap__cta">
+                <span>View agenda</span>
+                {% include 'partial/svg/right-arrow.svg' %}
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="overlap map">
+    <div class="guide-wrapper">
+        <div class="guide focus-groups__guide"></div>
+    </div>
+    <h1 class="overlap__heading">
+        {{post.get_field('map_heading')}}
+    </h1>
+    <div class="overlap__content">
+        <div class="overlap__img overlap__img--switch" style="background-image: url('{{ TimberImage(post.get_field('map_image')).src }}')"></div>
+        <div class="overlap__copy overlap__copy--switch">
+            {{post.get_field('map_content')}}
+        </div>
+    </div>
+</section>
+
+
