@@ -11,10 +11,7 @@ function fixedAgenda() {
             if (agendaScroll <= 80) {
                 agenda.classList.add('fixed');
                 header.classList.add('slide-up');
-            } else if (
-                agenda.classList.contains('fixed') &&
-                agendaScroll >= 80
-            ) {
+            } else if (agendaScroll >= 80) {
                 agenda.classList.remove('fixed');
                 header.classList.remove('slide-up');
             }
