@@ -231,6 +231,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"\/js\/compiled\/ie_helper.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/compiled\/ie_helper.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/js\/compiled\/site.min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -277,6 +287,16 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"\/js\/site\/agenda.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/compiled\/agenda.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
 		},
 	"\/js\/site\/babel-poly.js": {
 		"ft": 64,

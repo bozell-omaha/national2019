@@ -6,6 +6,7 @@
         background: #FFFFFF;
         box-shadow: 0 -1px 0 0 #E8E8E8, 0 1px 0 0 #E8E8E8;
         display: flex;
+        z-index: 3;
 
         &-search {
             width: 80%;
@@ -28,10 +29,21 @@
                 justify-content: flex-start;
             }
         }
+
+        .fixed & {
+            position: fixed;
+            top: 0;
+            right: 0;
+            @include media-query($large-up) {
+                top: 0;
+                width: calc(100% - 120px);
+            }
+        }
     }
 
     &__wrapper {
         display: flex;
+        height: 2000px;
         @include media-query($large-up) {
             // flex-wrap: wrap;
         }
@@ -40,8 +52,17 @@
     &__days {
         width: 100%;
         height: 90vh;
+        z-index: 3;
         @include media-query($large-up) {
             height: calc(100vh - 58px);
+        }
+        .fixed & {
+            position: fixed;
+            top: 56px;
+            width: 20%;
+            @include media-query($large-up) {
+                width: calc( (100% - 120px) * 0.2 );
+            }
         }
     }
 

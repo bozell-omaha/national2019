@@ -6,6 +6,7 @@
     z-index: 10;
     background: $white;
     box-shadow: 0 2px 10px -3px rgba(0,0,0,0.20);
+    transition: transform 0.2s ease;
     @include media-query($large-up) {
         left: 0;
         width: 336px;
@@ -16,6 +17,10 @@
         &.slim {
             width: 120px;
         }
+    }
+
+    &.slide-up {
+        transform: translateY(-100%);
     }
 
     &__wrapper {
