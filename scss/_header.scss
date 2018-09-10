@@ -124,7 +124,9 @@
 
         &-links {
             text-align: center;
-            svg {
+            a {
+                position: relative;
+                text-decoration: none;
                 margin: 0 4px;
             }
         }

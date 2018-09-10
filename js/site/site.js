@@ -1,4 +1,4 @@
-// @codekit-prepend "babel-poly.js";
+// "babel-poly.js";
 // @codekit-prepend "helper.js";
 // "slider.js";
 // "topics.js";
@@ -96,7 +96,7 @@ function scrollSideNav() {
     const arrow = document.querySelector('.arrow-forward');
     window.onscroll = () => {
         const scroll = window.pageYOffset;
-        if (scroll >= 10) {
+        if (scroll >= 10 && !header.classList.contains('slim')) {
             if (slideMenu.classList.contains('open')) {
                 slideMenu.classList.remove('open');
                 TweenMax.to(slideMenu, 0.4, {
@@ -106,9 +106,10 @@ function scrollSideNav() {
                 TweenMax.to(arrow, 0.4, { rotation: 360 });
             }
             header.classList.add('slim');
-        } else {
-            header.classList.remove('slim');
         }
+        // else {
+        //     header.classList.remove('slim');
+        // }
     };
 }
 

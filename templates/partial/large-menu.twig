@@ -5,7 +5,7 @@
         	<a class="nav-link nav-link--large {{ item.classes|join(' ') }}" target="{{ item.target }}" href="{{ item.link }}">
 			{{ item.title }}
 			{% if item.link == '#' %}
-				{% include 'partial/svg/arrow-forward.svg' %}
+				{% include 'partial/svg/arrow-forward.svg' with {className: 'side-arrow'} %}
 			{% endif %}
 		</a>
         </li>

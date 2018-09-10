@@ -62,14 +62,14 @@
         &-left {
             @include media-query($large-up) {
                 width: 50%;
-                padding: 115px;
+                padding: 56px;
             }
         }
 
         &-right {
             @include media-query($large-up) {
                 width: 50%;
-                padding: 115px;
+                padding: 56px;
             }
         }
     }

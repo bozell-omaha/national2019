@@ -10,7 +10,7 @@ html {
 
 body {
     font-family: $tda;
-    font-weight: 400;
+    font-weight: 300;
     color: $bodyCopy;
     overflow-x: hidden;
 }
@@ -30,6 +30,7 @@ body {
     color: $white;
     border-radius: 60px;
     font-size: 15px;
+    text-decoration: none;
 }
 
 .cta {
@@ -146,7 +147,7 @@ body {
 
 .pattern {
     background-color: transparent;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='46' height='46' fill-opacity='0.2' fill='%23cecece'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='12' height='12' fill-opacity='0.2' fill='%23000000'/%3E%3C/svg%3E");
 }
 
 .highlight {

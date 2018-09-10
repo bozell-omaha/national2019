@@ -44,6 +44,28 @@
 		"oAP": "\/archive.php",
 		"oF": 0
 		},
+	"\/assets\/img\/wisdom tree@2x.jpg": {
+		"ft": 16384,
+		"iS": 277659,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/assets\/img\/wisdom tree@2x.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"\/assets\/img\/wisdom tree@2x@2x.png": {
+		"ft": 32768,
+		"iS": 1293700,
+		"oA": 0,
+		"oAP": "\/assets\/img\/wisdom tree@2x@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/author.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -236,6 +258,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"\/js\/compiled\/topics.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/compiled\/topics.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/js\/compiled\/vendors.min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -250,7 +282,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 1,
+		"oA": 0,
 		"oAP": "\/js\/compiled\/babel-poly.min.js",
 		"oF": 0,
 		"sC": 3,
@@ -262,6 +294,16 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/js\/compiled\/helper.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/js\/site\/ie_helper.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/compiled\/ie_helper.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -284,7 +326,7 @@
 		"oAP": "\/js\/compiled\/slider.min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"\/js\/site\/topics.js": {
 		"ft": 64,
@@ -294,7 +336,7 @@
 		"oAP": "\/js\/compiled\/topics.min.js",
 		"oF": 0,
 		"sC": 3,
-		"tS": 0
+		"tS": 1
 		},
 	"\/js\/vendor\/barba.min.js": {
 		"ft": 64,
