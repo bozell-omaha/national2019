@@ -19,33 +19,42 @@ function fixedAgenda() {
 
         if (agendaScroll <= 0) {
             agenda.classList.add('fixed');
+            secondaryHeader();
         } else if (agenda.classList.contains('fixed') && agendaScroll >= 0) {
             agenda.classList.remove('fixed');
         }
     };
 }
 
-function scrollSideNav() {
-    const header = document.querySelector('#header');
-    const slideMenu = document.querySelector('.slide-menu');
-    const arrow = document.querySelector('.arrow-forward');
-    window.onscroll = () => {
-        const scroll = window.pageYOffset;
-        if (scroll >= 10 && !header.classList.contains('slim')) {
-            if (slideMenu.classList.contains('open')) {
-                slideMenu.classList.remove('open');
-                TweenMax.to(slideMenu, 0.4, {
-                    xPercent: -100,
-                    autoAlpha: 0,
-                });
-                TweenMax.to(arrow, 0.4, { rotation: 360 });
+function secondaryHeader() {
+    const agenda = document.querySelector('#agenda');
+    const headers = agenda.querySelectorAll('.agenda__events-header');
+    const activeHeader = agenda.querySelector('.agenda__events-header.active');
+    const activeBottom = activeHeader.getBoundingClientRect().bottom;
+    const activeTop = activeHeader.getBoundingClientRect().top;
+
+    headers.forEach(header => {
+        if (!header.classList.contains('active')) {
+            const headerTop = header.getBoundingClientRect().top;
+            const headerBottom = header.getBoundingClientRect().bottom;
+            console.log(Math.round(headerTop));
+            console.log(Math.round(activeBottom));
+
+            if (Math.round(headerTop) == Math.round(activeBottom)) {
+                activeHeader.classList.add('past');
+                activeHeader.classList.remove('active');
+                header.classList.add('active');
             }
-            header.classList.add('slim');
         }
-        // else {
-        //     header.classList.remove('slim');
+
+        // if (header.classList.contains('active')) {
+        //     const prevParentSibling =
+        //         header.parentElement.previousElementSibling;
+        //     if (prevParentSibling) {
+        //         console.log(prevParentSibling);
+        //     }
         // }
-    };
+    });
 }
 
 fixedAgenda();

@@ -86,14 +86,11 @@
                 font-weight: 700;
             }
 
-            // .fixed & {
-            //     position: fixed;
-            //         top: 58px;
-            // }
-        }
-
-        .fixed & {
-            margin-top: 110px;
+            .fixed &.active {
+                position: fixed;
+                    top: 58px;
+                margin-bottom: 110px;
+            }
         }
     }
 
@@ -110,6 +107,7 @@
 }
 
 .agenda-day {
+    position: relative;
     background: $offWhite;
     display: flex;
     flex-wrap: wrap;
@@ -220,4 +218,10 @@
             display: initial;
         }
     }
+}
+
+.past {
+    position: absolute;
+        top: auto;
+        bottom: 0;
 }

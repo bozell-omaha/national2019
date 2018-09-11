@@ -221,6 +221,16 @@
 		"oAP": "\/interior.php",
 		"oF": 0
 		},
+	"\/js\/compiled\/agenda.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/compiled\/agenda.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/js\/compiled\/babel-poly.min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -317,6 +327,16 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"\/js\/site\/homeHacks.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/compiled\/homeHacks.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
 		},
 	"\/js\/site\/ie_helper.js": {
 		"ft": 64,

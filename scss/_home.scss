@@ -182,22 +182,16 @@
     &__sponsor {
         position: relative;
         width: 45%;
-        height: 80px;
-        margin: 2.5%;
         text-align: center;
         @include media-query($large-up) {
             width: 30%;
-            margin: 1.5%;
-            height: 90px;
         }
 
         img {
-            height: 80px;
-            width: auto;
+            height: auto;
+            width: 80%;
             object-fit: cover;
-            @include media-query($large-up) {
-                height: 90px;
-            }
+            margin: 24px;
         }
     }
 
@@ -210,7 +204,7 @@
     .guide-wrapper {
         text-align: left;
         @include media-query($large-up) {
-            // padding-left: 130px;
+            padding-left: 13%;
         }
     }
 }

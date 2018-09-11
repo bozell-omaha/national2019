@@ -10,7 +10,7 @@
     </div>
     <div class="agenda__wrapper">
         <div class="agenda__left">
-            <div class="agenda__days" data-width="">
+            <div class="agenda__days">
                 <div class="agenda-day active" data-day="6">
                     <span class="agenda-day__month">Feb</span>
                     <span class="agenda-day__number">6</span>
@@ -31,7 +31,7 @@
         </div>
         <div class="agenda__right">
             <div class="agenda__day-wrapper" data-day="6">
-                <div class="agenda__events-header">
+                <div class="agenda__events-header active">
                     <span>Wednesday, February 6, 2019</span>
                 </div>
                 <div class="agenda__events">
@@ -71,6 +71,44 @@
             <div class="agenda__day-wrapper" data-day="7">
                 <div class="agenda__events-header">
                     <span>Thursday, February 7, 2019</span>
+                </div>
+                <div class="agenda__events">
+                    <div class="event">
+                        <span class="event__time">8:00 am - 8:45 am</span>
+                        <span class="event__title">Networking breakfast:</span>
+                        <span class="event__desc">Driving disruption through technology Innovation. {% include 'partial/svg/arrow-forward.svg' with {className: 'agenda-arrow--large'} %} </span>
+                        <div class="event__tag-wrapper">
+                            <span class="event__tag">Growth</span>
+                            <span class="event__tag">Innovation</span>
+                            <span class="event__tag">Strategy</span>
+                        </div>
+                        <div class="event__arrow">
+                            {% include 'partial/svg/arrow-forward.svg' with {className: 'agenda-arrow--small'} %}
+                        </div>
+                    </div>
+                    <div class="event">
+                        <span class="event__time">8:00 am - 7:00 pm</span>
+                        <span class="event__title">* * Registration and conference resource desk open * *</span>
+                        <span class="event__desc"></span>
+                    </div>
+                    <div class="event">
+                        <span class="event__time">9:00 am - 9:40 am</span>
+                        <span class="event__title">Opening general session:</span>
+                        <span class="event__desc">Driving disruption through technology Innovation. {% include 'partial/svg/arrow-forward.svg' with {className: 'agenda-arrow--large'} %}</span>
+                        <div class="event__tag-wrapper">
+                            <span class="event__tag">Growth</span>
+                            <span class="event__tag">Innovation</span>
+                        </div>
+                        <div class="event__arrow">
+                            {% include 'partial/svg/arrow-forward.svg' with {className: 'agenda-arrow--small'} %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="agenda__day-wrapper" data-day="8">
+                <div class="agenda__events-header">
+                    <span>Friday, February 8, 2019</span>
                 </div>
                 <div class="agenda__events">
                     <div class="event">
