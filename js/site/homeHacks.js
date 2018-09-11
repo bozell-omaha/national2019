@@ -9,7 +9,7 @@ function smallHeightHacks() {
             link.style.margin = '6px 0';
         });
         heroImg.style.right = '-30%';
-    } else if (window.innerHeight > 675) {
+    } else if (window.innerHeight > 675 && window.innerWidth > 750) {
         tdaLogo.style.display = 'flex';
         links.forEach(link => {
             link.style.margin = '12px 0';
