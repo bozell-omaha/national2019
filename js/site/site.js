@@ -118,3 +118,8 @@ slideTheMenu();
 if (window.innerWidth > 990) {
     scrollSideNav();
 }
+
+
+if (window.innerHeight < 675 && window.innerWidth > 750) {
+    document.body.classList.add('small');
+}

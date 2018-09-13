@@ -42,6 +42,11 @@
                 float: none;
             }
         }
+
+        .small & {
+            height: 80vh;
+            max-height: 650px;
+        }
     }
 
     &__content {

@@ -16,6 +16,10 @@ body {
     @include media-query($large-up) {
         overflow-x: visible;
     }
+
+    &.small {
+        font-size: 15px !important;
+    }
 }
 
 #content {

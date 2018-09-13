@@ -9,7 +9,7 @@
             <div class="home-hero__img">
                 <img src="{{function('wp_get_attachment_image_url', TimberImage(post.get_field('home_hero_image')).id, 'medium')}}"
                                 srcset="{{function('wp_get_attachment_image_srcset', TimberImage(post.get_field('home_hero_image')).id, 'medium' )}}"
-                                sizes="(max-width: 1024px) 100vw, 1024px" alt="Post thumbnail">
+                                sizes="100vw" alt="Post thumbnail">
             </div>
             <div class="pattern home-hero__pattern"></div>
             <div class="home-hero__cta">
