@@ -17,43 +17,34 @@ function fixedAgenda() {
             }
         }
 
-        if (agendaScroll <= 0) {
+        if (agendaScroll <= -1) {
             agenda.classList.add('fixed');
-            secondaryHeader();
-        } else if (agenda.classList.contains('fixed') && agendaScroll >= 0) {
+            fixDays();
+        } else if (agenda.classList.contains('fixed') && agendaScroll >= 1) {
+            const agendaEvents = agenda.querySelector(
+                '.agenda__day-wrapper.active'
+            );
             agenda.classList.remove('fixed');
+            agendaEvents.classList.remove('active');
         }
     };
 }
 
-function secondaryHeader() {
-    const agenda = document.querySelector('#agenda');
-    const headers = agenda.querySelectorAll('.agenda__events-header');
-    const activeHeader = agenda.querySelector('.agenda__events-header.active');
-    const activeBottom = activeHeader.getBoundingClientRect().bottom;
-    const activeTop = activeHeader.getBoundingClientRect().top;
-
-    headers.forEach(header => {
-        if (!header.classList.contains('active')) {
-            const headerTop = header.getBoundingClientRect().top;
-            const headerBottom = header.getBoundingClientRect().bottom;
-            console.log(Math.round(headerTop));
-            console.log(Math.round(activeBottom));
-
-            if (Math.round(headerTop) == Math.round(activeBottom)) {
-                activeHeader.classList.add('past');
-                activeHeader.classList.remove('active');
-                header.classList.add('active');
-            }
+function fixDays() {
+    const dayWrappers = document.querySelectorAll('.agenda__day-wrapper');
+    dayWrappers.forEach(wrapper => {
+        const top = wrapper.getBoundingClientRect().top;
+        const bottom = wrapper.getBoundingClientRect().bottom;
+        if (top < 98) {
+            wrapper.classList.add('active');
+        } else {
+            wrapper.classList.remove('active');
         }
 
-        // if (header.classList.contains('active')) {
-        //     const prevParentSibling =
-        //         header.parentElement.previousElementSibling;
-        //     if (prevParentSibling) {
-        //         console.log(prevParentSibling);
-        //     }
-        // }
+        if (bottom < 98) {
+            // wrapper.classList.remove('active');
+            console.log('HEY!');
+        }
     });
 }
 

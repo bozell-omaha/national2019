@@ -3,15 +3,15 @@
 <section class="ones">
     <div class="pattern ones__pattern"></div>
     <div class="ones__wrapper">
-        <div class="ones__main-img">
-            <img src="{{ TimberImage(post.get_field('1_1_image')).src }}" alt="">
+        <div class="ones__main-img" style="background-image: url('{{ TimberImage(post.get_field('1_1_image')).src }}')">
+            {# <img src="{{ TimberImage(post.get_field('1_1_image')).src }}" alt=""> #}
         </div>
         <div class="ones__copy-wrapper">
             <div class="ones__copy">
                 {{post.get_field('1_1_content')}}
             </div>
-            <div class="ones__small-img">
-                <img src="{{ TimberImage(post.get_field('1_1_small_image')).src }}" alt="">
+            <div class="ones__small-img" style="background-image: url('{{ TimberImage(post.get_field('1_1_small_image')).src }}')">
+                {# <img src="{{ TimberImage(post.get_field('1_1_small_image')).src }}" alt=""> #}
             </div>
         </div>
         <div class="ones-topics">

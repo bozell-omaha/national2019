@@ -84,9 +84,13 @@
             <script src="{{ site.theme.link }}/js/compiled/topics.min.js"></script>
         {% endif %}
 
-		{# {% if post.title == 'Agenda' %}
+		{% if post.title == 'Agenda' %}
             <script src="{{ site.theme.link }}/js/compiled/agenda.min.js"></script>
-        {% endif %} #}
+        {% endif %}
+
+		{% if post.title == 'Speakers' %}
+            <script src="{{ site.theme.link }}/js/compiled/speakers.min.js"></script>
+        {% endif %}
 
 	</body>
 </html>

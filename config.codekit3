@@ -241,6 +241,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"\/js\/compiled\/homeHacks.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/compiled\/homeHacks.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/js\/compiled\/ie_helper.min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -274,6 +284,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/compiled\/slider.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/js\/compiled\/speakers.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/compiled\/speakers.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -364,6 +384,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/compiled\/slider.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"\/js\/site\/speakers.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/compiled\/speakers.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
