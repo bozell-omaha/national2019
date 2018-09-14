@@ -32,21 +32,30 @@ function fixedAgenda() {
 
 function fixDays() {
     const dayWrappers = document.querySelectorAll('.agenda__day-wrapper');
-    dayWrappers.forEach(wrapper => {
+    const agendaDays = document.querySelectorAll('.agenda-day');
+    dayWrappers.forEach((wrapper, i) => {
         const top = wrapper.getBoundingClientRect().top;
         const bottom = wrapper.getBoundingClientRect().bottom;
-        const headerBottom = wrapper
-            .querySelector('.agenda__events-header')
-            .getBoundingClientRect().bottom;
-        if (top < 98) {
+        const wrapperDay = wrapper.getAttribute('data-day');
+        if (top <= 98 && bottom >= 98) {
+            wrapper.classList.remove('bottom');
             wrapper.classList.add('active');
-        } else if (bottom < 98) {
+            agendaDays.forEach(day => {
+                const theDay = day.getAttribute('data-day');
+                if (wrapperDay == theDay) {
+                    day.classList.add('active');
+                }
+            });
+        } else if (wrapper.classList.contains('active')) {
             wrapper.classList.remove('active');
-        } else {
-            wrapper.classList.remove('active');
+            wrapper.classList.add('bottom');
+            agendaDays.forEach(day => {
+                const theDay = day.getAttribute('data-day');
+                if (wrapperDay == theDay) {
+                    day.classList.remove('active');
+                }
+            });
         }
-
-        console.log(bottom);
     });
 }
 
