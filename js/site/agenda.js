@@ -35,16 +35,18 @@ function fixDays() {
     dayWrappers.forEach(wrapper => {
         const top = wrapper.getBoundingClientRect().top;
         const bottom = wrapper.getBoundingClientRect().bottom;
+        const headerBottom = wrapper
+            .querySelector('.agenda__events-header')
+            .getBoundingClientRect().bottom;
         if (top < 98) {
             wrapper.classList.add('active');
+        } else if (bottom < 98) {
+            wrapper.classList.remove('active');
         } else {
             wrapper.classList.remove('active');
         }
 
-        if (bottom < 98) {
-            // wrapper.classList.remove('active');
-            console.log('HEY!');
-        }
+        console.log(bottom);
     });
 }
 
