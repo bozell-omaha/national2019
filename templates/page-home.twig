@@ -2,7 +2,7 @@
 
 {% block content %}
 	<div class="content-wrapper home-wrapper">
-        <div class="home-hero">
+        {# <div class="home-hero">
             <div class="home-hero__content">
                 {{post.get_field('home_hero_copy')}}
             </div>
@@ -16,7 +16,8 @@
                 {% include 'partial/svg/play-btn.svg' %}
                 <span>Watch last year's video</span>
             </div>
-        </div>
+        </div> #}
+        {% include '/partial/homeHero.twig' %}
 
         <div class="overlap home-agenda">
             <div class="guide-wrapper">

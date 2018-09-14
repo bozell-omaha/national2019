@@ -44,6 +44,27 @@
 		"oAP": "\/archive.php",
 		"oF": 0
 		},
+	"\/assets\/img\/home-carouse-test-img.png": {
+		"ft": 32768,
+		"iS": 1721997,
+		"oA": 0,
+		"oAP": "\/assets\/img\/home-carouse-test-img.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/test-svg.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/img\/test-svg.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/assets\/img\/wisdom tree@2x.jpg": {
 		"ft": 16384,
 		"iS": 277659,
@@ -418,6 +439,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"\/js\/vendor\/flickity.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/js\/compiled\/flickity.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/js\/vendor\/TweenMax.min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -433,9 +464,19 @@
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "\/js\/vendor\/vendors.min.js",
+		"oAP": "\/js\/compiled\/vendors.min.js",
 		"oF": 2,
 		"sC": 0,
+		"tS": 0
+		},
+	"\/js\/vendor\/vendors.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/compiled\/vendors.min.min.js",
+		"oF": 0,
+		"sC": 3,
 		"tS": 0
 		},
 	"\/LICENSE": {
@@ -572,6 +613,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/scss\/_flickity.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/scss\/_flickity.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/scss\/_fonts.scss": {
 		"aP": 1,
 		"bl": 0,
@@ -620,6 +674,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/scss\/_header.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/scss\/_home-carousel.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/scss\/_home-carousel.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -977,11 +1044,25 @@
 		"oAP": "\/templates\/page-plugin.twig",
 		"oF": 0
 		},
+	"\/templates\/page-test.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/templates\/page-test.twig",
+		"oF": 0
+		},
 	"\/templates\/page.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/templates\/page.twig",
+		"oF": 0
+		},
+	"\/templates\/partial\/homeHero.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/templates\/partial\/homeHero.twig",
 		"oF": 0
 		},
 	"\/templates\/partial\/hours.twig": {

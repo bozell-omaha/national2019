@@ -145,6 +145,10 @@
             letter-spacing: 0.5px;
         }
 
+        svg {
+            opacity: 0.64;
+        }
+
         .slim & {
             opacity: 0;
             visibility: hidden;

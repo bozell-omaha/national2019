@@ -78,7 +78,7 @@
 .home-agenda {
     position: relative;
     @include media-query($medium-up) {
-        margin-top: -176px;
+        margin-top: -104px;
     }
 
     &__guide {
