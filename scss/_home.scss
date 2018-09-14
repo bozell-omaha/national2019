@@ -81,8 +81,13 @@
         margin-top: -104px;
     }
 
+    .guide {
+        text-align: left;
+    }
+
     &__guide {
         @include media-query($medium-up) {
+            margin-left: 35%;
             height: 256px;
         }
     }

@@ -11,6 +11,7 @@ function fixedAgenda() {
             if (agendaScroll <= 80) {
                 agenda.classList.add('fixed');
                 header.classList.add('slide-up');
+                fixDays();
             } else if (agendaScroll >= 80) {
                 agenda.classList.remove('fixed');
                 header.classList.remove('slide-up');
@@ -33,11 +34,18 @@ function fixedAgenda() {
 function fixDays() {
     const dayWrappers = document.querySelectorAll('.agenda__day-wrapper');
     const agendaDays = document.querySelectorAll('.agenda-day');
+    const sweetSpot =
+        document.querySelector('.agenda__header').getBoundingClientRect()
+            .height +
+        document.querySelector('.agenda__events-header').getBoundingClientRect()
+            .height;
+
     dayWrappers.forEach((wrapper, i) => {
         const top = wrapper.getBoundingClientRect().top;
         const bottom = wrapper.getBoundingClientRect().bottom;
         const wrapperDay = wrapper.getAttribute('data-day');
-        if (top <= 98 && bottom >= 98) {
+
+        if (top <= sweetSpot && bottom >= sweetSpot) {
             wrapper.classList.remove('bottom');
             wrapper.classList.add('active');
             agendaDays.forEach(day => {
@@ -59,4 +67,51 @@ function fixDays() {
     });
 }
 
+function scrollAgenda() {
+    const agendaDays = document.querySelectorAll('.agenda-day');
+    const agenda = document.querySelector('#agenda');
+    const dayWrappers = document.querySelectorAll('.agenda__day-wrapper');
+
+    agendaDays.forEach((day, i) => {
+        day.addEventListener('click', () => {
+            const theDay = day.getAttribute('data-day');
+            async function scrollAgenda(theDay) {
+                if (!agenda.classList.contains('fixed')) {
+                    window.scroll({
+                        behavior: 'smooth',
+                        top: agenda.offsetTop,
+                    });
+                }
+            }
+
+            scrollAgenda(theDay).then(() => {
+                dayWrappers.forEach(wrapper => {
+                    const wrapperDay = wrapper.getAttribute('data-day');
+                    if (wrapperDay == theDay) {
+                        if (window.innerWidth < 750) {
+                            const mobileSweetSpot = document
+                                .querySelector('.agenda__events-header')
+                                .getBoundingClientRect().height;
+
+                            window.scroll({
+                                behavior: 'smooth',
+                                top: wrapper.offsetTop + mobileSweetSpot,
+                            });
+                        } else {
+                            const sweetSpot = document
+                                .querySelector('.agenda__header')
+                                .getBoundingClientRect().height;
+                            window.scroll({
+                                behavior: 'smooth',
+                                top: wrapper.offsetTop - sweetSpot,
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    });
+}
+
 fixedAgenda();
+scrollAgenda();

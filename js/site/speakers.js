@@ -11,6 +11,7 @@ function initSpeakers() {
 speakers.forEach(speaker => {
     speaker.addEventListener('click', () => {
         speaker.classList.add('active');
+        const close = speaker.querySelector('.close-speaker');
         const root = document.documentElement;
         const body = document.body;
         const hero = document.querySelector('.interior-hero');
@@ -51,7 +52,8 @@ speakers.forEach(speaker => {
                     { y: 40 },
                     { y: 0, autoAlpha: 1, ease: Expo.easeOut },
                     0.15
-                );
+                )
+                .to(close, 0.8, { autoAlpha: 1 });
         } else {
             const bioContainer = document.querySelector(
                 '.speaker-bio__container'

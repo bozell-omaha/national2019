@@ -118,13 +118,20 @@
     }
 
     &__social {
-        width: 100%;
+        display: none;
         margin-top: 48px;
+        width: 100%;
         @include media-query($large-up) {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             transition: all 0.3s ease-in-out 0.4s;
+        }
+
+        &--mobile {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         &-links {

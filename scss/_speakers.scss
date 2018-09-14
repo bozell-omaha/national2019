@@ -109,6 +109,7 @@
     height: 100vh;
     z-index: 12;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     @include media-query($medium-up) {
         left: 15%;
         max-width: 300px;
@@ -125,4 +126,12 @@
     height: 80%;
     opacity: 0;
     visibility: hidden;
+}
+
+.close-speaker {
+    position: absolute;
+        top: -32px;
+        left: 0;
+    font-weight: 600;
+    opacity: 0;
 }

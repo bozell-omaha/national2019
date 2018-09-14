@@ -81,6 +81,7 @@
             z-index: 3;
             @include media-query($large-up) {
                 padding: 0 48px;
+                height: 48px;
             }
 
             .active & {
@@ -96,6 +97,9 @@
             span {
                 font-size: 16px;
                 font-weight: 700;
+                @include media-query($large-up) {
+                    font-size: 24px;
+                }
             }
         }
     }
@@ -134,6 +138,9 @@
     margin-top: 1px;
     height: 25%;
     transition: all 0.4s ease-in-out;
+    &:hover {
+        cursor: pointer;
+    }
 
     &__month {
         width: 100%;
@@ -181,12 +188,21 @@
         letter-spacing: 0;
         margin-top: 8px;
         line-height: 15px;
+        @include media-query($large-up) {
+            font-size: 16px;
+            line-height: 18px;
+        }
     }
 
     &__desc {
         font-size: 13px;
         letter-spacing: 0;
         line-height: 15px;
+        @include media-query($large-up) {
+            font-size: 16px;
+            line-height: 18px;
+            margin-top: 8px;
+        }
     }
 
     &__tag-wrapper {
