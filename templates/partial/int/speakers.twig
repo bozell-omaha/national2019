@@ -1,3 +1,5 @@
+<div class="pattern speaker-bio__pattern"></div>
+
 <section class="speakers">
     <h1 class="speakers__heading">Featured Keynote Speakers</h1>
     <div class="speakers__wrapper">
@@ -10,8 +12,8 @@
                     <span class="speaker-info__name">{{speaker.name}}</span>
                     <span class="speaker-info__title">{{speaker.position}}</span>
                 </div>
+                <div class="speaker__bio">{{speaker.bio|wpautop}}</div>
             </div>
-            <div class="speaker__bio">{{speaker.bio|wpautop}}</div>
             <a class="speaker-link" href="{{speaker.link}}" class="speaker__link"></a>
         </div>
         {% endif %}
@@ -52,8 +54,8 @@
                     <span class="speaker-info__name">{{speaker.name}}</span>
                     <span class="speaker-info__title">{{speaker.position}}</span>
                 </div>
+                <div class="speaker__bio">{{speaker.bio|wpautop}}</div>
             </div>
-            <div class="speaker__bio">{{speaker.bio|wpautop}}</div>
             <a class="speaker-link" href="{{speaker.link}}" class="speaker__link"></a>
         </div>
         {% endif %}
