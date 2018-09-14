@@ -118,8 +118,8 @@
     }
 
     &__social {
-        display: none;
         width: 100%;
+        margin-top: 48px;
         @include media-query($large-up) {
             display: flex;
             justify-content: center;

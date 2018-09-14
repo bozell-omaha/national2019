@@ -81,17 +81,27 @@ https://flickity.metafizzy.co
   .flickity-prev-next-button {
     // top: 50%;
     bottom: 0;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background: $pine;
     z-index: 3;
+    @include media-query($medium-up) {
+      width: 80px;
+      height: 80px;
+    }
     // border-radius: 50%;
     // background: transparent;
     /* vertically center */
     // transform: translateY(-50%);
   }
 
-  .flickity-prev-next-button.previous { right: 80px; }
+  .flickity-prev-next-button.previous {
+    left: 0;
+    @include media-query($medium-up) {
+      right: 80px;
+      left: inherit;
+    }
+  }
   .flickity-prev-next-button.next { right: 0; }
   /* right to left */
   .flickity-rtl .flickity-prev-next-button.previous {
