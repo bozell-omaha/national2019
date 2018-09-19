@@ -1,3 +1,95 @@
+.home-hero {
+    position: relative;
+    width: 100%;
+    @include media-query($medium-up) {
+        max-height: 100vh;
+    }
+}
+
+.hero-pattern {
+    position: absolute;
+        bottom: 80px;
+        right: 0;
+    width: 80%;
+    height: 70%;
+}
+
+.carousel-img {
+    position: absolute;
+        top: 50px;
+        right: 0;
+    width: 100%;
+    height: 40%;
+    @include media-query($medium-up) {
+        top: 0;
+        height: 100%;
+    }
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+                top: 0;
+                right: -30%;
+            height: 100%;
+            width: auto;
+        }
+    }
+}
+
+.carousel-static {
+    display: none;
+    @include media-query($medium-up) {
+        display: block;
+        position: absolute;
+            top: 0;
+            left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    @include media-query($large-up) {
+        padding-left: calc(336px - 120px + 24px);
+    }
+
+    &__inner {
+        position: relative;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+}
+
+.home-hero__cta {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 20%;
+    z-index: 10;
+    &:hover {
+        cursor: pointer;
+    }
+
+    span {
+        margin-left: -24px;
+    }
+
+    svg {
+        overflow: visible;
+    }
+}
+
+.home-hero__tag {
+    margin-top: 35%;
+    color: #6C6C6C;
+    font-weight: 300;
+    font-size: 17px;
+}
+
 .home-carousel {
     position: relative;
     width: 100%;
@@ -52,7 +144,7 @@
         padding: 40% 16px 0;
 
         @include media-query($medium-up) {
-            width: 60%;
+            width: 50%;
             padding: 0;
             padding-left: calc(336px - 120px + 24px);
         }
@@ -63,3 +155,42 @@
     }
 }
 
+.pulsate-bck {
+    animation: pulsate-bck 1.3s ease-in-out infinite both;
+    transform-origin: center;
+}
+
+@keyframes pulsate-bck {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+.ping {
+    animation: ping 1.2s ease-in-out infinite both;
+    transform-origin: center;
+    &:last-of-type {
+        animation-delay: 0.3s;
+    }
+}
+
+@keyframes ping {
+    0% {
+      transform: scale(0.2);
+      opacity: 1;
+    }
+    80% {
+      transform: scale(1.2);
+      opacity: 0.1;
+    }
+    100% {
+      transform: scale(2.2);
+      opacity: 0;
+    }
+}

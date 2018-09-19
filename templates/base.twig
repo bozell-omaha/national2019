@@ -47,7 +47,7 @@
 					</div>
 					<div class="header__td-logo">
 						<a href="http://www.tdainstitutional.com/">
-							{% include 'partial/svg/tdai-logo.svg' %}
+							{% include 'partial/svg/tdai-logo-2.svg' %}
 						</a>
 					</div>
 				</div>
@@ -58,6 +58,7 @@
 		{% include 'partial/mobile-nav.twig' %}
 
 		<section id="content" role="main" class="content-wrapper">
+			{% include 'partial/the-flag.twig' %}
 			<div class="wrapper {{sidebar_class}}">
 				{% block content %}
 					Sorry, no content
@@ -93,6 +94,22 @@
             <script src="{{ site.theme.link }}/js/compiled/speakers.min.js"></script>
         {% endif %}
 
+		<script>
+			/**
+			*   Modal suprise
+			*/
+			var modalBtn = document.querySelector('.js-tingle-modal');
+			modalBtn.addEventListener('click', function(){
+				var modalSurprise = new tingle.modal({
+					onClose: function(){
+						modalSurprise.destroy();
+					}
+				});
+				modalSurprise.setContent('<iframe width="100%" height="400" src="https://www.youtube.com/embed/Vyi8x02GRuI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
+				modalSurprise.open();
+			});
+		</script>
+
 		{% if post.title == 'Home' %}
 			<script>
 			var carousel = document.querySelector('.home-carousel');
@@ -109,19 +126,19 @@
 						x3: 15
 					}
 				});
-				var imgs = document.querySelectorAll('.carousel-cell__img');
+				{# var imgs = document.querySelectorAll('.carousel-cell__img'); #}
 
-				flkty.on( 'scroll', function() {
+				{# flkty.on( 'scroll', function() {
 					flkty.slides.forEach( function( slide, i ) {
 						var img = imgs[i];
 						var x = ( slide.target + flkty.x ) * -1/3;
 						img.style.transform = 'translateX(' + x  + 'px)';
 					});
-				});
+				}); #}
 
-				flkty.on( 'settle', function( index ) {
+				{# flkty.on( 'settle', function( index ) {
 					console.log( index);
-				});
+				}); #}
 
 			</script>
 		{% endif %}

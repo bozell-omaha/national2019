@@ -1,65 +1,60 @@
-<section class="home-carousel">
-
-
-    <div class="carousel-cell">
-        <div class="carousel-cell__img">
-            <div class="carousel-cell__img-inner">
-                <img src="{{site.link}}/wp-content/themes/linc2019/assets/img/home-carouse-test-img.png" alt="">
-            </div>
+<section class="home-hero">
+    <div class="pattern hero-pattern"></div>
+    <div class="carousel-img">
+        <div class="carousel-img__inner">
+            {# <img src="{{site.link}}/wp-content/themes/linc2019/assets/img/home-carouse-test-img.png" alt="">
+            #}
+            <img src="{{TimberImage(post.get_field('home_hero_image')).src}}"
+                                srcset="{{function('wp_get_attachment_image_srcset', TimberImage(post.get_field('home_hero_image')).id, 'medium' )}}"
+                                sizes="100vw" alt="">
         </div>
-        <div class="carousel-cell__copy">
-            <div class="carousel-cell__copy-inner">
-                <h1>Come LEARN at National LINC 2019</h1>
-                <p>World-class keynote speakers. Leading minds within our industry. Top experts on the subjects you care most about. It’s all in one place … at National LINC 2019 in San Diego.</p>
+    </div>
+    <div class="carousel-static">
+        <div class="carousel-static__inner">
+            <span class="home-hero__tag">Welcome to TD Ameritrade's 2019 advisor conference. </span>
+            <div class="home-hero__cta js-tingle-modal">
+                {% include 'partial/svg/play-btn.svg' %}
+                <span>Watch last year's video</span>
             </div>
         </div>
     </div>
+    <div class="home-carousel">
+        <div class="carousel-cell">
+            <div class="carousel-cell__copy">
+                <div class="carousel-cell__copy-inner">
+                    <h1>Come <span class="core">learn</span> at National LINC 2019</h1>
+                    <p>World-class keynote speakers. Leading minds within our industry. Top experts on the subjects you care most about. It’s all in one place … at National LINC 2019 in San Diego.</p>
+                </div>
+            </div>
+        </div>
 
-    <div class="carousel-cell">
-        <div class="carousel-cell__img">
-            <div class="carousel-cell__img-inner">
-                <img src="{{site.link}}/wp-content/themes/linc2019/assets/img/home-carouse-test-img.png" alt="">
+        <div class="carousel-cell">
+            <div class="carousel-cell__copy">
+                <div class="carousel-cell__copy-inner">
+                    <h1>Be <span class="core">inspired</span> to take your business further</h1>
+                    <p>From the moment you walk through the doors at National LINC 2019, your world will open up to new and exciting possibilities. </p>
+                </div>
             </div>
         </div>
-        <div class="carousel-cell__copy">
-            <div class="carousel-cell__copy-inner">
-                <h1>Be INSPIRED to take your business further</h1>
-                <p>From the moment you walk through the doors at National LINC 2019, your world will open up to new and exciting possibilities. </p>
-            </div>
-        </div>
-    </div>
 
-    <div class="carousel-cell">
-        <div class="carousel-cell__img">
-            <div class="carousel-cell__img-inner">
-                <img src="{{site.link}}/wp-content/themes/linc2019/assets/img/home-carouse-test-img.png" alt="">
+        <div class="carousel-cell">
+            <div class="carousel-cell__copy">
+                <div class="carousel-cell__copy-inner">
+                    <h1><span class="core">network</span> with the best of the best</h1>
+                    <p>Everyone you meet at National LINC 2019 has their own unique story. And you’ll have plenty of chances to meet them. Come share, learn, and grow together.</p>
+                </div>
             </div>
         </div>
-        <div class="carousel-cell__copy">
-            <div class="carousel-cell__copy-inner">
-                <h1>NETWORK with the best of the best</h1>
-                <p>Everyone you meet at National LINC 2019 has their own unique story. And you’ll have plenty of chances to meet them. Come share, learn, and grow together.</p>
-            </div>
-        </div>
-    </div>
 
-    <div class="carousel-cell">
-        <div class="carousel-cell__img">
-            <div class="carousel-cell__img-inner">
-                <img src="{{site.link}}/wp-content/themes/linc2019/assets/img/home-carouse-test-img.png" alt="">
-            </div>
-        </div>
-        <div class="carousel-cell__copy">
-            <div class="carousel-cell__copy-inner">
-                <h1>Discover innovation that CONNECTS</h1>
-                <p>Experience the latest technology, meet up with vendors, hear amazing stories, and uncover new and exciting ways to fuel your business growth.</p>
+        <div class="carousel-cell">
+            <div class="carousel-cell__copy">
+                <div class="carousel-cell__copy-inner">
+                    <h1>Discover innovation that <span class="core">connects</span></h1>
+                    <p>Experience the latest technology, meet up with vendors, hear amazing stories, and uncover new and exciting ways to fuel your business growth.</p>
+                </div>
             </div>
         </div>
     </div>
-
-
-
-
 </section>
 
 

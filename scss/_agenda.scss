@@ -6,15 +6,33 @@
         background: #FFFFFF;
         box-shadow: 0 -1px 0 0 #E8E8E8, 0 1px 0 0 #E8E8E8;
         display: flex;
-        z-index: 3;
+        z-index: 2;
 
         &-search {
-            width: 80%;
+            position: relative;
+            width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-end;
             padding: 0 16px;
+            @include media-query($medium-up) {
+                padding: 0 32px;
+            }
+
+            &-icon {
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+
+                svg {
+                    margin-left: 8px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
         }
 
         &-filter {
@@ -34,6 +52,7 @@
             position: fixed;
             top: 0;
             right: 0;
+            z-index: 4;
             @include media-query($large-up) {
                 top: 0;
                 width: calc(100% - 120px);
@@ -43,7 +62,6 @@
 
     &__wrapper {
         display: flex;
-        height: 2000px;
         @include media-query($large-up) {
             // flex-wrap: wrap;
         }
@@ -63,6 +81,16 @@
             @include media-query($large-up) {
                 width: calc( (100% - 120px) * 0.2 );
             }
+        }
+
+        .bottom & {
+            position: absolute;
+                top: inherit;
+                bottom: 0;
+                width: 20%;
+                @include media-query($large-up) {
+                    width: 20%;
+                }
         }
     }
 
@@ -120,7 +148,7 @@
 
     &__day-wrapper {
         position: relative;
-        padding: 40px 0;
+        // padding: 40px 0;
         margin-top: 1px;
     }
 }
@@ -252,8 +280,63 @@
     }
 }
 
-// .past {
-//     position: absolute;
-//         top: auto;
-//         bottom: 0;
-// }
+.agenda-filters {
+    position: fixed;
+        top: 0;
+        right: 0;
+    width: 90vw;
+    height: 100vh;
+    background: $white;
+    z-index: 20;
+    box-shadow: 0 2px 10px -3px rgba(0,0,0,0.20);
+    transform: translateX(100%);
+    transition: all 0.4s ease-in-out;
+    &.slide{
+        transform: none;
+    }
+    @include media-query($medium-up) {
+        position: absolute;
+            top: 100%;
+            right: initial;
+        width: auto;
+        height: auto;
+        transform: none;
+        opacity: 0;
+        &.show {
+            opacity: 1;
+        }
+    }
+
+
+    &__inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 32px;
+    }
+}
+
+.agenda-filter {
+    width: 100%;
+    @include media-query($medium-up) {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    input {
+        margin: 16px 8px 0 0;
+    }
+}
+
+.close-filters {
+    position: absolute;
+        top: 24px;
+        right: 24px;
+        z-index: 5;
+    @include media-query($medium-up) {
+        display: none;
+    }
+}

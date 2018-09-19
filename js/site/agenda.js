@@ -4,10 +4,10 @@ function fixedAgenda() {
 
     window.onscroll = () => {
         const agendaScroll = agenda.getBoundingClientRect().top;
+        const agendaBottom = agenda.getBoundingClientRect().bottom;
 
         if (window.innerWidth < 750) {
             const headerBottom = header.getBoundingClientRect().bottom;
-            console.log(agendaScroll);
             if (agendaScroll <= 80) {
                 agenda.classList.add('fixed');
                 header.classList.add('slide-up');
@@ -34,6 +34,7 @@ function fixedAgenda() {
 function fixDays() {
     const dayWrappers = document.querySelectorAll('.agenda__day-wrapper');
     const agendaDays = document.querySelectorAll('.agenda-day');
+    const agenda = document.querySelector('#agenda');
     const sweetSpot =
         document.querySelector('.agenda__header').getBoundingClientRect()
             .height +
@@ -113,5 +114,60 @@ function scrollAgenda() {
     });
 }
 
+function showFilters() {
+    const agendaHeader = document.querySelector('.agenda__header-search');
+    const filterIcons = agendaHeader.querySelectorAll('.show-filters');
+    const filterContainer = agendaHeader.querySelector('.agenda-filters');
+
+    filterIcons.forEach(filter => {
+        filter.addEventListener('click', () => {
+            if (window.innerWidth < 750) {
+                filterContainer.classList.toggle('slide');
+            } else {
+                filterContainer.classList.toggle('show');
+            }
+        });
+    });
+}
+
+function filters() {
+    const days = document.querySelectorAll('.agenda__day-wrapper');
+    const inputs = document.querySelectorAll('.agenda-filter input');
+    let isoArray = [];
+    days.forEach(day => {
+        const eventsWrapper = day.querySelector('.agenda__events');
+        let iso = new Isotope(day, {
+            itemSelector: '.event',
+            layoutMode: 'vertical',
+            stagger: 30,
+        });
+        isoArray.push(iso);
+    });
+
+    inputs.forEach(input => {
+        input.addEventListener('change', () => {
+            var filters = [];
+            var theFilters;
+            inputs.forEach(checkbox => {
+                if (checkbox.checked) {
+                    filters.push(checkbox.value);
+                }
+                theFilters = filters.join(', ');
+            });
+            isoArray.forEach(iso => {
+                console.log(iso);
+                iso.arrange({ filter: theFilters });
+                // if (iso.filteredItems.length == 0) {
+                //     iso.element.parentElement.style.display = 'none';
+                // } else {
+                //     iso.element.parentElement.style.display = 'block';
+                // }
+            });
+        });
+    });
+}
+
 fixedAgenda();
 scrollAgenda();
+showFilters();
+filters();
