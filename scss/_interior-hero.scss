@@ -48,8 +48,6 @@
     &__copy {
         width: 100%;
         @include media-query($large-up) {
-            display: flex;
-            justify-content: center;
             margin-top: 64px;
         }
 

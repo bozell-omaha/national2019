@@ -64,6 +64,10 @@
         &-name {
             width: 100%;
             margin-bottom: 0;
+            font-size: 32px;
+            @include media-query($medium-up) {
+                font-size: 40px;
+            }
         }
 
         &-title {
@@ -120,6 +124,17 @@
             &:hover {
                 cursor: pointer;
             }
+        }
+    }
+
+    &__cta {
+        position: absolute;
+        bottom: 56px;
+        width: 100%;
+        display: flex;
+        padding: 0 24px;
+        @include media-query($medium-up) {
+            padding: 0 104px;
         }
     }
 }

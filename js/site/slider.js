@@ -10,7 +10,7 @@ function init() {
         const slide = document.querySelector('.slide.active');
         const contentHeight = slide.querySelector('.slide__content')
             .offsetHeight;
-        const theHeight = contentHeight + width + 96;
+        const theHeight = contentHeight + width + 200;
         slider.style.height = theHeight + 'px';
     }
     //Hide all slide that aren't active

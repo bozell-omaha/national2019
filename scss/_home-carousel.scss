@@ -81,9 +81,14 @@
     svg {
         overflow: visible;
     }
+
+    .small & {
+        margin-bottom: 16px;
+    }
 }
 
 .home-hero__tag {
+    width: 100%;
     margin-top: 35%;
     color: #6C6C6C;
     font-weight: 300;

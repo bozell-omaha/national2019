@@ -6,7 +6,7 @@
 	</head>
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig">
+	<body class="{{body_class}} loading" data-template="base.twig">
 		<header id="header" class="header {% if fn('is_front_page') == false %}slim{% endif %}" >
 			{% block header %}
 				<div class="header__wrapper">
@@ -94,7 +94,25 @@
             <script src="{{ site.theme.link }}/js/compiled/speakers.min.js"></script>
         {% endif %}
 
-		<script>
+
+
+		{% if post.title == 'Home' %}
+			<script>
+			var carousel = document.querySelector('.home-carousel');
+			var flkty = new Flickity( carousel, {
+				prevNextButtons: true,
+				pageDots: true,
+				percentPosition: false,
+				arrowShape: {
+					x0: 10,
+					x1: 60,
+					y1: 50,
+					x2: 60,
+					y2: 45,
+					x3: 15
+				}
+			});
+
 			/**
 			*   Modal suprise
 			*/
@@ -108,37 +126,7 @@
 				modalSurprise.setContent('<iframe width="100%" height="400" src="https://www.youtube.com/embed/Vyi8x02GRuI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
 				modalSurprise.open();
 			});
-		</script>
 
-		{% if post.title == 'Home' %}
-			<script>
-			var carousel = document.querySelector('.home-carousel');
-				var flkty = new Flickity( carousel, {
-					prevNextButtons: true,
-					pageDots: true,
-					percentPosition: false,
-					arrowShape: {
-						x0: 10,
-						x1: 60,
-						y1: 50,
-						x2: 60,
-						y2: 45,
-						x3: 15
-					}
-				});
-				{# var imgs = document.querySelectorAll('.carousel-cell__img'); #}
-
-				{# flkty.on( 'scroll', function() {
-					flkty.slides.forEach( function( slide, i ) {
-						var img = imgs[i];
-						var x = ( slide.target + flkty.x ) * -1/3;
-						img.style.transform = 'translateX(' + x  + 'px)';
-					});
-				}); #}
-
-				{# flkty.on( 'settle', function( index ) {
-					console.log( index);
-				}); #}
 
 			</script>
 		{% endif %}

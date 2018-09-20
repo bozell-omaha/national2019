@@ -44,6 +44,17 @@
 		"oAP": "\/archive.php",
 		"oF": 0
 		},
+	"\/assets\/img\/1.jpg": {
+		"ft": 16384,
+		"iS": 636588,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/assets\/img\/1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/assets\/img\/home-carouse-test-img.png": {
 		"ft": 32768,
 		"iS": 1721997,
@@ -439,12 +450,32 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"\/js\/vendor\/charming.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/js\/compiled\/charming.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"\/js\/vendor\/flickity.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
 		"oAP": "\/js\/compiled\/flickity.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"\/js\/vendor\/imagesLoaded.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/js\/compiled\/imagesLoaded.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -459,12 +490,12 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"\/js\/vendor\/smoothscroll.js": {
+	"\/js\/vendor\/masonry.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "\/js\/compiled\/smoothscroll.min.js",
+		"oAP": "\/js\/compiled\/masonry.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -497,16 +528,6 @@
 		"oAP": "\/js\/compiled\/vendors.min.js",
 		"oF": 2,
 		"sC": 0,
-		"tS": 0
-		},
-	"\/js\/vendor\/vendors.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/compiled\/vendors.min.min.js",
-		"oF": 0,
-		"sC": 3,
 		"tS": 0
 		},
 	"\/LICENSE": {

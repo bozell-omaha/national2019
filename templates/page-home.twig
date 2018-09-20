@@ -52,11 +52,11 @@
                                 <div class="slide__content">
                                     <h1 class="slide__content-name">{{speaker.name}}</h1>
                                     <p class="slide__content-title">{{speaker.position}}</p>
-                                    <p class="slide__content-about">{{speaker.bio|slice(0,250) ~ '...'}}</p>
-                                    <a href="{{speaker.link}}" class="cta slide__content-cta">
+                                    <p class="slide__content-about">{{speaker.home_page_blurp}}</p>
+                                    {# <a href="{{speaker.link}}" class="cta slide__content-cta">
                                         <span>Read more</span>
                                         {% include 'partial/svg/right-arrow.svg' %}
-                                    </a>
+                                    </a> #}
                                 </div>
                             </div>
                         {% endif %}
@@ -74,6 +74,13 @@
                             {% include 'partial/svg/right-arrow.svg' %}
                         </div>
                     </div>
+                </div>
+
+                <div class="slide__cta">
+                    <a href="{{site.link}}/speakers" class="cta slide__content-cta">
+                        <span>View All</span>
+                        {% include 'partial/svg/right-arrow.svg' %}
+                    </a>
                 </div>
             </div>
         </div>
