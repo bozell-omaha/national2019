@@ -77,32 +77,43 @@
 
 
 <section class="speaker-wrap">
+    {# <div class="speaker-grid">
+        <a href="" class="speaker">
+            <div class="speaker__bg"></div>
+            <div class="speaker__wrap">
+                <img src="{{site.link}}/wp-content/themes/linc2019/assets/img/1.jpg" alt="" class="speaker__img">
+            </div>
+            <h3 class="speaker__name">Tom Nally</h3>
+        </a><!-- speaker -->
+        <a href="" class="speaker">
+            <div class="speaker__bg"></div>
+            <div class="speaker__wrap">
+                <img src="{{site.link}}/wp-content/themes/linc2019/assets/img/1.jpg" alt="" class="speaker__img">
+            </div>
+            <h3 class="speaker__name">Tom Nally</h3>
+        </a><!-- speaker -->
+        <a href="" class="speaker">
+            <div class="speaker__bg"></div>
+            <div class="speaker__wrap">
+                <img src="{{site.link}}/wp-content/themes/linc2019/assets/img/1.jpg" alt="" class="speaker__img">
+            </div>
+            <h3 class="speaker__name">Tom Nally</h3>
+        </a><!-- speaker -->
+    </div> #}
     <div class="speaker-grid">
-        <a href="" class="speaker">
-            <div class="speaker__bg"></div>
-            <div class="speaker__wrap">
-                <img src="{{site.link}}/wp-content/themes/linc2019/assets/img/1.jpg" alt="" class="speaker__img">
-            </div>
-            <h3 class="speaker__name">Tom Nally</h3>
-        </a><!-- speaker -->
-        <a href="" class="speaker">
-            <div class="speaker__bg"></div>
-            <div class="speaker__wrap">
-                <img src="{{site.link}}/wp-content/themes/linc2019/assets/img/1.jpg" alt="" class="speaker__img">
-            </div>
-            <h3 class="speaker__name">Tom Nally</h3>
-        </a><!-- speaker -->
-        <a href="" class="speaker">
-            <div class="speaker__bg"></div>
-            <div class="speaker__wrap">
-                <img src="{{site.link}}/wp-content/themes/linc2019/assets/img/1.jpg" alt="" class="speaker__img">
-            </div>
-            <h3 class="speaker__name">Tom Nally</h3>
-        </a><!-- speaker -->
+    {% for speaker in speakers %}
+            <a href="{{speaker.link}}" class="speaker">
+                <div class="speaker__bg"></div>
+                <div class="speaker__wrap">
+                    <img src="{{TimberImage(speaker.image).src}}" alt="" class="speaker__img">
+                </div>
+                <h3 class="speaker__name">{{speaker.name}}</h3>
+            </a><!-- speaker -->
+    {% endfor %}
     </div>
 </section>
 
-<section class="content">
+{# <section class="content">
     <div class="content-item">
         <div class="content-item__intro">
             <img src="{{site.link}}/wp-content/themes/linc2019/assets/img/1.jpg" alt="" class="content-item__img">
@@ -137,4 +148,4 @@
         </div>
     </div><!-- content-item -->
     <button class="content__close">Close</button>
-</section>
+</section> #}

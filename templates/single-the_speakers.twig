@@ -1,9 +1,16 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="content-wrapper">
-		<h1>{{ post.title }}</h1>
-        <h1>TESTING THIS OUT</h1>
-		<img src="{{TimberImage(post.image)}}" alt="">
-	</div><!-- /content-wrapper -->
+	<section class="clone">
+		<div class="clone-item">
+			<div class="clone-item__intro">
+				<img src="{{TimberImage(post.get_field('image')).src}}" alt="" class="clone-item__img">
+				<h2 class="clone-item__title">{{post.get_field('name')}}</h2>
+				<p class="clone-item__pos">{{post.get_field('position')}}</p>
+			</div>
+			<div class="clone-item__text">
+				{{post.get_field('bio')}}
+			</div>
+		</div><!-- content-item -->
+	</section>
 {% endblock %}

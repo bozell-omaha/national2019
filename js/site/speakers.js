@@ -6,8 +6,9 @@ const docEl = document.documentElement;
 const grid = document.querySelector('.speaker-grid');
 const speakers = [...grid.querySelectorAll('.speaker')];
 const contents = [...document.querySelectorAll('.content > .content-item')];
+const closeTheSpeaker = document.querySelector('.close__close');
+let scrollPos;
 
-console.log(content);
 //Window Size
 let winsize;
 const calcWinsize = () =>
@@ -131,14 +132,16 @@ imagesLoaded(document.querySelectorAll('.speaker-img'), () => {
     });
 });
 
-speakers.forEach(speaker => {
-    speaker.addEventListener('click', event => {
-        event.preventDefault();
-        openSpeaker(speaker);
-    });
-});
+// speakers.forEach(speaker => {
+//     speaker.addEventListener('click', event => {
+//         event.preventDefault();
+//         openSpeaker(speaker);
+//     });
+// });
 
 const openSpeaker = speaker => {
+    if (speaker.isAnimating) return;
+    speaker.isAnimating = true;
     //grab elements we'll need
     const speakerBG = speaker.querySelector('.speaker__bg');
     const speakerImgWrap = speaker.querySelector('.speaker__wrap');
@@ -147,7 +150,7 @@ const openSpeaker = speaker => {
     const gridWrap = document.querySelector('.speaker-grid');
     speaker.classList.add('exclude');
     // Get the current scroll position.
-    const scrollPos = window.scrollY;
+    scrollPos = window.scrollY;
     // Disable Scroll
     disableScroll();
     //set the current value
@@ -217,9 +220,21 @@ const openSpeaker = speaker => {
             window.scrollTo(0, 0);
             // Enable page scrolling.
             enableScroll();
+            speaker.isAnimating = false;
         },
     });
 };
+
+// const closeSpeaker = speaker => {
+//     if (this.isAnimating) return;
+//     this.isAnimating = true;
+//     // Get the content element respective to this grid item.
+//     const current = speakers.indexOf(speaker);
+//     const contentEl = contents[current];
+//     // Scroll to the previous scroll position before opening the item.
+//     window.scrollTo(0, this.scrollPos);
+//     // contentEl.DOM.el.parentNode.style.position = 'fixed';
+// };
 
 // function initSpeakers() {
 //     const sections = document.querySelectorAll('.speakers');

@@ -23,10 +23,6 @@
         <div class="overlap__img overlap__img--venue" style="background-image: url('{{ TimberImage(post.get_field('hotel_image')).src }}')"></div>
         <div class="overlap__copy overlap__copy--venue">
             {{post.get_field('hotel_content')}}
-            <a href="" class="cta overlap__cta">
-                <span>View agenda</span>
-                {% include 'partial/svg/right-arrow.svg' %}
-            </a>
         </div>
     </div>
 </section>

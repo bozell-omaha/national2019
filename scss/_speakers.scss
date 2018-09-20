@@ -319,6 +319,7 @@
 
         span {
             display: inline-block;
+            white-space: pre;
         }
     }
 
@@ -328,6 +329,7 @@
         margin: 0 auto;
         column-count: 2;
         column-gap: 32px;
+        margin-top: 5rem;
 
         p {
             margin: 0 0 24px;
@@ -338,6 +340,77 @@
     &__title {
         .js & {
             opacity: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+/*
+CLONE
+*/
+
+.clone{
+    margin: 0 auto;
+    pointer-events: none;
+}
+
+.clone-item {
+    width: 100%;
+    height: 100%;
+    padding: 10rem 5vw 10rem;
+
+    &__intro {
+        position: relative;
+    }
+
+    &__img {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        height: calc(100vh - 6rem);
+    }
+
+    &__title {
+        width: 100%;
+        text-align: center;
+        color: $coreGreen;
+        font-size: 5rem;
+        line-height: 1;
+        margin: 0;
+        padding: 0 5vw;
+        white-space: nowrap;
+
+        span {
+            display: inline-block;
+            white-space: pre;
+        }
+    }
+
+    &__pos {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 4rem;
+        margin: 0;
+        padding: 0 5vw;
+        white-space: nowrap;
+    }
+
+    &__text {
+        text-align: justify;
+        max-width: 800px;
+        margin: 0 auto;
+        column-count: 2;
+        column-gap: 32px;
+        margin-top: 5rem;
+
+        p {
+            margin: 0 0 24px;
         }
     }
 }
