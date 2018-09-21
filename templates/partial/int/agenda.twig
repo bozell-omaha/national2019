@@ -33,9 +33,9 @@
         <div class="agenda__left">
             <div class="agenda__days">
                 {% for day in agenda.Items %}
-                    <div class="agenda-day" data-day="{{day.Date|date("j")}}">
+                    <div class="agenda-day" data-day="{{day.Date|date("j")-1}}">
                         <span class="agenda-day__month">{{day.Date|date("M")}}</span>
-                        <span class="agenda-day__number">{{day.Date|date("j")}}</span>
+                        <span class="agenda-day__number">{{day.Date|date("j")-1}}</span>
                     </div>
                 {% endfor %}
             </div>
@@ -43,9 +43,9 @@
         <div class="agenda__right">
 
         {% for day in agenda.Items %}
-            <div class="agenda__day-wrapper" data-day="{{day.Date|date("j")}}">
+            <div class="agenda__day-wrapper" data-day="{{day.Date|date("j")-1}}">
                 <div class="agenda__events-header">
-                    <span>{{day.Date|date("l, F j, Y")}}</span>
+                    <span>{{day.Date|date("l, F")}} {{day.Date|date("j")-1}} {{day.Date|date("Y")}}</span>
                 </div>
                 <div class="agenda__events">
                     {% for session in day.Sessions %}
