@@ -6,8 +6,11 @@ const docEl = document.documentElement;
 const grid = document.querySelector('.speaker-grid');
 const speakers = [...grid.querySelectorAll('.speaker')];
 const contents = [...document.querySelectorAll('.content > .content-item')];
-const closeTheSpeaker = document.querySelector('.close__close');
+const closeTheSpeaker = document.querySelector('.content__close');
+const contentWrapper = document.querySelector('#content');
+const contentPattern = document.querySelector('.content > .content__pattern');
 let scrollPos;
+let activeSpeaker;
 
 //Window Size
 let winsize;
@@ -69,8 +72,22 @@ const hideOthers = () => {
     });
 };
 
-const hideTexts = name => {
-    TweenMax.to(name, 0.5, {
+const showOthers = () => {
+    const allSpeakers = document.querySelectorAll('.speaker:not(.exclude)');
+    TweenMax.staggerTo(allSpeakers, 0.8, {
+        scale: 1,
+        opacity: 1,
+        ease: Expo.easeInOut,
+        onComplete: () => {
+            allSpeakers.forEach(speaker => {
+                speaker.style.transform = 'none';
+            });
+        },
+    });
+};
+
+const hideTexts = (name, keynote) => {
+    TweenMax.to([name, keynote], 0.5, {
         ease: Quart.easeIn,
         delay: 0,
         y: 20,
@@ -78,18 +95,27 @@ const hideTexts = name => {
     });
 };
 
+const showTexts = (name, keynote) => {
+    TweenMax.to([name, keynote], 1, {
+        ease: Expo.easeOut,
+        delay: 1,
+        y: 0,
+        opacity: 1,
+    });
+};
+
 const showContentElems = (contentEl, delay) => {
     // toggle the back control and scroll indicator.
-    console.log(contentEl);
     const title = contentEl.querySelector('.content-item__title');
     const text = contentEl.querySelector('.content-item__text');
     const close = document.querySelector('.content > .content__close');
-    charming(title);
+    if (!title.classList.contains('charmed')) {
+        charming(title);
+        title.classList.add('charmed');
+    }
     // And access the spans/letters.
     const titleLetters = title.querySelectorAll('span');
-    const titleLettersTotal = titleLetters.length;
-    title.style.opacity = '1';
-    TweenMax.to([close, text], 0.8, {
+    TweenMax.to([close, text, contentPattern], 0.8, {
         ease: Expo.easeOut,
         delay: delay,
         startAt: { y: 60 },
@@ -97,13 +123,47 @@ const showContentElems = (contentEl, delay) => {
         opacity: 1,
     });
 
-    TweenMax.staggerFromTo(
-        titleLetters,
-        0.6,
-        { opacity: 0, y: 32 },
-        { opacity: 1, y: 0, ease: Back.easeOut, delay: 1 },
-        0.05
-    );
+    setTimeout(() => {
+        titleLetters.forEach((letter, pos) => {
+            const delay = pos * 0.05;
+            TweenMax.to(letter, 0.6, {
+                ease: Back.easeOut,
+                delay: delay,
+                startAt: { yPercent: '50%', opacity: 0 },
+                yPercent: '0',
+                opacity: 1,
+            });
+        });
+    }, 1000);
+};
+
+const hideContentElems = (contentEl, delay) => {
+    // toggle the back control and scroll indicator.
+    const title = contentEl.querySelector('.content-item__title');
+    const text = contentEl.querySelector('.content-item__text');
+    const position = contentEl.querySelector('.content-item__position');
+    const close = document.querySelector('.content > .content__close');
+    // charming(title);
+    // And access the spans/letters.
+    const titleLetters = title.querySelectorAll('span');
+    const titleLettersTotal = titleLetters.length;
+    TweenMax.to([close, text, contentPattern, position], 0.8, {
+        ease: Expo.easeIn,
+        delay: 0,
+        startAt: null,
+        y: 60,
+        opacity: 0,
+    });
+
+    titleLetters.forEach((letter, pos) => {
+        TweenMax.to(letter, 0.3, {
+            ease: Quart.easeIn,
+            delay: (titleLettersTotal - pos - 1) * 0.04,
+            yPercent: '50%',
+            startAt: null,
+            opacity: 0,
+        });
+    });
 };
 
 const getSizePosition = (el, scrolls = true) => {
@@ -132,21 +192,41 @@ imagesLoaded(document.querySelectorAll('.speaker-img'), () => {
     });
 });
 
-// speakers.forEach(speaker => {
-//     speaker.addEventListener('click', event => {
-//         event.preventDefault();
-//         openSpeaker(speaker);
-//     });
-// });
+speakers.forEach(speaker => {
+    const name = speaker.querySelector('.speaker__name');
+    charming(name);
+    const nameLetters = name.querySelectorAll('span');
+    speaker.addEventListener('mouseenter', () => {
+        animationHover(speaker, 'mouseenter', nameLetters);
+    });
+
+    speaker.addEventListener('mouseleave', () => {
+        animationHover(speaker, 'mouseleave', nameLetters);
+    });
+
+    speaker.addEventListener('click', event => {
+        event.preventDefault();
+        openSpeaker(speaker);
+    });
+});
+
+closeTheSpeaker.addEventListener('click', event => {
+    event.preventDefault();
+    // Get the content element respective to this grid item.
+    const currentContent = document.querySelector('.content-item--current');
+    closeItem(currentContent);
+});
 
 const openSpeaker = speaker => {
     if (speaker.isAnimating) return;
     speaker.isAnimating = true;
+    console.log(speaker);
     //grab elements we'll need
     const speakerBG = speaker.querySelector('.speaker__bg');
     const speakerImgWrap = speaker.querySelector('.speaker__wrap');
     const speakerImg = speaker.querySelector('.speaker__img');
     const speakerName = speaker.querySelector('.speaker__name');
+    const speakerKeynote = speaker.querySelector('.speaker__keynote');
     const gridWrap = document.querySelector('.speaker-grid');
     speaker.classList.add('exclude');
     // Get the current scroll position.
@@ -155,12 +235,14 @@ const openSpeaker = speaker => {
     disableScroll();
     //set the current value
     const current = speakers.indexOf(speaker);
+    activeSpeaker = current;
     //Hide all the other Speakers
     hideOthers();
-    hideTexts(speakerName);
+    hideTexts(speakerName, speakerKeynote);
     // Get the "grid__item-bg" width and height and set it explicitly,
     // also set its top and left respective to the page.
     const itemDim = getSizePosition(speaker);
+    console.log(itemDim);
     speakerBG.style.width = `${itemDim.width}px`;
     speakerBG.style.height = `${itemDim.height}px`;
     speakerBG.style.left = `${itemDim.left}px`;
@@ -178,7 +260,7 @@ const openSpeaker = speaker => {
         y: winsize.height / 2 - (itemDim.top + itemDim.height / 2),
         scaleX: d / itemDim.width,
         scaleY: d / itemDim.height,
-        rotation: -1 * speaker.angle * 2,
+        // rotation: -1 * speaker.angle * 2,
     });
     // Get the content element respective to this grid item.
     const contentEl = contents[current];
@@ -213,6 +295,7 @@ const openSpeaker = speaker => {
             contentEl.querySelector('.content-item__img').style.visibility =
                 'visible';
             // Set the main content wrapper to absolute so it´s position at the top.
+            contentWrapper.style.position = 'initial';
             contentEl.parentNode.style.position = 'absolute';
             // Hiding the grid scroll.
             gridWrap.classList.add('grid-wrap--hidden');
@@ -225,16 +308,101 @@ const openSpeaker = speaker => {
     });
 };
 
-// const closeSpeaker = speaker => {
-//     if (this.isAnimating) return;
-//     this.isAnimating = true;
-//     // Get the content element respective to this grid item.
-//     const current = speakers.indexOf(speaker);
-//     const contentEl = contents[current];
-//     // Scroll to the previous scroll position before opening the item.
-//     window.scrollTo(0, this.scrollPos);
-//     // contentEl.DOM.el.parentNode.style.position = 'fixed';
-// };
+const closeItem = item => {
+    if (item.isAnimating) return;
+    item.isAnimating = true;
+    const gridWrap = document.querySelector('.speaker-grid');
+    // Get the content element respective to this grid item.
+    const contentEl = contents[activeSpeaker];
+    const contentImg = contentEl.querySelector('.content-item__img');
+    // Scroll to the previous scroll position before opening the item.
+    window.scrollTo(0, scrollPos);
+    contentEl.parentNode.style.position = 'fixed';
+    // Disable page scrolling.
+    disableScroll();
+    // Showing the grid scroll.
+    gridWrap.classList.remove('grid-wrap--hidden');
+    // The item that is open.
+    const gridItem = speakers[activeSpeaker];
+    const gridItemImg = gridItem.querySelector('.speaker__img');
+    const gridItemBg = gridItem.querySelector('.speaker__bg');
+    const gridItemName = gridItem.querySelector('.speaker__name');
+    const gridItemKeynote = gridItem.querySelector('.speaker__keynote');
+    // Hide the back control and scroll indicator and all the item´s content elements.
+    hideContentElems(contentEl, 0);
+    // Set the grid´s image back to visible and hide the content´s one.
+    gridItemImg.style.opacity = 1;
+    contentImg.style.visibility = 'hidden';
+    // Animate the grid´s image back to the grid position.
+    TweenMax.to(gridItemImg, 1.2, {
+        ease: Expo.easeInOut,
+        scaleX: 1,
+        scaleY: 1,
+        x: 0,
+        y: 0,
+        rotation: gridItem.angle * 2,
+    });
+    // And also the bg element.
+    TweenMax.to(gridItemBg, 1.2, {
+        ease: Expo.easeInOut,
+        delay: 0.15,
+        x: 0,
+        y: 0,
+        scaleX: 1,
+        scaleY: 1,
+        rotation: 0,
+        onComplete: () => {
+            contentEl.classList.remove('content-item--current');
+            gridItem.classList.remove('exclude');
+            contentWrapper.style.position = 'relative';
+            gridItemBg.style.position = 'absolute';
+            gridItemBg.style.left = '0px';
+            gridItemBg.style.top = '0px';
+            activeSpeaker = -1;
+            // allowTilt = true;
+            gridItem.style.zIndex = 0;
+            enableScroll();
+            item.isAnimating = false;
+        },
+    });
+    // Show all the grid items except the one we want to close.
+    showOthers();
+    // Also show the item texts. (1s delay)
+    showTexts(gridItemName, gridItemKeynote);
+};
+
+const animationHover = (speaker, type, nameLetters) => {
+    if (window.innerWidth > 990) {
+        const bg = speaker.querySelector('.speaker__bg');
+        // Scale up the bg element.
+        TweenMax.to(bg, 1, {
+            ease: Expo.easeOut,
+            scale: type === 'mouseenter' ? 1.15 : 1,
+        });
+        nameLetters.forEach((letter, pos) => {
+            TweenMax.to(letter, 0.2, {
+                ease: Quad.easeIn,
+                delay: pos * 0.1,
+                yPercent: type === 'mouseenter' ? '-50%' : '50%',
+                opacity: 0,
+                onComplete: () => {
+                    TweenMax.to(letter, type === 'mouseenter' ? 0.6 : 1, {
+                        ease:
+                            type === 'mouseenter'
+                                ? Expo.easeOut
+                                : Elastic.easeOut.config(1, 0.4),
+                        startAt: {
+                            yPercent: type === 'mouseenter' ? '70%' : '-70%',
+                            opacity: 0,
+                        },
+                        yPercent: '0%',
+                        opacity: 1,
+                    });
+                },
+            });
+        });
+    }
+};
 
 // function initSpeakers() {
 //     const sections = document.querySelectorAll('.speakers');

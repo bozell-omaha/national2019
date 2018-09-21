@@ -148,7 +148,7 @@
 
     &__day-wrapper {
         position: relative;
-        // padding: 40px 0;
+        padding: 40px 0 0;
         margin-top: 1px;
     }
 }
@@ -164,7 +164,7 @@
     color: $pine;
     padding: 16px;
     margin-top: 1px;
-    height: 25%;
+    height: 33.33%;
     transition: all 0.4s ease-in-out;
     &:hover {
         cursor: pointer;

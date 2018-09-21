@@ -218,13 +218,6 @@
 		"oAP": "\/footer.php",
 		"oF": 0
 		},
-	"\/functions.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/functions.php",
-		"oF": 0
-		},
 	"\/header.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -244,13 +237,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/index.php",
-		"oF": 0
-		},
-	"\/interior.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/interior.php",
 		"oF": 0
 		},
 	"\/js\/compiled\/agenda.min.js": {
@@ -558,13 +544,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/page-home.php",
-		"oF": 0
-		},
-	"\/page.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/page.php",
 		"oF": 0
 		},
 	"\/phpunit.xml": {
@@ -1154,13 +1133,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/templates\/partial\/hours.twig",
-		"oF": 0
-		},
-	"\/templates\/partial\/int\/agenda.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/templates\/partial\/int\/agenda.twig",
 		"oF": 0
 		},
 	"\/templates\/partial\/int\/bcl.twig": {

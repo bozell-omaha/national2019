@@ -224,7 +224,7 @@
         outline: 1px solid transparent;
     }
 
-    &__name {
+    &__keynote {
         font-weight: normal;
         position: absolute;
             left: 0;
@@ -234,6 +234,18 @@
         transform-origin: 0 50%;
         transform: rotate(180deg);
         margin-left: -0.25rem;
+    }
+
+    &__name {
+        position: absolute;
+            right: -2.45rem;
+            bottom: -0.8rem;
+        font-size: 2rem;
+        margin: 0;
+        span {
+            display: inline-block;
+            white-space: pre;
+        }
     }
 }
 
@@ -247,6 +259,13 @@
             left: 0;
         width: 100%;
         z-index: 1000;
+    }
+
+    &__pattern {
+        position: fixed;
+        width: 80%;
+        height: 70vh;
+        opacity: 0;
     }
 
     &__close {
@@ -297,7 +316,12 @@
         position: relative;
         display: block;
         margin: 0 auto;
-        height: calc(100vh - 6rem);
+        width: 100%;
+        height: auto;
+        @include media-query($medium-up) {
+            height: calc(100vh - 6rem);
+            width: auto;
+        }
 
         .js & {
             visibility: hidden;
@@ -305,21 +329,35 @@
     }
 
     &__title {
-        position: absolute;
-            bottom: 3rem;
-            left: 0;
         width: 100%;
         text-align: center;
         color: $coreGreen;
-        font-size: 5rem;
+        font-size: 7vw;
         line-height: 1;
-        margin: 0;
+        margin: 2rem 0 0;
         padding: 0 5vw;
         white-space: nowrap;
+        @include media-query($medium-up) {
+            position: absolute;
+                bottom: 3rem;
+                left: 0;
+            margin: 0;
+        }
 
         span {
             display: inline-block;
             white-space: pre;
+
+            .js & {
+                opacity: 0;
+            }
+        }
+    }
+
+    &__position {
+        text-align: center;
+        @include media-query($large-up) {
+            font-size: 2vw;
         }
     }
 
@@ -327,21 +365,24 @@
         text-align: justify;
         max-width: 800px;
         margin: 0 auto;
-        column-count: 2;
-        column-gap: 32px;
         margin-top: 5rem;
+        @include media-query($medium-up) {
+            column-count: 2;
+            column-gap: 32px;
+        }
 
         p {
             margin: 0 0 24px;
         }
-    }
 
-    &__text,
-    &__title {
         .js & {
             opacity: 0;
         }
     }
+}
+
+.content-item--current ~ .content__close {
+    pointer-events: auto;
 }
 
 

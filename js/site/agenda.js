@@ -1,6 +1,11 @@
 function fixedAgenda() {
     const agenda = document.querySelector('#agenda');
     const header = document.querySelector('#header');
+    const agendaHeight = agenda.getBoundingClientRect().height;
+    const daysHeight = agenda
+        .querySelector('.agenda__days')
+        .getBoundingClientRect().height;
+    const theHeight = (agendaHeight - daysHeight) * -1;
 
     window.onscroll = () => {
         const agendaScroll = agenda.getBoundingClientRect().top;
@@ -20,15 +25,29 @@ function fixedAgenda() {
 
         if (agendaScroll <= -1) {
             agenda.classList.add('fixed');
+            agenda.classList.remove('bottom');
             fixDays();
-        } else if (agenda.classList.contains('fixed') && agendaScroll >= 1) {
-            const agendaEvents = agenda.querySelector(
-                '.agenda__day-wrapper.active'
-            );
+        } else {
             agenda.classList.remove('fixed');
-            agendaEvents.classList.remove('active');
+            removeActive();
+        }
+
+        if (agendaScroll <= theHeight) {
+            agenda.classList.add('bottom');
+            agenda.classList.remove('fixed');
+            removeActive();
         }
     };
+}
+
+function removeActive() {
+    const agenda = document.querySelector('#agenda');
+    const actives = agenda.querySelectorAll('.active');
+    if (actives.length > 0) {
+        actives.forEach(item => {
+            item.classList.remove('active');
+        });
+    }
 }
 
 function fixDays() {

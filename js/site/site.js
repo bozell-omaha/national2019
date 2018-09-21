@@ -107,9 +107,6 @@ function scrollSideNav() {
             }
             header.classList.add('slim');
         }
-        // else {
-        //     header.classList.remove('slim');
-        // }
     };
 }
 

@@ -19,7 +19,7 @@ function init() {
             TweenLite.set(slide, { autoAlpha: 0 });
         }
     });
-    // Disable arrow down on page load
+    // Disable arrow on page load
     TweenLite.set(prevSlide, { autoAlpha: 0.2 });
 }
 
