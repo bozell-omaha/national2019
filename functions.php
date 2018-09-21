@@ -26,6 +26,9 @@ class StarterSite extends TimberSite {
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
+		
+		
+		
 		parent::__construct();
 	}
 
@@ -51,6 +54,13 @@ class StarterSite extends TimberSite {
 		$context['large_menu'] = new TimberMenu('large-menu');
 		$context['slide_menu'] = new TimberMenu('slide-menu');
 		$context['site'] = $this;
+
+		$context['agenda'] = TimberHelper::transient( 'agenda', function(){
+			$url = urldecode('http://national.tda.bozellhosting.com/agendaapi/GetHubbAgenda?EventCode=20190206A');
+			$agenda = json_decode(file_get_contents($url));
+			return $agenda;
+		}, 600 );
+
 		return $context;
 	}
 
