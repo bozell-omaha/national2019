@@ -2,6 +2,7 @@
 
 <section id="agenda" class="agenda">
     <div class="agenda__header">
+    {% if agenda.Keywords %}
         <div class="agenda__header-search">
             <span class="agenda__header-search-icon show-filters">Filters {% include 'partial/svg/arrow-down.svg' %}</span>
             <div class="agenda-filters">
@@ -28,6 +29,7 @@
                 </div>
             </div>
         </div>
+        {% endif %}
     </div>
     <div class="agenda__wrapper">
         <div class="agenda__left">
