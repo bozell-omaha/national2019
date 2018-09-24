@@ -1,5 +1,3 @@
-// @codekit-prepend "imagesLoaded.js"
-// @codekit-prepend "masonry.js"
 // @codekit-prepend "charming.js"
 // @codekit-prepend "isotope.min.js"
 // @codekit-prepend "flickity.min.js"

@@ -6,7 +6,7 @@
             <div class="pattern interior-hero__pattern"></div>
             <div class="interior-hero__wrapper">
                 <div class="interior-hero__img" style="background-image: url('{{ TimberImage(post.get_field('hero_image')) }}')">
-                    <h1 class="interior-hero__title">{{post.title}}</h1>
+                    <h1 class="interior-hero__title">{{post.title|capitalize}}</h1>
                 </div>
                 <div class="interior-hero__copy">
                     <div class="interior-hero__copy-wrapper">
@@ -16,23 +16,23 @@
             </div>
         </section>
 
-        {% if post.title == 'Business Consulting Lounge' %}
+        {% if post.slug == 'business-consulting-lounge' %}
             {% include 'partial/int/bcl.twig' %}
         {% endif %}
 
-        {% if post.title == 'LINCx' %}
+        {% if post.slug == 'lincx' %}
             {% include 'partial/int/lincx.twig' %}
         {% endif %}
 
-        {% if post.title == 'Innovation Alley' %}
+        {% if post.slug == 'innovation-alley' %}
             {% include 'partial/int/innovation.twig' %}
         {% endif %}
 
-        {% if post.title == 'Veo Village' %}
+        {% if post.slug == 'veo-village' %}
             {% include 'partial/int/veo.twig' %}
         {% endif %}
 
-        {% if post.title == 'First-time Attendees' %}
+        {% if post.slug == 'first-time-attendee' %}
             {% include 'partial/int/first.twig' %}
         {% endif %}
 
@@ -40,11 +40,11 @@
             {% include 'partial/int/meet.twig' %}
         {% endif %}
 
-        {% if post.title == 'Speakers' %}
+        {% if post.slug == 'speakers' %}
             {% include 'partial/int/speakers.twig' %}
         {% endif %}
 
-        {% if post.title == 'Agenda' %}
+        {% if post.slug == 'agenda' %}
             {% include 'partial/int/agenda.twig' %}
         {% endif %}
 

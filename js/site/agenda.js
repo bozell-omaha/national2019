@@ -9,10 +9,8 @@ function fixedAgenda() {
 
     window.onscroll = () => {
         const agendaScroll = agenda.getBoundingClientRect().top;
-        const agendaBottom = agenda.getBoundingClientRect().bottom;
 
         if (window.innerWidth < 750) {
-            const headerBottom = header.getBoundingClientRect().bottom;
             if (agendaScroll <= 80) {
                 agenda.classList.add('fixed');
                 header.classList.add('slide-up');
@@ -53,7 +51,6 @@ function removeActive() {
 function fixDays() {
     const dayWrappers = document.querySelectorAll('.agenda__day-wrapper');
     const agendaDays = document.querySelectorAll('.agenda-day');
-    const agenda = document.querySelector('#agenda');
     const sweetSpot =
         document.querySelector('.agenda__header').getBoundingClientRect()
             .height +
@@ -103,7 +100,6 @@ function scrollAgenda() {
                     });
                 }
             }
-
             scrollAgenda(theDay).then(() => {
                 dayWrappers.forEach(wrapper => {
                     const wrapperDay = wrapper.getAttribute('data-day');
@@ -176,11 +172,6 @@ function filters() {
             isoArray.forEach(iso => {
                 console.log(iso);
                 iso.arrange({ filter: theFilters });
-                // if (iso.filteredItems.length == 0) {
-                //     iso.element.parentElement.style.display = 'none';
-                // } else {
-                //     iso.element.parentElement.style.display = 'block';
-                // }
             });
         });
     });

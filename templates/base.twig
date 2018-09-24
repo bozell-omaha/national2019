@@ -57,9 +57,9 @@
 		{% include 'partial/slide-menu.twig' %}
 		{% include 'partial/mobile-nav.twig' %}
 
-		<section id="content" role="main" class="content-wrapper">
+		<section id="barba-wrapper" role="main" class="content-wrapper">
 			{% include 'partial/the-flag.twig' %}
-			<div class="wrapper {{sidebar_class}}">
+			<div class="wrapper {{sidebar_class}} barba-container" data-namespace="{{post.slug}}">
 				{% block content %}
 					Sorry, no content
 				{% endblock %}
@@ -75,62 +75,8 @@
 
 		<script src="{{ site.theme.link }}/js/compiled/vendors.min.js"></script>
 		<script src="{{ site.theme.link }}/js/compiled/site.min.js"></script>
-
-		<script src="{{ site.theme.link }}/js/compiled/homeHacks.min.js"></script>
-
-		{% if post.title == 'Home' %}
-            <script src="{{ site.theme.link }}/js/compiled/slider.min.js"></script>
-        {% endif %}
-
-		{% if post.title == 'Business Consulting Lounge' %}
-            <script src="{{ site.theme.link }}/js/compiled/topics.min.js"></script>
-        {% endif %}
-
-		{% if post.title == 'Agenda' %}
-            <script src="{{ site.theme.link }}/js/compiled/agenda.min.js"></script>
-        {% endif %}
-
-		{% if post.title == 'Speakers' %}
-            <script src="{{ site.theme.link }}/js/compiled/speakers.min.js"></script>
-        {% endif %}
-
-
-
-		{% if post.title == 'Home' %}
-			<script>
-			var carousel = document.querySelector('.home-carousel');
-			var flkty = new Flickity( carousel, {
-				prevNextButtons: true,
-				pageDots: true,
-				percentPosition: false,
-				arrowShape: {
-					x0: 10,
-					x1: 60,
-					y1: 50,
-					x2: 60,
-					y2: 45,
-					x3: 15
-				}
-			});
-
-			/**
-			*   Modal suprise
-			*/
-			var modalBtn = document.querySelector('.js-tingle-modal');
-			modalBtn.addEventListener('click', function(){
-				var modalSurprise = new tingle.modal({
-					onClose: function(){
-						modalSurprise.destroy();
-					}
-				});
-				modalSurprise.setContent('<iframe width="100%" height="400" src="https://www.youtube.com/embed/Vyi8x02GRuI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>');
-				modalSurprise.open();
-			});
-
-
-			</script>
+		{% if post.slug == 'home' %}
+			<script src="{{ site.theme.link }}/js/site/test.js"></script>
 		{% endif %}
-
-
 	</body>
 </html>

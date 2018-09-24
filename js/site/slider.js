@@ -1,9 +1,9 @@
-const slides = document.querySelectorAll('.slide');
-const slider = document.querySelector('.slider');
-const nextSlide = document.querySelector('.slide__nav-btn--next');
-const prevSlide = document.querySelector('.slide__nav-btn--prev');
+// const slides = document.querySelectorAll('.slide');
+// const slider = document.querySelector('.slider');
+// const nextSlide = document.querySelector('.slide__nav-btn--next');
+// const prevSlide = document.querySelector('.slide__nav-btn--prev');
 
-function init() {
+const homeSpeakerInit = () => {
     if (window.innerWidth < 990) {
         const slider = document.querySelector('.slider');
         const width = window.innerWidth;
@@ -21,9 +21,9 @@ function init() {
     });
     // Disable arrow on page load
     TweenLite.set(prevSlide, { autoAlpha: 0.2 });
-}
+};
 
-function goToNextSlide(slideOut, slideIn) {
+const goToNextSlide = (slideOut, slideIn) => {
     let tl = new TimelineMax();
     //slideOut items
     const slideOutImg = slideOut.querySelector('.slide__img--inner');
@@ -66,9 +66,9 @@ function goToNextSlide(slideOut, slideIn) {
     if (slideInPos === size) {
         TweenLite.to(nextSlide, 0.3, { autoAlpha: 0.2, ease: Linear.easeNone });
     }
-}
+};
 
-function goToPrevSlide(slideOut, slideIn) {
+const goToPrevSlide = (slideOut, slideIn) => {
     let tl = new TimelineMax();
     //slideOut items
     const slideOutImg = slideOut.querySelector('.slide__img--inner');
@@ -110,25 +110,66 @@ function goToPrevSlide(slideOut, slideIn) {
     if (slideInPos === 1) {
         TweenLite.to(prevSlide, 0.3, { autoAlpha: 0.2, ease: Linear.easeNone });
     }
-}
+};
 
-nextSlide.addEventListener('click', e => {
-    const slideOut = document.querySelector('.slide.active');
-    const slideIn = document.querySelector('.slide.active').nextElementSibling;
+// nextSlide.addEventListener('click', e => {
+//     const slideOut = document.querySelector('.slide.active');
+//     const slideIn = document.querySelector('.slide.active').nextElementSibling;
 
-    if (slideIn !== null) {
-        goToNextSlide(slideOut, slideIn);
-    }
+//     if (slideIn !== null) {
+//         goToNextSlide(slideOut, slideIn);
+//     }
+// });
+
+// prevSlide.addEventListener('click', e => {
+//     const slideOut = document.querySelector('.slide.active');
+//     const slideIn = document.querySelector('.slide.active')
+//         .previousElementSibling;
+
+//     if (slideIn !== null) {
+//         goToPrevSlide(slideOut, slideIn);
+//     }
+// });
+
+// init();
+
+const Homepage = Barba.BaseView.extend({
+    namespace: 'home',
+    onEnter() {
+        const slides = document.querySelectorAll('.slide');
+        const slider = document.querySelector('.slider');
+        const nextSlide = document.querySelector('.slide__nav-btn--next');
+        const prevSlide = document.querySelector('.slide__nav-btn--prev');
+        // The new Container is ready and attached to the DOM.
+        // opening();
+        init();
+    },
+    onEnterCompleted() {
+        // The Transition has just finished.
+        nextSlide.addEventListener('click', e => {
+            const slideOut = document.querySelector('.slide.active');
+            const slideIn = document.querySelector('.slide.active')
+                .nextElementSibling;
+
+            if (slideIn !== null) {
+                goToNextSlide(slideOut, slideIn);
+            }
+        });
+
+        prevSlide.addEventListener('click', e => {
+            const slideOut = document.querySelector('.slide.active');
+            const slideIn = document.querySelector('.slide.active')
+                .previousElementSibling;
+
+            if (slideIn !== null) {
+                goToPrevSlide(slideOut, slideIn);
+            }
+        });
+    },
+    onLeave() {
+        // A new Transition toward a new page has just started.
+    },
+    onLeaveCompleted() {
+        // The Container has just been removed from the DOM.
+    },
 });
-
-prevSlide.addEventListener('click', e => {
-    const slideOut = document.querySelector('.slide.active');
-    const slideIn = document.querySelector('.slide.active')
-        .previousElementSibling;
-
-    if (slideIn !== null) {
-        goToPrevSlide(slideOut, slideIn);
-    }
-});
-
-init();

@@ -2,8 +2,6 @@
     <div class="pattern hero-pattern"></div>
     <div class="carousel-img">
         <div class="carousel-img__inner">
-            {# <img src="{{site.link}}/wp-content/themes/linc2019/assets/img/home-carouse-test-img.png" alt="">
-            #}
             <img src="{{TimberImage(post.get_field('home_hero_image')).src}}"
                                 srcset="{{function('wp_get_attachment_image_srcset', TimberImage(post.get_field('home_hero_image')).id, 'medium' )}}"
                                 sizes="100vw" alt="">
@@ -12,10 +10,6 @@
     <div class="carousel-static">
         <div class="carousel-static__inner">
             <span class="home-hero__tag">Welcome to TD Ameritrade's 2019 advisor conference. </span>
-            <div class="home-hero__cta js-tingle-modal">
-                {% include 'partial/svg/play-btn.svg' %}
-                <span>Watch last year's video</span>
-            </div>
         </div>
     </div>
     <div class="home-carousel">
@@ -23,7 +17,7 @@
             <div class="carousel-cell__copy">
                 <div class="carousel-cell__copy-inner">
                     <h1>Come <span class="core">LEARN</span> at National LINC 2019</h1>
-                    <p>World-class keynote speakers. Leading minds within our industry. Top experts on the subjects you care most about. It’s all in one place … at National LINC 2019 in San Diego.</p>
+                    <p>World-class keynote speakers. Leading minds within our industry. Top professionals on the subjects you care most about. It’s all in one place … at National LINC 2019 in San Diego.</p>
                 </div>
             </div>
         </div>
