@@ -3,8 +3,13 @@
     <div class="carousel-img">
         <div class="carousel-img__inner">
             <img src="{{TimberImage(post.get_field('home_hero_image')).src}}"
-                 srcset="{{function('wp_get_attachment_image_srcset', TimberImage(post.get_field('home_hero_image')).id, 'large' )}}"
+                 srcset="{{TimberImage(post.get_field('home_hero_image')).src|retina(1)}} 1x,
+                         {{TimberImage(post.get_field('home_hero_image')).src|retina(2)}} 2x,
+                         {{TimberImage(post.get_field('home_hero_image')).src|retina(3)}} 3x,
+                         {{TimberImage(post.get_field('home_hero_image')).src|retina(4)}} 4x,
+                 "
                  sizes="100vw" alt="Hero Image - LINC 2019">
+
         </div>
     </div>
     <div class="carousel-static">
