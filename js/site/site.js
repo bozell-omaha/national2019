@@ -1025,6 +1025,7 @@ function hamburger() {
     const header = document.querySelector('.header');
     const slideMenu = document.querySelector('.slide-menu');
     const largeClose = document.querySelector('.header__close');
+    const arrow = document.querySelector('.nav-link--large > .arrow-forward');
 
     burger.addEventListener('click', () => {
         if (window.innerWidth <= 990) {
@@ -1061,12 +1062,14 @@ function hamburger() {
                 active.classList.remove('current-menu-item');
                 link.classList.add('current-menu-item');
                 header.classList.add('slim');
-                slideMenu.classList.remove('open');
-                TweenMax.to(slideMenu, 0.4, {
-                    xPercent: -100,
-                    autoAlpha: 0,
-                });
-                TweenMax.to(arrow, 0.4, { rotation: 360 });
+                if (slideMenu.classList.contains('open')) {
+                    slideMenu.classList.remove('open');
+                    TweenMax.to(slideMenu, 0.4, {
+                        xPercent: -100,
+                        autoAlpha: 0,
+                    });
+                    TweenMax.to(arrow, 0.4, { rotation: 360 });
+                }
             }
         });
     });
