@@ -744,13 +744,14 @@ const speakersInit = () => {
         const title = contentEl.querySelector('.content-item__title');
         const text = contentEl.querySelector('.content-item__text');
         const close = document.querySelector('.content > .content__close');
+        const position = contentEl.querySelector('.content-item__position');
         if (!title.classList.contains('charmed')) {
             charming(title);
             title.classList.add('charmed');
         }
         // And access the spans/letters.
         const titleLetters = title.querySelectorAll('span');
-        TweenMax.to([close, text, contentPattern], 0.8, {
+        TweenMax.to([close, text, position, contentPattern], 0.8, {
             ease: Expo.easeOut,
             delay: delay,
             startAt: { y: 60 },
@@ -1014,8 +1015,16 @@ MOBILE NAV
 */
 function hamburger() {
     const burger = document.querySelector('.menu-icon');
+    const links = document.querySelectorAll(
+        '.nav-link:not(.nav-link--overview)'
+    );
+    const mobileLinks = document.querySelectorAll(
+        '.mobile-nav__link:not(.has-drop)'
+    );
     const mobileNav = document.querySelector('.mobile-nav');
     const header = document.querySelector('.header');
+    const slideMenu = document.querySelector('.slide-menu');
+    const largeClose = document.querySelector('.header__close');
 
     burger.addEventListener('click', () => {
         if (window.innerWidth <= 990) {
@@ -1034,22 +1043,59 @@ function hamburger() {
             }
         }
     });
+
+    largeClose.addEventListener('click', () => {
+        if (!header.classList.contains('slim')) {
+            header.classList.add('slim');
+        } else {
+            header.classList.remove('slim');
+        }
+    });
+
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth >= 990) {
+                header.classList.add('slim');
+                slideMenu.classList.remove('open');
+                TweenMax.to(slideMenu, 0.4, {
+                    xPercent: -100,
+                    autoAlpha: 0,
+                });
+                TweenMax.to(arrow, 0.4, { rotation: 360 });
+            }
+        });
+    });
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 990) {
+                burger.classList.remove('open');
+                mobileNav.style.transform = 'translateX(-100%)';
+            }
+        });
+    });
 }
 
-function openAccordian(e) {
-    event.preventDefault();
-    const parent = e.parentElement;
-    const dropdown = e.nextElementSibling;
-    const arrow = e.querySelector('.arrow-down');
+const openAccordian = () => {
+    const drops = document.querySelectorAll('.has-drop');
 
-    if (!parent.classList.contains('open')) {
-        parent.classList.add('open');
-        dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
-    } else {
-        parent.classList.remove('open');
-        dropdown.style.maxHeight = '0';
-    }
-}
+    drops.forEach(drop => {
+        const parent = drop.parentElement;
+        const dropdown = drop.nextElementSibling;
+        const arrow = drop.querySelector('.arrow-down');
+
+        drop.addEventListener('click', event => {
+            event.preventDefault();
+            if (!parent.classList.contains('open')) {
+                parent.classList.add('open');
+                dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+            } else {
+                parent.classList.remove('open');
+                dropdown.style.maxHeight = '0';
+            }
+        });
+    });
+};
 
 /*
 =====================================
@@ -1217,6 +1263,7 @@ if (
 ) {
     hamburger();
     slideTheMenu();
+    openAccordian();
     if (window.innerWidth > 990) {
         scrollSideNav();
     }
@@ -1235,6 +1282,7 @@ if (
     document.addEventListener('DOMContentLoaded', () => {
         hamburger();
         slideTheMenu();
+        openAccordian();
         if (window.innerWidth > 990) {
             scrollSideNav();
         }

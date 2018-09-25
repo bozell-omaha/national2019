@@ -3,7 +3,7 @@
 	{% for item in mobile_menu %}
 		{% if item.children %}
 			<li class="nav-menu__item mobile-nav__menu-item mobile-nav__menu-item--drop">
-				<a class="nav-link mobile-nav__link has-drop" target="{{ item.target }}" href="{{ item.link }}" onClick="openAccordian(this)">
+				<a class="nav-link mobile-nav__link has-drop" target="{{ item.target }}" href="{{ item.link }}">
 					{{ item.title|title }}
 					{% include 'partial/svg/arrow-down.svg' %}
 				</a>

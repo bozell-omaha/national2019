@@ -265,8 +265,8 @@
 }
 
 .agenda-arrow {
-
     &--small {
+        display: none;
         @include media-query($large-up) {
             display: none;
         }

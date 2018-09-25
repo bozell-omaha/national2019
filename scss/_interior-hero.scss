@@ -30,15 +30,15 @@
 
     &__title {
         position: absolute;
-            bottom: -64px;
+            top: 100%;
             left: -10%;
         width: 100%;
-        background: $white;
         margin: 0;
         padding: 16px 16px 16px 0;
         font-size: 32px;
         line-height: 34px;
         @include media-query($medium-up) {
+            top: auto;
             bottom: 72px;
             left: -104px;
             text-align: left;
@@ -46,12 +46,13 @@
             width: auto;
             font-size: 40px;
             line-height: 42px;
+            background: $white;
         }
     }
 
     &__copy {
         width: 100%;
-        margin-top: 72px;
+        margin-top: 104px;
         @include media-query($large-up) {
             margin-top: 64px;
         }

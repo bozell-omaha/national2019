@@ -32,9 +32,7 @@
         align-items: center;
         padding: 0 24px;
         @include media-query($large-up) {
-            align-items: flex-start;
-            flex-wrap: wrap;
-            align-content: space-between;
+            display: block;
             padding: 0;
         }
     }
@@ -49,7 +47,7 @@
             justify-content: center;
             width: 100%;
             height: 104px;
-            padding-top: 32px;
+            margin: 32px 0 64px;
             transition: transform 0.3s ease-in-out;
 
             .slim & {
@@ -93,11 +91,13 @@
             opacity: 0;
             visibility: 0;
             transition: all 0.3s ease-in-out;
+            z-index: -1;
 
             .slim & {
                 opacity: 1;
                 visibility: visibile;
                 transition: all 0.3s ease-in-out 0.4s;
+                z-index: 5;
             }
         }
     }
@@ -119,12 +119,13 @@
 
     &__social {
         display: none;
-        margin-top: 48px;
+        margin: 48px 0 96px;
         width: 100%;
         @include media-query($large-up) {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            margin: 48px 0 0 0;
             transition: all 0.3s ease-in-out 0.4s;
         }
 
@@ -143,13 +144,15 @@
             }
         }
 
-        p {
+        a {
             width: 100%;
             text-align: center;
             font-size: 12px;
             font-weight: 600;
             color: #9B9B9B;
             letter-spacing: 0.5px;
+            text-decoration: none;
+            margin-top: 16px;
         }
 
         svg {
@@ -171,7 +174,7 @@
             justify-content: center;
             width: 100%;
             height: 104px;
-            border-top: 1px solid #cecece;
+            border-bottom: 1px solid #cecece;
             transition: transform 0.3s ease-in-out;
 
             .slim & {
@@ -229,5 +232,34 @@
 
 .arrow-forward {
     transform: translateX(24px);
+}
+
+.header__close {
+    display: none;
+    @include media-query($large-up) {
+        position: absolute;
+            top: 0px;
+            right: 0px;
+        width: 64px;
+        height: 32px;
+        background: $pine;
+        transition: opacity 0.3s liner;
+        transition-delay: 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        color: $white;
+
+        .slim & {
+            opacity: 0;
+            transition: opacity 0.3s liner;
+            transition-delay: 0s;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 

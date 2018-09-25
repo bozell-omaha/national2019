@@ -108,6 +108,7 @@ const showContentElems = (contentEl, delay) => {
     // toggle the back control and scroll indicator.
     const title = contentEl.querySelector('.content-item__title');
     const text = contentEl.querySelector('.content-item__text');
+    const position = contentEl.querySelector('.content-item__position');
     const close = document.querySelector('.content > .content__close');
     if (!title.classList.contains('charmed')) {
         charming(title);
@@ -115,7 +116,7 @@ const showContentElems = (contentEl, delay) => {
     }
     // And access the spans/letters.
     const titleLetters = title.querySelectorAll('span');
-    TweenMax.to([close, text, contentPattern], 0.8, {
+    TweenMax.to([close, text, position, contentPattern], 0.8, {
         ease: Expo.easeOut,
         delay: delay,
         startAt: { y: 60 },

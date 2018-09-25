@@ -109,7 +109,7 @@ body {
     display: block;
     width: 100%;
     padding-left: 15%;
-    margin: 12px 0;
+    margin: 16px 0;
     text-decoration: none;
     color: #6C6C6C;
     font-size: 15px;
@@ -133,8 +133,6 @@ body {
     }
 
     &--overview {
-        // pointer-events: none;
-        // cursor: default;
     }
 
     &.current-menu-item {
