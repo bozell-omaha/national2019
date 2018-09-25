@@ -1055,6 +1055,11 @@ function hamburger() {
     links.forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth >= 990) {
+                const active = document.querySelector(
+                    '.nav-link.current-menu-item'
+                );
+                active.classList.remove('current-menu-item');
+                link.classList.add('current-menu-item');
                 header.classList.add('slim');
                 slideMenu.classList.remove('open');
                 TweenMax.to(slideMenu, 0.4, {
@@ -1069,6 +1074,11 @@ function hamburger() {
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (window.innerWidth <= 990) {
+                const active = document.querySelector(
+                    '.nav-link.current-menu-item'
+                );
+                active.classList.remove('current-menu-item');
+                link.classList.add('current-menu-item');
                 burger.classList.remove('open');
                 mobileNav.style.transform = 'translateX(-100%)';
             }
@@ -1094,6 +1104,14 @@ const openAccordian = () => {
                 dropdown.style.maxHeight = '0';
             }
         });
+    });
+};
+
+const currentMenuItem = () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventLis;
     });
 };
 
