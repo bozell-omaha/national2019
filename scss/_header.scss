@@ -3,7 +3,7 @@
     height: 80px;
     position: fixed;
         top: 0;
-    z-index: 10;
+    z-index: 15;
     background: $white;
     box-shadow: 0 2px 10px -3px rgba(0,0,0,0.20);
     transition: transform 0.2s ease;
@@ -205,11 +205,26 @@
         height: 3px;
         background-color: $bodyCopy;
         margin: 4px 0;
+        transform-origin: left;
+        transition: all 0.3s linear;
 
         &:nth-child(2) {
             width: 20px;
         }
+
+        .open &:first-child {
+            transform: rotate(45deg) translateY(-1px);
+        }
+
+        .open &:nth-child(2) {
+            opacity: 0;
+        }
+
+        .open &:last-child {
+            transform: rotate(-45deg) translateY(2px) translateX(-1px)
+        }
     }
+
 }
 
 .arrow-forward {

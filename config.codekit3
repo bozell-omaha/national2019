@@ -330,6 +330,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js/compiled/test.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/compiled/test.min.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js/compiled/topics.min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -380,6 +390,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js/site/homeCellSlider.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/js/compiled/homeCellSlider.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/js/site/homeHacks.js": {
 		"ft": 64,
 		"ma": 0,
@@ -426,16 +446,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/compiled/speakers.min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/js/site/test.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 0,
-		"oA": 0,
-		"oAP": "/js/compiled/test.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1

@@ -81,25 +81,25 @@ const goToPrevSlide = (slideOut, slideIn) => {
 
     tl.to(slideIn, 0.4, { autoAlpha: 1, className: '+=active' })
         .to(slideOut, 0.4, { className: '-=active' })
-        .to(slideOutImg, 1.1, { xPercent: 100, ease: Expo.easeInOut }, 0.1)
+        .to(slideOutImg, 1.1, { xPercent: 100, ease: Expo.easeOut }, 0.1)
         .fromTo(
             slideInImg,
             1.1,
             { xPercent: -115, scale: 1.3 },
-            { xPercent: 0, scale: 1, ease: Expo.easeInOut },
+            { xPercent: 0, scale: 1, ease: Quart.easeIn },
             0.1
         )
         .to(
             slideOutContent,
             0.9,
-            { y: 32, autoAlpha: 0, ease: Expo.easeInOut },
+            { y: 32, autoAlpha: 0, ease: Expo.easeOut },
             0.1
         )
         .fromTo(
             slideInContent,
             0.9,
             { y: 32, autoAlpha: 0 },
-            { y: 0, autoAlpha: 1, ease: Expo.easeInOut },
+            { y: 0, autoAlpha: 1, ease: Quart.easeIn },
             0.1
         );
 
@@ -112,24 +112,24 @@ const goToPrevSlide = (slideOut, slideIn) => {
     }
 };
 
-// nextSlide.addEventListener('click', e => {
-//     const slideOut = document.querySelector('.slide.active');
-//     const slideIn = document.querySelector('.slide.active').nextElementSibling;
+nextSlide.addEventListener('click', e => {
+    const slideOut = document.querySelector('.slide.active');
+    const slideIn = document.querySelector('.slide.active').nextElementSibling;
 
-//     if (slideIn !== null) {
-//         goToNextSlide(slideOut, slideIn);
-//     }
-// });
+    if (slideIn !== null) {
+        goToNextSlide(slideOut, slideIn);
+    }
+});
 
-// prevSlide.addEventListener('click', e => {
-//     const slideOut = document.querySelector('.slide.active');
-//     const slideIn = document.querySelector('.slide.active')
-//         .previousElementSibling;
+prevSlide.addEventListener('click', e => {
+    const slideOut = document.querySelector('.slide.active');
+    const slideIn = document.querySelector('.slide.active')
+        .previousElementSibling;
 
-//     if (slideIn !== null) {
-//         goToPrevSlide(slideOut, slideIn);
-//     }
-// });
+    if (slideIn !== null) {
+        goToPrevSlide(slideOut, slideIn);
+    }
+});
 
 // init();
 

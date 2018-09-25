@@ -113,11 +113,11 @@ const speakerSlider = () => {
 
         tl.to(slideIn, 0.4, { autoAlpha: 1, className: '+=active' })
             .to(slideOut, 0.4, { className: '-=active' })
-            .to(slideOutImg, 1.1, { xPercent: 100, ease: Expo.easeInOut }, 0.1)
+            .to(slideOutImg, 1.1, { xPercent: -100, ease: Expo.easeInOut }, 0.1)
             .fromTo(
                 slideInImg,
                 1.1,
-                { xPercent: -115, scale: 1.3 },
+                { xPercent: 115, scale: 1.3 },
                 { xPercent: 0, scale: 1, ease: Expo.easeInOut },
                 0.1
             )
@@ -164,35 +164,168 @@ const speakerSlider = () => {
     });
 };
 
-const heroSlider = () => {
-    const Homecarousel = document.querySelector('.home-carousel');
-    let flkty = new Flickity(Homecarousel, {
-        prevNextButtons: true,
-        pageDots: true,
-        percentPosition: false,
-        arrowShape: {
-            x0: 10,
-            x1: 60,
-            y1: 50,
-            x2: 60,
-            y2: 45,
-            x3: 15,
-        },
+// const heroVideo = () => {
+//     const modalBtn = document.querySelector('.js-tingle-modal');
+//     modalBtn.addEventListener('click', function() {
+//         var modalSurprise = new tingle.modal({
+//             onClose: function() {
+//                 modalSurprise.destroy();
+//             },
+//         });
+//         modalSurprise.setContent(
+//             '<iframe width="100%" height="400" src="https://www.youtube.com/embed/Vyi8x02GRuI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
+//         );
+//         modalSurprise.open();
+//     });
+// };
+
+const initHeroSlides = () => {
+    const carouselCells = document.querySelectorAll('.carousel-cell');
+    //Hide all slide that aren't active
+    carouselCells.forEach(cell => {
+        if (!hasClass(cell, 'active')) {
+            TweenLite.set(cell, { autoAlpha: 0 });
+        }
     });
 };
 
-const heroVideo = () => {
-    const modalBtn = document.querySelector('.js-tingle-modal');
-    modalBtn.addEventListener('click', function() {
-        var modalSurprise = new tingle.modal({
-            onClose: function() {
-                modalSurprise.destroy();
-            },
-        });
-        modalSurprise.setContent(
-            '<iframe width="100%" height="400" src="https://www.youtube.com/embed/Vyi8x02GRuI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'
-        );
-        modalSurprise.open();
+const homeCellSlider = () => {
+    const nextCell = document.querySelector('.carousel-btn--next');
+    const prevCell = document.querySelector('.carousel-btn--prev');
+
+    const goToNextCell = (cellOut, cellIn) => {
+        let tl = new TimelineMax();
+        //cellOut items
+        const cellOutHeading = cellOut.querySelector('h1');
+        const cellOutContent = cellOut.querySelector('p');
+        //slideIn items
+        const cellInPos =
+            Array.from(cellIn.parentNode.children).indexOf(cellIn) + 1;
+        const cellInHeading = cellIn.querySelector('h1');
+        const cellInContent = cellIn.querySelector('p');
+        const size = [...document.querySelectorAll('.carousel-cell')].length;
+
+        tl.to(cellIn, 0.4, { autoAlpha: 1, className: '+=active' })
+            .to(cellOut, 0.4, { className: '-=active' })
+            .to(
+                cellOutHeading,
+                0.9,
+                {
+                    yPercent: -32,
+                    autoAlpha: 0,
+                    ease: Quart.easeIn,
+                },
+                0.1
+            )
+            .to(
+                cellOutContent,
+                0.9,
+                { yPercent: -32, autoAlpha: 0, ease: Quart.easeIn },
+                0.2
+            )
+            .fromTo(
+                cellInHeading,
+                0.9,
+                { yPercent: 32, autoAlpha: 0 },
+                { yPercent: 0, autoAlpha: 1, ease: Expo.easeOut },
+                1.2
+            )
+
+            .fromTo(
+                cellInContent,
+                0.9,
+                { yPercent: 32, autoAlpha: 0 },
+                { yPercent: 0, autoAlpha: 1, ease: Expo.easeOut },
+                1.3
+            );
+
+        // Fade out arrow up and fade in arrow down
+        // Fade in arrow down
+        TweenLite.set(prevCell, { autoAlpha: 1 });
+        // Fade out arrow up on last slide
+        if (cellInPos === size) {
+            TweenLite.to(nextCell, 0.3, {
+                autoAlpha: 0.2,
+                ease: Linear.easeNone,
+            });
+        }
+    };
+
+    const goToPrevCell = (cellOut, cellIn) => {
+        let tl = new TimelineMax();
+        //cellOut items
+        const cellOutHeading = cellOut.querySelector('h1');
+        const cellOutContent = cellOut.querySelector('p');
+        //slideIn items
+        const cellInPos =
+            Array.from(cellIn.parentNode.children).indexOf(cellIn) + 1;
+        const cellInHeading = cellIn.querySelector('h1');
+        const cellInContent = cellIn.querySelector('p');
+        const size = [...document.querySelectorAll('.carousel-cell')].length;
+
+        tl.to(cellIn, 0.4, { autoAlpha: 1, className: '+=active' })
+            .to(cellOut, 0.4, { className: '-=active' })
+            .to(
+                cellOutContent,
+                0.9,
+                { yPercent: 32, autoAlpha: 0, ease: Quart.easeIn },
+                0.1
+            )
+            .to(
+                cellOutHeading,
+                0.9,
+                {
+                    yPercent: 32,
+                    autoAlpha: 0,
+                    ease: Quart.easeIn,
+                },
+                0.2
+            )
+            .fromTo(
+                cellInContent,
+                0.9,
+                { yPercent: -32, autoAlpha: 0 },
+                { yPercent: 0, autoAlpha: 1, ease: Expo.easeOut },
+                1.2
+            )
+            .fromTo(
+                cellInHeading,
+                0.9,
+                { yPercent: -32, autoAlpha: 0 },
+                { yPercent: 0, autoAlpha: 1, ease: Expo.easeOut },
+                1.3
+            );
+
+        // Fade out arrow up and fade in arrow down
+        // Fade in arrow down
+        TweenLite.set(nextCell, { autoAlpha: 1 });
+        // Fade out arrow up on last slide
+        if (cellInPos === 1) {
+            TweenLite.to(prevCell, 0.3, {
+                autoAlpha: 0.2,
+                ease: Linear.easeNone,
+            });
+        }
+    };
+
+    nextCell.addEventListener('click', e => {
+        const cellOut = document.querySelector('.carousel-cell.active');
+        const cellIn = document.querySelector('.carousel-cell.active')
+            .nextElementSibling;
+
+        if (cellIn !== null) {
+            goToNextCell(cellOut, cellIn);
+        }
+    });
+
+    prevCell.addEventListener('click', e => {
+        const cellOut = document.querySelector('.carousel-cell.active');
+        const cellIn = document.querySelector('.carousel-cell.active')
+            .previousElementSibling;
+
+        if (cellIn !== null) {
+            goToPrevCell(cellOut, cellIn);
+        }
     });
 };
 
@@ -303,7 +436,23 @@ const fixedAgenda = () => {
         .getBoundingClientRect().height;
     const theHeight = (agendaHeight - daysHeight) * -1;
 
+    const slideMenu = document.querySelector('.slide-menu');
+    const arrow = document.querySelector('.arrow-forward');
+
     window.onscroll = () => {
+        const scroll = window.pageYOffset;
+        if (scroll >= 10 && !header.classList.contains('slim')) {
+            if (slideMenu.classList.contains('open')) {
+                slideMenu.classList.remove('open');
+                TweenMax.to(slideMenu, 0.4, {
+                    xPercent: -100,
+                    autoAlpha: 0,
+                });
+                TweenMax.to(arrow, 0.4, { rotation: 360 });
+            }
+            header.classList.add('slim');
+        }
+
         if (window.location.href.indexOf('agenda') > -1) {
             // alert('your url contains the name franky');
             const agendaScroll = agenda.getBoundingClientRect().top;
@@ -972,7 +1121,7 @@ const Homepage = Barba.BaseView.extend({
     namespace: 'home',
     onEnter() {
         homeSpeakerInit();
-        heroSlider();
+        initHeroSlides();
         smallHeightHacks();
         window.addEventListener('resize', () => {
             smallHeightHacks();
@@ -981,6 +1130,7 @@ const Homepage = Barba.BaseView.extend({
     onEnterCompleted() {
         // The Transition has just finished.
         speakerSlider();
+        homeCellSlider();
     },
     onLeave() {
         // A new Transition toward a new page has just started.
@@ -1019,14 +1169,17 @@ Agenda View
 const Agendapage = Barba.BaseView.extend({
     namespace: 'agenda',
     onEnter() {
-        fixedAgenda();
-        scrollAgenda();
-        scrollSideNav();
+        // fixedAgenda();
+        // scrollAgenda();
+        // scrollSideNav();
         // showFilters();
         // filters();
     },
     onEnterCompleted() {
         // The Transition has just finished.
+        fixedAgenda();
+        scrollAgenda();
+        // scrollSideNav();
     },
     onLeave() {
         // A new Transition toward a new page has just started.

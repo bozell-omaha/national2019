@@ -9,12 +9,12 @@
         <ul class="nav-menu nav-menu--slide">
         {% for item in slide_menu.items %}
             <li class="nav-menu__item nav-menu__item--slide">
-                <a class="nav-link nav-link--slide {{ item.classes|join(' ') }}" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+                <a class="nav-link nav-link--slide {{ item.classes|join(' ') }}" target="{{ item.target }}" href="{{ item.link }}">{{ item.title|title }}</a>
                 {% if item.children %}
                     <ul class="nav-menu nav-menu__slide">
                         {% for child in item.children %}
                             <li class="nav-menu__item nav-menu__item--slide">
-                                <a href="{{child.link}}" class="nav-link nav-link--slide"> {{child.title}} </a>
+                                <a href="{{child.link}}" class="nav-link nav-link--slide"> {{child.title|title}} </a>
                             </li>
                         {% endfor %}
                     </ul>
