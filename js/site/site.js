@@ -21,6 +21,10 @@ function indexInParent(node) {
     return -1;
 }
 
+const isIE =
+    !!navigator.userAgent.match(/Trident/g) ||
+    !!navigator.userAgent.match(/MSIE/g);
+
 /*
 =====================================
 Home Page Functions
@@ -982,30 +986,38 @@ const speakersInit = () => {
         }
     };
 
-    speakers.forEach(speaker => {
-        const name = speaker.querySelector('.speaker__name');
-        charming(name);
-        const nameLetters = name.querySelectorAll('span');
-        speaker.addEventListener('mouseenter', () => {
-            animationHover(speaker, 'mouseenter', nameLetters);
+    if (isIE) {
+        speakers.forEach(speaker => {
+            speaker.classList.remove('no-barba');
+        });
+    } else {
+        speakers.forEach(speaker => {
+            const name = speaker.querySelector('.speaker__name');
+            charming(name);
+            const nameLetters = name.querySelectorAll('span');
+            speaker.addEventListener('mouseenter', () => {
+                animationHover(speaker, 'mouseenter', nameLetters);
+            });
+
+            speaker.addEventListener('mouseleave', () => {
+                animationHover(speaker, 'mouseleave', nameLetters);
+            });
+
+            speaker.addEventListener('click', event => {
+                event.preventDefault();
+                openSpeaker(speaker);
+            });
         });
 
-        speaker.addEventListener('mouseleave', () => {
-            animationHover(speaker, 'mouseleave', nameLetters);
-        });
-
-        speaker.addEventListener('click', event => {
+        closeTheSpeaker.addEventListener('click', event => {
             event.preventDefault();
-            openSpeaker(speaker);
+            // Get the content element respective to this grid item.
+            const currentContent = document.querySelector(
+                '.content-item--current'
+            );
+            closeItem(currentContent);
         });
-    });
-
-    closeTheSpeaker.addEventListener('click', event => {
-        event.preventDefault();
-        // Get the content element respective to this grid item.
-        const currentContent = document.querySelector('.content-item--current');
-        closeItem(currentContent);
-    });
+    }
 };
 
 /*
