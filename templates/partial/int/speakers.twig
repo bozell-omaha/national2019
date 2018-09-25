@@ -100,7 +100,7 @@
             <h3 class="speaker__name">Tom Nally</h3>
         </a><!-- speaker --> #}
         {% for speaker in speakers %}
-            <a href="" class="speaker">
+            <a href="{{speaker.link}}" class="speaker no-barba">
                 <div class="speaker__bg"></div>
                 <div class="speaker__wrap">
                     <img src="{{TimberImage(speaker.image).src|resize(750,1000)}}" alt="" class="speaker__img">

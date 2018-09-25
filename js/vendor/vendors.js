@@ -1,6 +1,6 @@
 // @codekit-prepend "charming.js"
+// @codekit-prepend "classList.js"
 // @codekit-prepend "isotope.min.js"
-// @codekit-prepend "flickity.min.js"
 // @codekit-prepend "tingle.min.js"
 // @codekit-prepend "barba.min.js"
 // @codekit-prepend "TweenMax.min.js"

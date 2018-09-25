@@ -480,11 +480,21 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/vendor/flickity.min.js": {
+	"/js/vendor/classList.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
+		"oAP": "/js/compiled/classList.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/vendor/flickity.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
 		"oAP": "/js/compiled/flickity.min.min.js",
 		"oF": 0,
 		"sC": 3,
