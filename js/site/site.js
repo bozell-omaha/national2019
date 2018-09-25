@@ -1013,6 +1013,7 @@ const speakersInit = () => {
 MOBILE NAV
 =====================================
 */
+
 function hamburger() {
     const burger = document.querySelector('.menu-icon');
     const links = document.querySelectorAll(
@@ -1059,6 +1060,7 @@ function hamburger() {
                 const active = document.querySelector(
                     '.nav-link.current-menu-item'
                 );
+                ga('send', 'pageview', location.pathname);
                 active.classList.remove('current-menu-item');
                 link.classList.add('current-menu-item');
                 header.classList.add('slim');
@@ -1080,6 +1082,7 @@ function hamburger() {
                 const active = document.querySelector(
                     '.nav-link.current-menu-item'
                 );
+                ga('send', 'pageview', location.pathname);
                 active.classList.remove('current-menu-item');
                 link.classList.add('current-menu-item');
                 burger.classList.remove('open');
@@ -1107,14 +1110,6 @@ const openAccordian = () => {
                 dropdown.style.maxHeight = '0';
             }
         });
-    });
-};
-
-const currentMenuItem = () => {
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    navLinks.forEach(link => {
-        link.addEventLis;
     });
 };
 

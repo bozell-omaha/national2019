@@ -3,8 +3,7 @@
     <div class="carousel-img">
         <div class="carousel-img__inner">
             <img src="{{TimberImage(post.get_field('home_hero_image')).src}}"
-                                srcset="{{function('wp_get_attachment_image_srcset', TimberImage(post.get_field('home_hero_image')).id, 'medium' )}}"
-                                sizes="100vw" alt="">
+                                >
         </div>
     </div>
     <div class="carousel-static">
