@@ -26,9 +26,7 @@ class StarterSite extends TimberSite {
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
-		
-		
-		
+		add_image_size( 'x-large', 1400, false );
 		parent::__construct();
 	}
 
