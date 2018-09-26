@@ -1037,8 +1037,25 @@ function hamburger() {
     const mobileNav = document.querySelector('.mobile-nav');
     const header = document.querySelector('.header');
     const slideMenu = document.querySelector('.slide-menu');
-    const largeClose = document.querySelector('.header__close');
     const arrow = document.querySelector('.nav-link--large > .arrow-forward');
+    const logoLink = document.querySelector('.header__logo-link');
+    const slideMenuLinks = document.querySelectorAll('.nav-link--slide');
+    const overview = document.querySelector('.nav-link--overview');
+
+    const slideMenuParent = link => {
+        // slideMenuLinks.forEach(link => {
+        //     if (link.classList.contains('current-menu-item')) {
+        //         overview.classList.add('whoa');
+        //         console.log(link);
+        //     }
+        // });
+
+        if (link.classList.contains('nav-link--slide')) {
+            overview.classList.add('maybe');
+        } else {
+            overview.classList.remove('maybe');
+        }
+    };
 
     burger.addEventListener('click', () => {
         if (window.innerWidth <= 990) {
@@ -1055,14 +1072,6 @@ function hamburger() {
             } else {
                 header.classList.remove('slim');
             }
-        }
-    });
-
-    largeClose.addEventListener('click', () => {
-        if (!header.classList.contains('slim')) {
-            header.classList.add('slim');
-        } else {
-            header.classList.remove('slim');
         }
     });
 
@@ -1085,6 +1094,7 @@ function hamburger() {
                 }
                 setTimeout(() => {
                     ga('send', 'pageview', location.pathname);
+                    slideMenuParent(link);
                 }, 1000);
             }
         });
@@ -1105,6 +1115,13 @@ function hamburger() {
                 }, 1000);
             }
         });
+    });
+
+    logoLink.addEventListener('click', () => {
+        const active = document.querySelector('.nav-link.current-menu-item');
+        const homeItem = document.querySelector('.menu-item-home');
+        active.classList.remove('current-menu-item');
+        homeItem.classList.add('current-menu-item');
     });
 }
 
@@ -1169,7 +1186,6 @@ ON SCROLL DOWN - HIDE SIDE NAV
 =====================================
 */
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-
 function scrollSideNav() {
     const header = document.querySelector('#header');
     const slideMenu = document.querySelector('.slide-menu');

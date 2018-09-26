@@ -3,7 +3,7 @@
 	{% for item in large_menu %}
         <li class="nav-menu__item">
         	<a class="nav-link nav-link--large {{ item.classes|join(' ') }}" target="{{ item.target }}" href="{{ item.link }}">
-			{{ item.title|title }}
+			{{ item.title }}
 			{% if item.link == '#' %}
 				{% include 'partial/svg/arrow-forward.svg' with {className: 'side-arrow'} %}
 			{% endif %}

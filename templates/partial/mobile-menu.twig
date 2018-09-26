@@ -4,14 +4,14 @@
 		{% if item.children %}
 			<li class="nav-menu__item mobile-nav__menu-item mobile-nav__menu-item--drop">
 				<a class="nav-link mobile-nav__link has-drop" target="{{ item.target }}" href="{{ item.link }}">
-					{{ item.title|title }}
+					{{ item.title }}
 					{% include 'partial/svg/arrow-down.svg' %}
 				</a>
 				{% include "partial/mobile-menu.twig" with {'mobile_menu': item.get_children, className: 'dropdown'} %}
 			</li>
 		{% else %}
 			<li class="nav-menu__item mobile-nav__menu-item">
-				<a class="nav-link mobile-nav__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title|title }}</a>
+				<a class="nav-link mobile-nav__link" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
 			</li>
 		{% endif %}
 	{% endfor %}

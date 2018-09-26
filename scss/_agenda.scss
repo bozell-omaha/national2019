@@ -128,6 +128,10 @@
                 @include media-query($large-up) {
                     font-size: 24px;
                 }
+
+                .active & {
+                    color: $coreGreen;
+                }
             }
         }
     }
@@ -220,18 +224,28 @@
             font-size: 16px;
             line-height: 18px;
         }
-    }
 
-    &__desc {
-        font-size: 13px;
-        letter-spacing: 0;
-        line-height: 15px;
-        @include media-query($large-up) {
-            font-size: 16px;
-            line-height: 18px;
-            margin-top: 8px;
+        .arrow-forward {
+            transform: none;
+            margin-left: 24px;
         }
     }
+
+    // &__desc {
+    //     font-size: 13px;
+    //     letter-spacing: 0;
+    //     line-height: 16px;
+    //     list-style: none;
+    //     overflow: hidden;
+    //     max-height: 0;
+    //     margin: 8px;
+    //     transition: max-height 350ms ease-in-out;
+    //     @include media-query($large-up) {
+    //         font-size: 16px;
+    //         line-height: 18px;
+    //         margin-top: 8px;
+    //     }
+    // }
 
     &__tag-wrapper {
         width: 100%;
@@ -253,27 +267,27 @@
             top: 0;
             right: 0;
         height: 100%;
-        width: 40px;
+        width: 10%;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        .arrow-forward {
-            transform: none;
+        svg {
+            opacity: 0.6;
         }
     }
 }
 
 .agenda-arrow {
     &--small {
-        display: none;
+        // display: none;
         @include media-query($large-up) {
             display: none;
         }
     }
 
     &--large {
-        display: none;
+        // display: none;
         @include media-query($large-up) {
             display: initial;
         }
@@ -339,4 +353,34 @@
     @include media-query($medium-up) {
         display: none;
     }
+}
+
+.mobile-desc {
+    position: fixed;
+        top: 0;
+        left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #FFFFFF;
+    z-index: 999;
+    padding: 24px 16px;
+    transform: translateX(100%);
+    overflow: auto;
+
+    &__container {
+        margin: 16px 0;
+    }
+
+    &__sub {
+        text-transform: uppercase;
+        color: #999999;
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    &__desc {
+        margin-top: 0;
+    }
+
 }

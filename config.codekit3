@@ -422,11 +422,11 @@
 		},
 	"/js/site/site.js": {
 		"ft": 64,
-		"ma": 1,
-		"mi": 1,
+		"ma": 0,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "/js/compiled/site.min.js",
-		"oF": 2,
+		"oF": 3,
 		"sC": 3,
 		"tS": 1
 		},
@@ -446,6 +446,16 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/compiled/speakers.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/js/site/test.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "/js/compiled/test.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
@@ -1321,6 +1331,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/templates/partial/svg/chevron-right.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/templates/partial/svg/chevron-right.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/templates/partial/svg/facebook.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1401,6 +1421,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/templates/partial/svg/location.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/templates/partial/svg/location.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/templates/partial/svg/mobile-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1446,6 +1476,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/templates/partial/svg/search.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/templates/partial/svg/speaker.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/templates/partial/svg/speaker.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
