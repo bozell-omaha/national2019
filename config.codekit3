@@ -423,7 +423,7 @@
 	"/js/site/site.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 0,
+		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/compiled/site.min.js",
 		"oF": 3,
