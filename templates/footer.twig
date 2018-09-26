@@ -1,7 +1,6 @@
 <div class="footer__reminders">
     <div class="footer__reminders-content">
-        <a href="">Key reminders and deadlines here</a>
-        <p>Last day to register for conference: <strong>Friday, Dec 14</strong></p>
+        <p>Last day to register for conference: <strong>Friday, Dec 7</strong></p>
     </div>
 </div>
 
@@ -14,7 +13,7 @@
     <div class="footer__reserve-right">
         <div class="days-left">
             <span>DAYS LEFT TO REGISTER</span>
-            {% set end = '2018-12-14' %}
+            {% set end = '2018-12-7' %}
             {% set difference = date(end|date('Y/m/d')).diff(date('now'|date('Y/m/d'))) %}
             {% set leftDays = difference.days %}
             {% if leftDays == 1 %}

@@ -10,7 +10,6 @@
 		<header id="header" class="header {% if fn('is_front_page') == false %}slim{% endif %}" >
 			{% block header %}
 				<div class="header__wrapper">
-					<span class="header__close">Close</span>
 					<div class="header__logo">
 						<a class="header__logo-link" href="{{site.link}}">
 							{% include 'partial/svg/large-logo.svg' %}
@@ -75,5 +74,9 @@
 
 		<script src="{{ site.theme.link }}/js/compiled/vendors.min.js"></script>
 		<script src="{{ site.theme.link }}/js/compiled/site.min.js"></script>
+
+		{% if post.title == 'Agenda' %}
+			<script src="{{ site.theme.link }}/js/compiled/test.min.js"></script>
+		{% endif %}
 	</body>
 </html>

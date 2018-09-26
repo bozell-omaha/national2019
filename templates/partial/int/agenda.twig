@@ -58,26 +58,82 @@
                         <span class="event__time">{{session.Time}}</span>
                             <span class="event__title">{{item.Title}}</span>
                             {% if item.Description %}
-                                <span class="event__desc">{{item.Description}} {% include 'partial/svg/arrow-forward.svg' with {className: 'agenda-arrow--large'} %} </span>
+                                {# <div class="event__desc mobile-desc">
+                                    <h3>{{item.Title}}</h3>
+                                    <p>{{item.Description}}</p>
+                                    {% if item.Speakers %}
+                                    <div class="mobile-desc__speakers">
+                                        <div class="mobile-desc__left">Speakers</div>
+                                        <div class="mobile-desc__right">
+                                        {% for speaker in item.Speakers %}
+                                        <span>{{ speaker.FirstName }}</span>
+                                        {% endfor %}
+                                        </div>
+
+                                    </div>
+                                    {% endif %}
+                                    {% if item.Keywords %}
+                                        {% for keyword in item.Keywords %}
+                                        <span>{{keyword}}</span>
+                                        {% endfor %}
+                                    {% endif %}
+                                    {% if item.Room %}
+                                    <span>{{item.Room}}</span>
+                                    {% endif %}
+
+                                </div> #}
+                                <div class="event__desc mobile-desc">
+                                    <h3 class="mobile-desc__title">{{item.Title}}</h3>
+
+                                    <div class="mobile-desc__container">
+                                        <p class="mobile-desc__sub">Room</p>
+                                        <span>Regency Ballroom P</span>
+                                    </div>
+
+                                    <div class="mobile-desc__container">
+                                        <p class="mobile-desc__sub">Description</p>
+                                        <p class="mobil-desc__desc">{{item.Description}}</p>
+                                    </div>
+
+                                    <div class="mobile-desc__container">
+                                        <p class="mobile-desc__sub">Speakers</p>
+                                        <div class="mobile-desc__speakers-container">
+                                            <span class="mobile-desc__speaker">Name One</span>
+                                            <span class="mobile-desc__speaker">Name Two</span>
+                                            <span class="mobile-desc__speaker">Name Three</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mobile-desc__container">
+                                        <p class="mobile-desc__sub">Keywords</p>
+                                        <div class="mobile-desc__keywords-container">
+                                            <span class="mobile-desc__keyword">Technology</span>
+                                            <span class="mobile-desc__keyword">Estate Planning</span>
+                                            <span class="mobile-desc__keyword">Other</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="event__arrow">
+                                    {% include 'partial/svg/chevron-right.svg' with {className: 'agenda-arrow--large'} %}
+                                </div>
                             {% endif %}
                             {# <div class="event__tag-wrapper">
                                 <span class="event__tag">Technology</span>
                                 <span class="event__tag">Trading</span>
                                 <span class="event__tag">Strategy</span>
                             </div> #}
-                             <div class="event__arrow">
-                            {% include 'partial/svg/arrow-forward.svg' with {className: 'agenda-arrow--small'} %}
-                        </div>
+                        {% endfor %}
                     </div>
                         {% endfor %}
                        
                     {% endfor %}
-                    
+
                 </div>
             </div>
             {% endfor %}
 
-            
+
         </div>
     </div>
 </section>

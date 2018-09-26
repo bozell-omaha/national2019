@@ -133,6 +133,10 @@ body {
     }
 
     &--overview {
+        &.maybe {
+            color: $bodyCopy;
+            font-weight: 700;
+        }
     }
 
     &.current-menu-item {
@@ -152,6 +156,7 @@ body {
 
 .nav-link--slide {
     &.current-menu-item {
+        color: $coreGreen;
         &::before {
             left: -48px;
         }
