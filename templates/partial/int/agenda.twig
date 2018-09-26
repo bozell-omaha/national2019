@@ -42,6 +42,7 @@
                 {% endfor %}
             </div>
         </div>
+
         <div class="agenda__right">
 
         {% for day in agenda.Items %}
@@ -51,13 +52,11 @@
                 </div>
                 <div class="agenda__events">
                     {% for session in day.Sessions %}
-                    <div class="event technology trading strategy">
-                        <span class="event__time">{{session.Time}}</span>
-                        {% if session.Title %}
-                            <span class="event__sessiontitle">{{session.Title}}</span>
-                        {% endif %}
                         {% for item in session.Items %}
+                        <div class="event technology trading strategy">
+                            <span class="event__time">{{session.Time}}</span>
                             <span class="event__title">{{item.Title}}</span>
+
                             {% if item.Description %}
                                 {# <div class="event__desc mobile-desc">
                                     <h3>{{item.Title}}</h3>
@@ -91,33 +90,39 @@
                                     <div class="mobile-desc__inner">
                                         <h3 class="mobile-desc__title">{{item.Title}}</h3>
 
+                                        {% if item.Room %}
                                         <div class="mobile-desc__container">
                                             <p class="mobile-desc__sub">Room</p>
-                                            <span>Regency Ballroom P</span>
+                                            <span>{{item.Room}}</span>
                                         </div>
+                                        {% endif %}
 
                                         <div class="mobile-desc__container">
                                             <p class="mobile-desc__sub">Description</p>
                                             <p class="mobile-desc__desc">{{item.Description}}</p>
                                         </div>
 
+                                        {% if item.Speakers %}
                                         <div class="mobile-desc__container">
                                             <p class="mobile-desc__sub">Speakers</p>
                                             <div class="mobile-desc__speakers-container">
-                                                <span class="mobile-desc__speaker">Name One</span>
-                                                <span class="mobile-desc__speaker">Name Two</span>
-                                                <span class="mobile-desc__speaker">Name Three</span>
+                                                {% for speaker in item.Speakers %}
+                                                <span class="mobile-desc__speaker">{{speaker.FirstName}}</span>
+                                                {% endfor %}
                                             </div>
                                         </div>
+                                        {% endif %}
 
+                                        {% if itemn.Keywords %}
                                         <div class="mobile-desc__container">
                                             <p class="mobile-desc__sub">Keywords</p>
                                             <div class="mobile-desc__keywords-container">
-                                                <span class="mobile-desc__keyword">Technology</span>
-                                                <span class="mobile-desc__keyword">Estate Planning</span>
-                                                <span class="mobile-desc__keyword">Other</span>
+                                            {% for keyword in item.Keywords %}
+                                                <span class="mobile-desc__keyword">{{keyword}}</span>
+                                            {% endfor %}
                                             </div>
                                         </div>
+                                        {% endif %}
                                     </div>
 
                                 </div>
@@ -130,13 +135,14 @@
                                 <span class="event__tag">Trading</span>
                                 <span class="event__tag">Strategy</span>
                             </div> #}
+                        </div>
                         {% endfor %}
-                    </div>
+
                     {% endfor %}
 
                 </div>
             </div>
-            {% endfor %}
+        {% endfor %}
 
 
         </div>

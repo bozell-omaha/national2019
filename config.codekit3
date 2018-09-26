@@ -1196,13 +1196,6 @@
 		"oAP": "/templates/partial/hours.twig",
 		"oF": 0
 		},
-	"/templates/partial/int/agenda.twig": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/templates/partial/int/agenda.twig",
-		"oF": 0
-		},
 	"/templates/partial/int/bcl.twig": {
 		"cB": 0,
 		"ft": 8192,
