@@ -84,33 +84,39 @@
 
                                 </div> #}
                                 <div class="event__desc mobile-desc">
-                                    <h3 class="mobile-desc__title">{{item.Title}}</h3>
-
-                                    <div class="mobile-desc__container">
-                                        <p class="mobile-desc__sub">Room</p>
-                                        <span>Regency Ballroom P</span>
+                                    <div class="mobile-desc__header">
+                                        <span class="mobile-desc__close">{% include 'partial/svg/chevron-right.svg' %} Agenda</span>
                                     </div>
 
-                                    <div class="mobile-desc__container">
-                                        <p class="mobile-desc__sub">Description</p>
-                                        <p class="mobil-desc__desc">{{item.Description}}</p>
-                                    </div>
+                                    <div class="mobile-desc__inner">
+                                        <h3 class="mobile-desc__title">{{item.Title}}</h3>
 
-                                    <div class="mobile-desc__container">
-                                        <p class="mobile-desc__sub">Speakers</p>
-                                        <div class="mobile-desc__speakers-container">
-                                            <span class="mobile-desc__speaker">Name One</span>
-                                            <span class="mobile-desc__speaker">Name Two</span>
-                                            <span class="mobile-desc__speaker">Name Three</span>
+                                        <div class="mobile-desc__container">
+                                            <p class="mobile-desc__sub">Room</p>
+                                            <span>Regency Ballroom P</span>
                                         </div>
-                                    </div>
 
-                                    <div class="mobile-desc__container">
-                                        <p class="mobile-desc__sub">Keywords</p>
-                                        <div class="mobile-desc__keywords-container">
-                                            <span class="mobile-desc__keyword">Technology</span>
-                                            <span class="mobile-desc__keyword">Estate Planning</span>
-                                            <span class="mobile-desc__keyword">Other</span>
+                                        <div class="mobile-desc__container">
+                                            <p class="mobile-desc__sub">Description</p>
+                                            <p class="mobile-desc__desc">{{item.Description}}</p>
+                                        </div>
+
+                                        <div class="mobile-desc__container">
+                                            <p class="mobile-desc__sub">Speakers</p>
+                                            <div class="mobile-desc__speakers-container">
+                                                <span class="mobile-desc__speaker">Name One</span>
+                                                <span class="mobile-desc__speaker">Name Two</span>
+                                                <span class="mobile-desc__speaker">Name Three</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="mobile-desc__container">
+                                            <p class="mobile-desc__sub">Keywords</p>
+                                            <div class="mobile-desc__keywords-container">
+                                                <span class="mobile-desc__keyword">Technology</span>
+                                                <span class="mobile-desc__keyword">Estate Planning</span>
+                                                <span class="mobile-desc__keyword">Other</span>
+                                            </div>
                                         </div>
                                     </div>
 
