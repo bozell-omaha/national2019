@@ -51,12 +51,11 @@
                 </div>
                 <div class="agenda__events">
                     {% for session in day.Sessions %}
-                    <div class="event technology trading strategy">
-                        <span class="event__time">{{session.Time}}</span>
-                        {% if session.Title %}
-                            <span class="event__sessiontitle">{{session.Title}}</span>
-                        {% endif %}
+                    
+                       
                         {% for item in session.Items %}
+                        <div class="event technology trading strategy">
+                        <span class="event__time">{{session.Time}}</span>
                             <span class="event__title">{{item.Title}}</span>
                             {% if item.Description %}
                                 <span class="event__desc">{{item.Description}} {% include 'partial/svg/arrow-forward.svg' with {className: 'agenda-arrow--large'} %} </span>
@@ -66,11 +65,12 @@
                                 <span class="event__tag">Trading</span>
                                 <span class="event__tag">Strategy</span>
                             </div> #}
-                        {% endfor %}
-                        <div class="event__arrow">
+                             <div class="event__arrow">
                             {% include 'partial/svg/arrow-forward.svg' with {className: 'agenda-arrow--small'} %}
                         </div>
                     </div>
+                        {% endfor %}
+                       
                     {% endfor %}
                     
                 </div>
