@@ -13,12 +13,18 @@ body {
     font-weight: 300;
     color: $bodyCopy;
     overflow-x: hidden;
+    transition: filter 0.5s ease-out;
     @include media-query($large-up) {
         overflow-x: visible;
     }
 
     &.small {
         font-size: 15px !important;
+    }
+
+    &.blur {
+        filter: blur(15px);
+        /* makes sure it stays on top */
     }
 }
 

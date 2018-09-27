@@ -5,8 +5,9 @@
 	{% endblock %}
 	</head>
 {% endblock %}
-
-	<body class="{{body_class}} loading" data-template="base.twig">
+	<section class="blur">
+	</section>
+	<body class="{{body_class}} loading blur" data-template="base.twig">
 		<header id="header" class="header {% if fn('is_front_page') == false %}slim{% endif %}" >
 			{% block header %}
 				<div class="header__wrapper">

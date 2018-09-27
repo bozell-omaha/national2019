@@ -17,7 +17,7 @@
             justify-content: flex-end;
             padding: 0 16px;
             @include media-query($medium-up) {
-                padding: 0 32px;
+                padding: 0 250spx;
             }
 
             &-icon {
@@ -199,6 +199,7 @@
     padding: 16px 40px 16px 16px;
     background: #FFFFFF;
     box-shadow: 0 -1px 0 0 #E8E8E8, 0 1px 0 0 #E8E8E8;
+    width: 100%;
     @include media-query($large-up) {
         padding: 32px 48px;
     }
@@ -273,6 +274,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        @include media-query($medium-up) {
+            display: none;
+        }
 
         svg {
             opacity: 0.6;
@@ -376,6 +380,8 @@
         z-index: 0;
         transform: none;
         overflow: hidden;
+        // max-height: 0;
+        // transition: max-height 350ms ease-in-out;
     }
 
     &__header {
@@ -395,10 +401,21 @@
 
     &__inner {
         padding: 72px 20px 0;
+        width: 100%;
+        max-width: 690px;
+        @include media-query($medium-up) {
+            padding: 0;
+        }
     }
 
     &__container {
         margin: 32px 0;
+    }
+
+    &__title {
+        @include media-query($medium-up) {
+            display: none;
+        }
     }
 
     &__sub {
@@ -456,5 +473,4 @@
             display: none;
         }
     }
-
 }

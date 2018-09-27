@@ -431,65 +431,107 @@ const BCLTopics = () => {
 Agenda Functions
 =====================================
 */
-const fixedAgenda = () => {
+const agenda = () => {
     const agenda = document.querySelector('#agenda');
-    const header = document.querySelector('#header');
-    const agendaHeight = agenda.getBoundingClientRect().height;
-    const daysHeight = agenda
+    var agendaHeight = agenda.getBoundingClientRect().height;
+    var daysHeight = agenda
         .querySelector('.agenda__days')
         .getBoundingClientRect().height;
-    const theHeight = (agendaHeight - daysHeight) * -1;
+    var theHeight = (agendaHeight - daysHeight) * -1;
 
-    const slideMenu = document.querySelector('.slide-menu');
-    const arrow = document.querySelector('.arrow-forward');
+    const fixedAgenda = () => {
+        const header = document.querySelector('#header');
+        const slideMenu = document.querySelector('.slide-menu');
+        const arrow = document.querySelector('.arrow-forward');
 
-    window.onscroll = () => {
-        const scroll = window.pageYOffset;
-        if (scroll >= 10 && !header.classList.contains('slim')) {
-            if (slideMenu.classList.contains('open')) {
-                slideMenu.classList.remove('open');
-                TweenMax.to(slideMenu, 0.4, {
-                    xPercent: -100,
-                    autoAlpha: 0,
-                });
-                TweenMax.to(arrow, 0.4, { rotation: 360 });
-            }
-            header.classList.add('slim');
-        }
-
-        if (window.location.href.indexOf('agenda') > -1) {
-            // alert('your url contains the name franky');
-            const agendaScroll = agenda.getBoundingClientRect().top;
-            const agendaBottom = agenda.getBoundingClientRect().bottom;
-
-            if (window.innerWidth < 750) {
-                const headerBottom = header.getBoundingClientRect().bottom;
-                if (agendaScroll <= 80) {
-                    agenda.classList.add('fixed');
-                    header.classList.add('slide-up');
-                    fixDays();
-                } else if (agendaScroll >= 80) {
-                    agenda.classList.remove('fixed');
-                    header.classList.remove('slide-up');
+        window.onscroll = () => {
+            const scroll = window.pageYOffset;
+            if (window.innerWidth > 990) {
+                if (scroll >= 10 && !header.classList.contains('slim')) {
+                    if (slideMenu.classList.contains('open')) {
+                        slideMenu.classList.remove('open');
+                        TweenMax.to(slideMenu, 0.4, {
+                            xPercent: -100,
+                            autoAlpha: 0,
+                        });
+                        TweenMax.to(arrow, 0.4, { rotation: 360 });
+                    }
+                    header.classList.add('slim');
                 }
             }
 
-            if (agendaScroll <= -1) {
-                agenda.classList.add('fixed');
-                agenda.classList.remove('bottom');
-                fixDays();
-            } else {
-                agenda.classList.remove('fixed');
-                removeActive();
-            }
+            if (window.location.href.indexOf('agenda') > -1) {
+                const agendaScroll = agenda.getBoundingClientRect().top;
 
-            if (agendaScroll <= theHeight) {
-                agenda.classList.add('bottom');
-                agenda.classList.remove('fixed');
-                removeActive();
+                if (window.innerWidth < 750) {
+                    if (agendaScroll <= 80) {
+                        agenda.classList.add('fixed');
+                        header.classList.add('slide-up');
+                        fixDays();
+                    } else if (agendaScroll >= 80) {
+                        agenda.classList.remove('fixed');
+                        header.classList.remove('slide-up');
+                    }
+                }
+
+                if (agendaScroll <= -1) {
+                    agenda.classList.add('fixed');
+                    agenda.classList.remove('bottom');
+                    fixDays();
+                } else {
+                    agenda.classList.remove('fixed');
+                    removeActive();
+                }
+
+                if (agendaScroll <= theHeight) {
+                    agenda.classList.add('bottom');
+                    agenda.classList.remove('fixed');
+                    removeActive();
+                }
             }
-        }
+        };
     };
+
+    const filters = () => {
+        const days = document.querySelectorAll('.agenda__day-wrapper');
+        const inputs = document.querySelectorAll('.agenda-filter input');
+        let isoArray = [];
+        days.forEach(day => {
+            const eventsWrapper = day.querySelector('.agenda__events');
+            let iso = new Isotope(day, {
+                itemSelector: '.event',
+                layoutMode: 'vertical',
+                stagger: 30,
+            });
+            isoArray.push(iso);
+        });
+
+        inputs.forEach(input => {
+            input.addEventListener('change', () => {
+                var filters = [];
+                var theFilters;
+                inputs.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        filters.push(checkbox.value);
+                    }
+                    theFilters = filters.join(', ');
+                });
+                isoArray.forEach(iso => {
+                    iso.arrange({ filter: theFilters });
+                });
+                setTimeout(() => {
+                    agendaHeight = agenda.getBoundingClientRect().height;
+                    daysHeight = agenda
+                        .querySelector('.agenda__days')
+                        .getBoundingClientRect().height;
+                    theHeight = (agendaHeight - daysHeight) * -1;
+                }, 400);
+            });
+        });
+    };
+
+    fixedAgenda();
+    filters();
 };
 
 const removeActive = () => {
@@ -547,14 +589,6 @@ const scrollAgenda = () => {
     agendaDays.forEach((day, i) => {
         day.addEventListener('click', () => {
             const theDay = day.getAttribute('data-day');
-            // async function scrollAgenda(theDay) {
-            //     if (!agenda.classList.contains('fixed')) {
-            //         window.scroll({
-            //             behavior: 'smooth',
-            //             top: agenda.offsetTop,
-            //         });
-            //     }
-            // }
             dayWrappers.forEach(wrapper => {
                 const wrapperDay = wrapper.getAttribute('data-day');
                 if (wrapperDay == theDay) {
@@ -578,32 +612,6 @@ const scrollAgenda = () => {
                     }
                 }
             });
-
-            // scrollAgenda(theDay).then(() => {
-            //     dayWrappers.forEach(wrapper => {
-            //         const wrapperDay = wrapper.getAttribute('data-day');
-            //         if (wrapperDay == theDay) {
-            //             if (window.innerWidth < 750) {
-            //                 const mobileSweetSpot = document
-            //                     .querySelector('.agenda__events-header')
-            //                     .getBoundingClientRect().height;
-
-            //                 window.scroll({
-            //                     behavior: 'smooth',
-            //                     top: wrapper.offsetTop + mobileSweetSpot,
-            //                 });
-            //             } else {
-            //                 const sweetSpot = document
-            //                     .querySelector('.agenda__header')
-            //                     .getBoundingClientRect().height;
-            //                 window.scroll({
-            //                     behavior: 'smooth',
-            //                     top: wrapper.offsetTop - sweetSpot,
-            //                 });
-            //             }
-            //         }
-            //     });
-            // });
         });
     });
 };
@@ -628,37 +636,6 @@ const showTheFilters = word => {
         if (window.innerWidth < 990) {
             filterContainer.classList.remove('slide');
         }
-    });
-};
-
-const filters = () => {
-    const days = document.querySelectorAll('.agenda__day-wrapper');
-    const inputs = document.querySelectorAll('.agenda-filter input');
-    let isoArray = [];
-    days.forEach(day => {
-        const eventsWrapper = day.querySelector('.agenda__events');
-        let iso = new Isotope(day, {
-            itemSelector: '.event',
-            layoutMode: 'vertical',
-            stagger: 30,
-        });
-        isoArray.push(iso);
-    });
-
-    inputs.forEach(input => {
-        input.addEventListener('change', () => {
-            var filters = [];
-            var theFilters;
-            inputs.forEach(checkbox => {
-                if (checkbox.checked) {
-                    filters.push(checkbox.value);
-                }
-                theFilters = filters.join(', ');
-            });
-            isoArray.forEach(iso => {
-                iso.arrange({ filter: theFilters });
-            });
-        });
     });
 };
 
@@ -1351,10 +1328,11 @@ const Agendapage = Barba.BaseView.extend({
     onEnter() {},
     onEnterCompleted() {
         // The Transition has just finished.
-        fixedAgenda();
+        // fixedAgenda();
+        agenda();
         scrollAgenda();
         mobileAgendaEventFunctionality();
-        filters();
+        // filters();
         showTheFilters('true');
         // scrollSideNav();
     },
@@ -1412,6 +1390,9 @@ if (
     });
 } else {
     document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+            document.body.classList.remove('blur');
+        }, 1000);
         hamburger();
         slideTheMenu();
         openAccordian();

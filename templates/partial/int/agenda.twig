@@ -44,31 +44,7 @@
                             <span class="event__time">{{session.Time}}</span>
                             <span class="event__title">{{item.Title}}</span>
 
-                            {% if item.Description %}
-                                {# <div class="event__desc mobile-desc">
-                                    <h3>{{item.Title}}</h3>
-                                    <p>{{item.Description}}</p>
-                                    {% if item.Speakers %}
-                                    <div class="mobile-desc__speakers">
-                                        <div class="mobile-desc__left">Speakers</div>
-                                        <div class="mobile-desc__right">
-                                        {% for speaker in item.Speakers %}
-                                        <span>{{ speaker.FirstName }}</span>
-                                        {% endfor %}
-                                        </div>
-
-                                    </div>
-                                    {% endif %}
-                                    {% if item.Keywords %}
-                                        {% for keyword in item.Keywords %}
-                                        <span>{{keyword}}</span>
-                                        {% endfor %}
-                                    {% endif %}
-                                    {% if item.Room %}
-                                    <span>{{item.Room}}</span>
-                                    {% endif %}
-
-                                </div> #}
+                            {% if item.Description != item.Title %}
                                 <div class="event__desc mobile-desc">
                                     <div class="mobile-desc__header">
                                         <span class="mobile-desc__close">{% include 'partial/svg/chevron-right.svg' %} Agenda</span>

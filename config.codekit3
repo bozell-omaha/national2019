@@ -922,6 +922,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"/scss/_preloader.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/scss/_preloader.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"/scss/_slide-menu.scss": {
 		"aP": 1,
 		"bl": 0,
