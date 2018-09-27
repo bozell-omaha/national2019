@@ -37,6 +37,10 @@
                 right: -30%;
             height: 100%;
             width: auto;
+
+            .small & {
+                height: 90%;
+            }
         }
     }
 }
@@ -94,6 +98,10 @@
     color: #6C6C6C;
     font-weight: 300;
     font-size: 17px;
+
+    .small & {
+        margin-top: 15%;
+    }
 }
 
 .home-carousel {

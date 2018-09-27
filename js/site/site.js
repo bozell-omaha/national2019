@@ -887,8 +887,8 @@ const speakersInit = () => {
     };
 
     const openSpeaker = speaker => {
-        if (speaker.isAnimating) return;
-        speaker.isAnimating = true;
+        // if (speaker.isAnimating) return;
+        // speaker.isAnimating = true;
         //grab elements we'll need
         const speakerBG = speaker.querySelector('.speaker__bg');
         const speakerImgWrap = speaker.querySelector('.speaker__wrap');
@@ -970,7 +970,7 @@ const speakersInit = () => {
                 window.scrollTo(0, 0);
                 // Enable page scrolling.
                 enableScroll();
-                speaker.isAnimating = false;
+                // speaker.isAnimating = false;
             },
         });
     };
@@ -1377,12 +1377,12 @@ if (
     if (window.innerWidth > 990) {
         scrollSideNav();
     }
-    if (window.innerHeight < 675 && window.innerWidth > 750) {
+    if (window.innerHeight < 800 && window.innerWidth > 750) {
         document.body.classList.add('small');
     }
 
     window.addEventListener('resize', () => {
-        if (window.innerHeight < 675 && window.innerWidth > 750) {
+        if (window.innerHeight < 800 && window.innerWidth > 750) {
             document.body.classList.add('small');
         } else {
             document.body.classList.remove('small');
@@ -1399,12 +1399,12 @@ if (
         if (window.innerWidth > 990) {
             scrollSideNav();
         }
-        if (window.innerHeight < 675 && window.innerWidth > 750) {
+        if (window.innerHeight < 800 && window.innerWidth > 750) {
             document.body.classList.add('small');
         }
 
         window.addEventListener('resize', () => {
-            if (window.innerHeight < 675 && window.innerWidth > 750) {
+            if (window.innerHeight < 800 && window.innerWidth > 750) {
                 document.body.classList.add('small');
             } else {
                 document.body.classList.remove('small');
