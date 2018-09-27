@@ -4,3 +4,4 @@
 // @codekit-prepend "tingle.min.js"
 // @codekit-prepend "barba.min.js"
 // @codekit-prepend "TweenMax.min.js"
+// @codekit-prepend "smoothScroll.js"

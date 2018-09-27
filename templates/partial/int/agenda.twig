@@ -8,7 +8,12 @@
             <div class="agenda-filters">
                 <span class="close-filters show-filters">Close</span>
                 <div class="agenda-filters__inner">
+                    {% for keyword in agenda.Keywords %}
                     <div class="agenda-filter">
+                        <input type="checkbox" name="{{keyword|replace(' ', '-')|lower}}" value=".{{keyword|replace(' ', '-')|lower}}" id=""><label for="{{keyword|replace(' ', '-')|lower}}">{{keyword}}</label>
+                    </div>
+                    {% endfor %}
+                    {# <div class="agenda-filter">
                         <input type="checkbox" name="growth" value=".growth" id=""><label for="growth">Growth</label>
                     </div>
                     <div class="agenda-filter">
@@ -25,7 +30,7 @@
                     </div>
                     <div class="agenda-filter">
                         <input type="checkbox" name="innovation" value=".innovation" id=""><label for="innovation">Innovation</label>
-                    </div>
+                    </div> #}
                 </div>
             </div>
         </div>
@@ -53,7 +58,7 @@
                 <div class="agenda__events">
                     {% for session in day.Sessions %}
                         {% for item in session.Items %}
-                        <div class="event technology trading strategy">
+                        <div class="event{% if item.Keywords %}{% for keyword in item.Keywords %} {{keyword|replace(' ', '-')|lower}}{% endfor %}{% endif %} ">
                             <span class="event__time">{{session.Time}}</span>
                             <span class="event__title">{{item.Title}}</span>
 
@@ -113,7 +118,7 @@
                                         </div>
                                         {% endif %}
 
-                                        {% if itemn.Keywords %}
+                                        {% if item.Keywords %}
                                         <div class="mobile-desc__container">
                                             <p class="mobile-desc__sub">Keywords</p>
                                             <div class="mobile-desc__keywords-container">
@@ -130,11 +135,13 @@
                                     {% include 'partial/svg/chevron-right.svg' with {className: 'agenda-arrow--large'} %}
                                 </div>
                             {% endif %}
-                            {# <div class="event__tag-wrapper">
-                                <span class="event__tag">Technology</span>
-                                <span class="event__tag">Trading</span>
-                                <span class="event__tag">Strategy</span>
-                            </div> #}
+                            {% if item.Keywords %}
+                            <div class="event__tag-wrapper">
+                                {% for keyword in item.Keywords %}
+                                <span class="event__tag">{{keyword}}</span>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
                         </div>
                         {% endfor %}
 

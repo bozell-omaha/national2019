@@ -547,40 +547,63 @@ const scrollAgenda = () => {
     agendaDays.forEach((day, i) => {
         day.addEventListener('click', () => {
             const theDay = day.getAttribute('data-day');
-            async function scrollAgenda(theDay) {
-                if (!agenda.classList.contains('fixed')) {
-                    window.scroll({
-                        behavior: 'smooth',
-                        top: agenda.offsetTop,
-                    });
-                }
-            }
+            // async function scrollAgenda(theDay) {
+            //     if (!agenda.classList.contains('fixed')) {
+            //         window.scroll({
+            //             behavior: 'smooth',
+            //             top: agenda.offsetTop,
+            //         });
+            //     }
+            // }
+            dayWrappers.forEach(wrapper => {
+                const wrapperDay = wrapper.getAttribute('data-day');
+                if (wrapperDay == theDay) {
+                    if (window.innerWidth < 750) {
+                        const mobileSweetSpot = document
+                            .querySelector('.agenda__events-header')
+                            .getBoundingClientRect().height;
 
-            scrollAgenda(theDay).then(() => {
-                dayWrappers.forEach(wrapper => {
-                    const wrapperDay = wrapper.getAttribute('data-day');
-                    if (wrapperDay == theDay) {
-                        if (window.innerWidth < 750) {
-                            const mobileSweetSpot = document
-                                .querySelector('.agenda__events-header')
-                                .getBoundingClientRect().height;
-
-                            window.scroll({
-                                behavior: 'smooth',
-                                top: wrapper.offsetTop + mobileSweetSpot,
-                            });
-                        } else {
-                            const sweetSpot = document
-                                .querySelector('.agenda__header')
-                                .getBoundingClientRect().height;
-                            window.scroll({
-                                behavior: 'smooth',
-                                top: wrapper.offsetTop - sweetSpot,
-                            });
-                        }
+                        window.scroll({
+                            behavior: 'smooth',
+                            top: wrapper.offsetTop + mobileSweetSpot,
+                        });
+                    } else {
+                        const sweetSpot = document
+                            .querySelector('.agenda__header')
+                            .getBoundingClientRect().height;
+                        window.scroll({
+                            behavior: 'smooth',
+                            top: wrapper.offsetTop - sweetSpot,
+                        });
                     }
-                });
+                }
             });
+
+            // scrollAgenda(theDay).then(() => {
+            //     dayWrappers.forEach(wrapper => {
+            //         const wrapperDay = wrapper.getAttribute('data-day');
+            //         if (wrapperDay == theDay) {
+            //             if (window.innerWidth < 750) {
+            //                 const mobileSweetSpot = document
+            //                     .querySelector('.agenda__events-header')
+            //                     .getBoundingClientRect().height;
+
+            //                 window.scroll({
+            //                     behavior: 'smooth',
+            //                     top: wrapper.offsetTop + mobileSweetSpot,
+            //                 });
+            //             } else {
+            //                 const sweetSpot = document
+            //                     .querySelector('.agenda__header')
+            //                     .getBoundingClientRect().height;
+            //                 window.scroll({
+            //                     behavior: 'smooth',
+            //                     top: wrapper.offsetTop - sweetSpot,
+            //                 });
+            //             }
+            //         }
+            //     });
+            // });
         });
     });
 };
@@ -1324,6 +1347,8 @@ const Agendapage = Barba.BaseView.extend({
         fixedAgenda();
         scrollAgenda();
         mobileAgendaEventFunctionality();
+        showFilters();
+        filters();
         // scrollSideNav();
     },
     onLeave() {

@@ -540,6 +540,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/js/vendor/smoothScroll.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/js/compiled/smoothScroll.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/js/vendor/tingle.min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -1194,6 +1204,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "/templates/partial/hours.twig",
+		"oF": 0
+		},
+	"/templates/partial/int/agenda.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/templates/partial/int/agenda.twig",
 		"oF": 0
 		},
 	"/templates/partial/int/bcl.twig": {
