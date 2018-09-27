@@ -40,7 +40,7 @@
                 <div class="agenda__events">
                     {% for session in day.Sessions %}
                         {% for item in session.Items %}
-                        <div class="event{% if item.Keywords %}{% for keyword in item.Keywords %} {{keyword|replace(' ', '-')|lower}}{% endfor %}{% endif %} ">
+                        <div class="event{% if item.Keywords %}{% for keyword in item.Keywords %} {{keyword|replace(' ', '-')|lower}}{% endfor %}{% endif %}">
                             <span class="event__time">{{session.Time}}</span>
                             <span class="event__title">{{item.Title}}</span>
 

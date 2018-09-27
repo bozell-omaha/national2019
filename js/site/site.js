@@ -640,7 +640,7 @@ const showTheFilters = word => {
 };
 
 const mobileAgendaEventFunctionality = () => {
-    const eventTitles = document.querySelectorAll('.event__title');
+    const eventOpenBtns = document.querySelectorAll('.event__desc');
     const eventCloseBtns = document.querySelectorAll('.mobile-desc__close');
     const body = document.body;
     const docEl = document.documentElement;
@@ -676,21 +676,29 @@ const mobileAgendaEventFunctionality = () => {
         document.onkeydown = null;
     };
 
-    eventTitles.forEach(title => {
-        const description = title.nextElementSibling;
-        title.addEventListener('click', e => {
-            e.stopPropagation;
-            description.style.transform = 'none';
-            disableScroll();
+    eventOpenBtns.forEach(desc => {
+        // const description = title.nextElementSibling;
+        const container = desc.parentElement;
+        container.addEventListener('click', e => {
+            if (!desc.classList.contains('active')) {
+                console.log('HIT!!!!!!');
+                desc.style.transform = 'none';
+                disableScroll();
+                desc.classList.add('active');
+            }
         });
     });
 
     eventCloseBtns.forEach(btn => {
         const container = btn.parentElement.parentElement;
         btn.addEventListener('click', e => {
-            e.stopPropagation;
+            e.preventDefault;
+            console.log(container);
             container.style.transform = 'translateX(100%)';
             enableScroll();
+            setTimeout( () => {
+                container.classList.remove('active');
+            }, 500);
         });
     });
 };
