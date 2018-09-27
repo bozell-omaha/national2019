@@ -6,31 +6,13 @@
         <div class="agenda__header-search">
             <span class="agenda__header-search-icon show-filters">Filters {% include 'partial/svg/arrow-down.svg' %}</span>
             <div class="agenda-filters">
-                <span class="close-filters show-filters">Close</span>
+                <span class="close-filters">Close</span>
                 <div class="agenda-filters__inner">
                     {% for keyword in agenda.Keywords %}
                     <div class="agenda-filter">
                         <input type="checkbox" name="{{keyword|replace(' ', '-')|lower}}" value=".{{keyword|replace(' ', '-')|lower}}" id=""><label for="{{keyword|replace(' ', '-')|lower}}">{{keyword}}</label>
                     </div>
                     {% endfor %}
-                    {# <div class="agenda-filter">
-                        <input type="checkbox" name="growth" value=".growth" id=""><label for="growth">Growth</label>
-                    </div>
-                    <div class="agenda-filter">
-                        <input type="checkbox" name="human-capital" value=".human-capital" id=""><label for="human-capital">Human Capital</label>
-                    </div>
-                    <div class="agenda-filter">
-                        <input type="checkbox" name="technology" value=".technology" id=""><label for="technology">Technology</label>
-                    </div>
-                    <div class="agenda-filter">
-                        <input type="checkbox" name="custody" value=".custody" id=""><label for="custody">Custody</label>
-                    </div>
-                    <div class="agenda-filter">
-                        <input type="checkbox" name="trading" value=".trading" id=""><label for="trading">Trading</label>
-                    </div>
-                    <div class="agenda-filter">
-                        <input type="checkbox" name="innovation" value=".innovation" id=""><label for="innovation">Innovation</label>
-                    </div> #}
                 </div>
             </div>
         </div>

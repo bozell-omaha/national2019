@@ -608,19 +608,26 @@ const scrollAgenda = () => {
     });
 };
 
-const showFilters = () => {
-    const agendaHeader = document.querySelector('.agenda__header-search');
-    const filterIcons = agendaHeader.querySelectorAll('.show-filters');
-    const filterContainer = agendaHeader.querySelector('.agenda-filters');
+const showTheFilters = word => {
+    if (word == 'false') {
+        return;
+    }
+    const filterIcon = document.querySelector('.show-filters');
+    const closeFilters = document.querySelector('.close-filters');
+    const filterContainer = document.querySelector('.agenda-filters');
 
-    filterIcons.forEach(filter => {
-        filter.addEventListener('click', () => {
-            if (window.innerWidth < 750) {
-                filterContainer.classList.toggle('slide');
-            } else {
-                filterContainer.classList.toggle('show');
-            }
-        });
+    filterIcon.addEventListener('click', () => {
+        if (window.innerWidth < 990) {
+            filterContainer.classList.add('slide');
+        } else {
+            filterContainer.classList.toggle('show');
+        }
+    });
+
+    closeFilters.addEventListener('click', () => {
+        if (window.innerWidth < 990) {
+            filterContainer.classList.remove('slide');
+        }
     });
 };
 
@@ -1347,12 +1354,13 @@ const Agendapage = Barba.BaseView.extend({
         fixedAgenda();
         scrollAgenda();
         mobileAgendaEventFunctionality();
-        showFilters();
         filters();
+        showTheFilters('true');
         // scrollSideNav();
     },
     onLeave() {
         // A new Transition toward a new page has just started.
+        showTheFilters('false');
     },
     onLeaveCompleted() {
         // The Container has just been removed from the DOM.
@@ -1402,102 +1410,6 @@ if (
             document.body.classList.remove('small');
         }
     });
-    let lastElementClicked;
-    Homepage.init();
-    BCLpage.init();
-    Agendapage.init();
-    Speakers.init();
-
-    Barba.Pjax.start();
-    Barba.Pjax.init();
-    Barba.Prefetch.init();
-
-    Barba.Dispatcher.on('linkClicked', function(el) {
-        lastElementClicked = el;
-    });
-
-    const FadeTransition = Barba.BaseTransition.extend({
-        start() {
-            /**
-             * This function is automatically called as soon the Transition starts
-             * this.newContainerLoading is a Promise for the loading of the new container
-             * (Barba.js also comes with an handy Promise polyfill!)
-             */
-
-            // As soon the loading is finished and the old page is faded out, let's fade the new page
-            Promise.all([this.newContainerLoading, this.scrollTop()])
-                // .then(this.fadeOut())
-                .then(this.fadeIn.bind(this));
-        },
-
-        scrollTop() {
-            return new Promise(resolve => {
-                const obj = { y: window.pageYOffset };
-                const container = this.oldContainer;
-                const tl = new TimelineMax({ onComplete: resolve });
-
-                tl.to(obj, 0.8, {
-                    y: 0,
-                    onUpdate() {
-                        window.scroll(0, obj.y);
-                    },
-                    ease: Power4.easeOut,
-                }).to(
-                    container,
-                    0.8,
-                    { autoAlpha: 0, ease: Power4.easeOut },
-                    0.1
-                );
-            });
-        },
-
-        fadeOut() {
-            /**
-             * this.oldContainer is the HTMLElement of the old Container
-             */
-            this.oldContainer.style.opacity = '0.5';
-
-            return new Promise(resolve => {
-                resolve();
-            });
-            // return this.oldContainer.animate({ opacity: 0 }).promise();
-        },
-
-        fadeIn() {
-            /**
-             * this.newContainer is the HTMLElement of the new Container
-             * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
-             * Please note, newContainer is available just after newContainerLoading is resolved!
-             */
-
-            const _this = this;
-            const $el = this.newContainer;
-
-            this.oldContainer.style.display = 'none';
-            $el.style.opacity = '0';
-
-            setTimeout(() => {
-                TweenMax.to($el, 0.6, { autoAlpha: 1, onComplete: done });
-            }, 2000);
-
-            function done() {
-                _this.done();
-            }
-        },
-    });
-
-    /**
-     * Next step, you have to tell Barba to use the new Transition
-     */
-
-    Barba.Pjax.getTransition = function() {
-        /**
-         * Here you can use your own logic!
-         * For example you can use different Transition based on the current page or link...
-         */
-
-        return FadeTransition;
-    };
 } else {
     document.addEventListener('DOMContentLoaded', () => {
         hamburger();
