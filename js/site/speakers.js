@@ -353,6 +353,7 @@ const closeItem = item => {
         scaleY: 1,
         rotation: 0,
         onComplete: () => {
+            console.log('hi');
             contentEl.classList.remove('content-item--current');
             gridItem.classList.remove('exclude');
             contentWrapper.style.position = 'relative';

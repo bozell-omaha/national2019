@@ -887,8 +887,8 @@ const speakersInit = () => {
     };
 
     const openSpeaker = speaker => {
-        // if (speaker.isAnimating) return;
-        // speaker.isAnimating = true;
+        if (speaker.isAnimating) return;
+        speaker.isAnimating = true;
         //grab elements we'll need
         const speakerBG = speaker.querySelector('.speaker__bg');
         const speakerImgWrap = speaker.querySelector('.speaker__wrap');
@@ -907,6 +907,7 @@ const speakersInit = () => {
         //Hide all the other Speakers
         hideOthers();
         hideTexts(speakerName, speakerKeynote);
+        speaker.style.zIndex = '1000';
         // Get the "grid__item-bg" width and height and set it explicitly,
         // also set its top and left respective to the page.
         const itemDim = getSizePosition(speaker);
@@ -916,7 +917,6 @@ const speakersInit = () => {
         speakerBG.style.top = `${itemDim.top}px`;
         // Set it to position fixed.
         speakerBG.style.position = 'fixed';
-        speaker.style.zIndex = '1000';
         // Calculate the viewport diagonal. We will need to take this in consideration when scaling up the item´s bg element.
         const d = Math.hypot(winsize.width, winsize.height);
         // Scale up the item´s bg element.
@@ -970,7 +970,7 @@ const speakersInit = () => {
                 window.scrollTo(0, 0);
                 // Enable page scrolling.
                 enableScroll();
-                // speaker.isAnimating = false;
+                speaker.isAnimating = false;
             },
         });
     };
@@ -1017,7 +1017,7 @@ const speakersInit = () => {
             y: 0,
             scaleX: 1,
             scaleY: 1,
-            rotation: 0,
+            // rotation: 0,
             onComplete: () => {
                 contentEl.classList.remove('content-item--current');
                 gridItem.classList.remove('exclude');
@@ -1026,7 +1026,6 @@ const speakersInit = () => {
                 gridItemBg.style.left = '0px';
                 gridItemBg.style.top = '0px';
                 activeSpeaker = -1;
-                // allowTilt = true;
                 gridItem.style.zIndex = 0;
                 enableScroll();
                 item.isAnimating = false;
@@ -1038,8 +1037,8 @@ const speakersInit = () => {
         showTexts(gridItemName, gridItemKeynote);
     };
 
-    const animationHover = (speaker, type, nameLetters) => {
-        if (window.innerWidth > 990) {
+    const animationHover = (speaker, type) => {
+        if (window.innerWidth > 990 && !speaker.classList.contains('exclude')) {
             const bg = speaker.querySelector('.speaker__bg');
             // Scale up the bg element.
             TweenMax.to(bg, 1, {
@@ -1055,15 +1054,12 @@ const speakersInit = () => {
         });
     } else {
         speakers.forEach(speaker => {
-            const name = speaker.querySelector('.speaker__name');
-            charming(name);
-            const nameLetters = name.querySelectorAll('span');
             speaker.addEventListener('mouseenter', () => {
-                animationHover(speaker, 'mouseenter', nameLetters);
+                animationHover(speaker, 'mouseenter');
             });
 
             speaker.addEventListener('mouseleave', () => {
-                animationHover(speaker, 'mouseleave', nameLetters);
+                animationHover(speaker, 'mouseleave');
             });
 
             speaker.addEventListener('click', event => {
@@ -1073,7 +1069,7 @@ const speakersInit = () => {
         });
 
         closeTheSpeaker.addEventListener('click', event => {
-            event.preventDefault();
+            // event.preventDefault();
             // Get the content element respective to this grid item.
             const currentContent = document.querySelector(
                 '.content-item--current'
@@ -1353,11 +1349,10 @@ Speakers Page View
 const Speakers = Barba.BaseView.extend({
     namespace: 'speakers',
     onEnter() {
-        // speakersInit();
+        speakersInit();
     },
     onEnterCompleted() {
         // The Transition has just finished.
-        speakersInit();
     },
     onLeave() {
         // A new Transition toward a new page has just started.
@@ -1416,8 +1411,8 @@ if (
         Agendapage.init();
         Speakers.init();
 
-        Barba.Pjax.start();
         Barba.Pjax.init();
+        // Barba.Pjax.start();
         Barba.Prefetch.init();
 
         Barba.Dispatcher.on('linkClicked', function(el) {
