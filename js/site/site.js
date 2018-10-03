@@ -696,7 +696,7 @@ const mobileAgendaEventFunctionality = () => {
             console.log(container);
             container.style.transform = 'translateX(100%)';
             enableScroll();
-            setTimeout( () => {
+            setTimeout(() => {
                 container.classList.remove('active');
             }, 500);
         });
@@ -1249,6 +1249,29 @@ function slideTheMenu() {
 
 /*
 =====================================
+Google Analytics - Register Events
+=====================================
+*/
+const analytics = () => {
+    const flag = document.querySelector('.flag__link');
+    const footerBtn = document.querySelector('.footer__btn > .btn');
+    const menuBtns = document.querySelectorAll('.mobile-cta-wrapper > .btn');
+
+    flag.addEventListener('click', () => {
+        ga('send', 'event', 'Register', 'Reg - Flag');
+    });
+    footerBtn.addEventListener('click', () => {
+        ga('send', 'event', 'Register', 'Reg - Footer');
+    });
+    menuBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            ga('send', 'event', 'Register', 'Reg - Menu');
+        });
+    });
+};
+
+/*
+=====================================
 ON SCROLL DOWN - HIDE SIDE NAV
 =====================================
 */
@@ -1312,6 +1335,18 @@ const BCLpage = Barba.BaseView.extend({
         BCLTopics();
     },
     onEnterCompleted() {
+        const onesCta = document.querySelector('.ones__cta > .cta');
+        const videoCta = document.querySelector('.video-shoot__cta');
+        const focusCta = document.querySelector('.focus-groups__cta');
+        onesCta.addEventListener('click', () => {
+            ga('send', 'event', 'Register', 'BCL - 1 on 1');
+        });
+        videoCta.addEventListener('click', () => {
+            ga('send', 'event', 'Register', 'BCL - Video Shoot');
+        });
+        focusCta.addEventListener('click', () => {
+            ga('send', 'event', 'Register', 'BCL - Focus Groups');
+        });
         // The Transition has just finished.
     },
     onLeave() {
@@ -1396,6 +1431,7 @@ if (
         setTimeout(() => {
             document.body.classList.remove('blur');
         }, 1000);
+        analytics();
         hamburger();
         slideTheMenu();
         openAccordian();
