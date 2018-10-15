@@ -59,7 +59,7 @@ class StarterSite extends TimberSite {
 			return $agenda;
 		}, 600 );
 
-		return $context;
+		return $context; 
 	}
 
 	function myfoo( $text ) {
