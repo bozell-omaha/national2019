@@ -35,7 +35,7 @@
         {% for day in agenda.Items %}
             <div class="agenda__day-wrapper" data-day="{{day.Date|date("j")-1}}">
                 <div class="agenda__events-header">
-                    <span>{{day.Date|date("l, F")}} {{day.Date|date("j")-1}} {{day.Date|date("Y")}}</span>
+                    <span>{{day.Date|date("l, F")}} {{day.Date|date("j")-1}}, 2019</span>
                 </div>
                 <div class="agenda__events">
                     {% for session in day.Sessions %}
