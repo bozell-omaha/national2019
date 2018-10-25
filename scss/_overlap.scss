@@ -84,6 +84,11 @@
                 margin-top: 0;
             }
         }
+        &--weezer {
+            @include media-query($large-up) {
+                transform: translateX(-5%);
+            }
+        }
     }
 
     &__cta {
