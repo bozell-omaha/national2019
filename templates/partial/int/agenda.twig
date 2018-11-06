@@ -31,7 +31,7 @@
         </div>
 
         <div class="agenda__right">
-
+     
         {% for day in agenda.Items %}
             <div class="agenda__day-wrapper" data-day="{{day.Date|date("j")-1}}">
                 <div class="agenda__events-header">
@@ -73,6 +73,12 @@
                                                 <span class="mobile-desc__speaker">{{speaker.FirstName}}</span>
                                                 {% endfor %}
                                             </div>
+                                        </div>
+                                        {% endif %}
+                                        {% if item.CreditInfo %}
+                                             <div class="mobile-desc__container">
+                                            <p class="mobile-desc__sub">Credits: </p>
+                                            <span>{{item.CreditInfo}}</span>
                                         </div>
                                         {% endif %}
 
