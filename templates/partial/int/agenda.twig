@@ -76,9 +76,12 @@
                                         </div>
                                         {% endif %}
                                         {% if item.CreditInfo %}
+                                        {% set creditInfoArray = item.CreditInfo | split(',') %}
                                              <div class="mobile-desc__container">
                                             <p class="mobile-desc__sub">Credits: </p>
-                                            <span>{{item.CreditInfo}}</span>
+                                            {% for credit in creditInfoArray %}
+                                            <span>{{credit}}</span><br />
+                                            {% endfor %}
                                         </div>
                                         {% endif %}
 
