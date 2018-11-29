@@ -10,9 +10,12 @@
                 <div class="agenda-filters__inner">
                     {% for keyword in agenda.Keywords %}
                     <div class="agenda-filter">
-                        <input type="checkbox" name="{{keyword|replace(' ', '-')|lower}}" value=".{{keyword|replace(' ', '-')|lower}}" id=""><label for="{{keyword|replace(' ', '-')|lower}}">{{keyword}}</label>
+                        <input type="checkbox" name="{{keyword|replace(' ', '-')|lower}}" value=".{{keyword|replace(' ', '-')|lower}}" id="{{keyword|replace(' ', '-')|lower}}"><label for="{{keyword|replace(' ', '-')|lower}}">{{keyword}}</label>
                     </div>
                     {% endfor %}
+                     <div class="agenda-filter">
+                        <input type="checkbox" name="credits" value=".credits" id="credits"><label for="credits">Has Credits</label>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,7 +43,7 @@
                 <div class="agenda__events">
                     {% for session in day.Sessions %}
                         {% for item in session.Items %}
-                        <div class="event{% if item.Keywords %}{% for keyword in item.Keywords %} {{keyword|replace(' ', '-')|lower}}{% endfor %}{% endif %}">
+                        <div class="event {% if item.CreditInfo %} credits {% endif %} {% if item.Keywords %}{% for keyword in item.Keywords %} {{keyword|replace(' ', '-')|lower}}{% endfor %}{% endif %}">
                             <span class="event__time">{{session.Time}}</span>
                             <span class="event__title">{{item.Title}}</span>
 
@@ -77,12 +80,14 @@
                                         {% endif %}
                                         {% if item.CreditInfo %}
                                         {% set creditInfoArray = item.CreditInfo | split(',') %}
-                                             <div class="mobile-desc__container">
+                                        <div class="mobile-desc__container">
                                             <p class="mobile-desc__sub">Credits: </p>
                                             {% for credit in creditInfoArray %}
-                                            <span>{{credit}}</span><br />
+                                            <span><strong>{{credit}}</strong></span><br />
                                             {% endfor %}
                                         </div>
+
+                       
                                         {% endif %}
 
                                         {% if item.Keywords %}
