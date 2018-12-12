@@ -44,6 +44,10 @@
             {% include 'partial/int/speakers.twig' %}
         {% endif %}
 
+        {% if post.slug == 'sponsors' %}
+            {% include 'partial/int/speakers.twig' %}
+        {% endif %}
+
         {% if post.slug == 'agenda' %}
             {% include 'partial/int/agenda.twig' %}
         {% endif %}
