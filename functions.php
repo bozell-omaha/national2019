@@ -59,6 +59,55 @@ class StarterSite extends TimberSite {
 			return $agenda;
 		}, 600 );
 
+		$context['sponsors']['premier'] = TimberHelper::transient( 'sponsors_premier', function(){
+			$url = urldecode('http://national.tda.bozellhosting.com/sponsors/logos/?eventcode=20190206A&sponsortypes=328');
+			$sponsors = json_decode(file_get_contents($url));
+			return $sponsors;
+		}, 600 );
+
+		$context['sponsors']['diamond'] = TimberHelper::transient( 'sponsors_diamond', function(){
+			$url = urldecode('http://national.tda.bozellhosting.com/sponsors/logos/?eventcode=20190206A&sponsortypes=327');
+			$sponsors = json_decode(file_get_contents($url));
+			return $sponsors;
+		}, 600 );
+
+		$context['sponsors']['platinum'] = TimberHelper::transient( 'sponsors_platinum', function(){
+			$url = urldecode('http://national.tda.bozellhosting.com/sponsors/logos/?eventcode=20190206A&sponsortypes=326');
+			$sponsors = json_decode(file_get_contents($url));
+			return $sponsors;
+		}, 600 );
+
+		$context['sponsors']['gold'] = TimberHelper::transient( 'sponsors_gold', function(){
+			$url = urldecode('http://national.tda.bozellhosting.com/sponsors/logos/?eventcode=20190206A&sponsortypes=325');
+			$sponsors = json_decode(file_get_contents($url));
+			return $sponsors;
+		}, 600 );
+
+		$context['sponsors']['silver'] = TimberHelper::transient( 'sponsors_silver', function(){
+			$url = urldecode('http://national.tda.bozellhosting.com/sponsors/logos/?eventcode=20190206A&sponsortypes=324');
+			$sponsors = json_decode(file_get_contents($url));
+			return $sponsors;
+		}, 600 );
+	
+
+		$context['sponsors']['affinity'] = TimberHelper::transient( 'sponsors_affinity', function(){
+			$url = urldecode('http://national.tda.bozellhosting.com/sponsors/logos/?eventcode=20190206A&sponsortypes=323');
+			$sponsors = json_decode(file_get_contents($url));
+			return $sponsors;
+		}, 600 );
+
+		$context['sponsors']['bronze'] = TimberHelper::transient( 'sponsors_bronze', function(){
+			$url = urldecode('http://national.tda.bozellhosting.com/sponsors/logos/?eventcode=20190206A&sponsortypes=322');
+			$sponsors = json_decode(file_get_contents($url));
+			return $sponsors;
+		}, 600 );
+
+		$context['sponsors']['veo'] = TimberHelper::transient( 'sponsors_veo', function(){
+			$url = urldecode('http://national.tda.bozellhosting.com/sponsors/logos/?eventcode=20190206A&sponsortypes=321');
+			$sponsors = json_decode(file_get_contents($url));
+			return $sponsors;
+		}, 600 );
+
 		return $context; 
 	}
 

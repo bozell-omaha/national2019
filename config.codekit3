@@ -1,5 +1,5 @@
 {
-"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https://codekitapp.com/",
+"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com\/",
 "buildSteps": [
 	{
 		"name": "Process All Remaining Files and Folders",
@@ -7,624 +7,610 @@
 		"uuidString": "D943AF76-D9A4-48D2-B4B7-C35832909CBA"
 		}
 	],
-"creatorBuild": "28905",
+"creatorBuild": "26680",
 "files": {
-	"/.eslintrc": {
+	"\/.eslintrc": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/.eslintrc",
+		"oAP": "\/.eslintrc",
 		"oF": 0
 		},
-	"/.gitignore": {
+	"\/.gitignore": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/.gitignore",
+		"oAP": "\/.gitignore",
 		"oF": 0
 		},
-	"/.travis.yml": {
+	"\/.travis.yml": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/.travis.yml",
+		"oAP": "\/.travis.yml",
 		"oF": 0
 		},
-	"/404.php": {
+	"\/404.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/404.php",
+		"oAP": "\/404.php",
 		"oF": 0
 		},
-	"/archive.php": {
+	"\/archive.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/archive.php",
+		"oAP": "\/archive.php",
 		"oF": 0
 		},
-	"/assets/img/1.jpg": {
+	"\/assets\/img\/1.jpg": {
 		"ft": 16384,
 		"iS": 636588,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/assets/img/1.jpg",
+		"oAP": "\/assets\/img\/1.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"/assets/img/home-carouse-test-img.png": {
+	"\/assets\/img\/home-carouse-test-img.png": {
 		"ft": 32768,
 		"iS": 1721997,
 		"oA": 0,
-		"oAP": "/assets/img/home-carouse-test-img.png",
+		"oAP": "\/assets\/img\/home-carouse-test-img.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
-	"/assets/img/test-svg.svg": {
+	"\/assets\/img\/test-svg.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/assets/img/test-svg.svg",
+		"oAP": "\/assets\/img\/test-svg.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/assets/img/wisdom tree@2x.jpg": {
+	"\/assets\/img\/wisdom tree@2x.jpg": {
 		"ft": 16384,
 		"iS": 277659,
 		"jF": 0,
 		"oA": 0,
-		"oAP": "/assets/img/wisdom tree@2x.jpg",
+		"oAP": "\/assets\/img\/wisdom tree@2x.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"q": 100
 		},
-	"/assets/img/wisdom tree@2x@2x.png": {
+	"\/assets\/img\/wisdom tree@2x@2x.png": {
 		"ft": 32768,
 		"iS": 1293700,
 		"oA": 0,
-		"oAP": "/assets/img/wisdom tree@2x@2x.png",
+		"oAP": "\/assets\/img\/wisdom tree@2x@2x.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"/author.php": {
+	"\/author.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/author.php",
+		"oAP": "\/author.php",
 		"oF": 0
 		},
-	"/bin/install-wp-tests.sh": {
+	"\/bin\/install-wp-tests.sh": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/bin/install-wp-tests.sh",
+		"oAP": "\/bin\/install-wp-tests.sh",
 		"oF": 0
 		},
-	"/composer.json": {
+	"\/composer.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "/composer-min.json",
+		"oAP": "\/composer-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"/composer.lock": {
+	"\/fonts\/TDASansScreen-Bold.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/composer.lock",
+		"oAP": "\/fonts\/TDASansScreen-Bold.ttf",
 		"oF": 0
 		},
-	"/fonts/TDASansScreen-Bold.ttf": {
+	"\/fonts\/TDASansScreen-Bold.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/fonts/TDASansScreen-Bold.ttf",
+		"oAP": "\/fonts\/TDASansScreen-Bold.woff",
 		"oF": 0
 		},
-	"/fonts/TDASansScreen-Bold.woff": {
+	"\/fonts\/TDASansScreen-Bold.woff2": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/fonts/TDASansScreen-Bold.woff",
+		"oAP": "\/fonts\/TDASansScreen-Bold.woff2",
 		"oF": 0
 		},
-	"/fonts/TDASansScreen-Bold.woff2": {
+	"\/fonts\/TDASansScreen-Light.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/fonts/TDASansScreen-Bold.woff2",
+		"oAP": "\/fonts\/TDASansScreen-Light.ttf",
 		"oF": 0
 		},
-	"/fonts/TDASansScreen-Light.ttf": {
+	"\/fonts\/TDASansScreen-Light.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/fonts/TDASansScreen-Light.ttf",
+		"oAP": "\/fonts\/TDASansScreen-Light.woff",
 		"oF": 0
 		},
-	"/fonts/TDASansScreen-Light.woff": {
+	"\/fonts\/TDASansScreen-Light.woff2": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/fonts/TDASansScreen-Light.woff",
+		"oAP": "\/fonts\/TDASansScreen-Light.woff2",
 		"oF": 0
 		},
-	"/fonts/TDASansScreen-Light.woff2": {
+	"\/fonts\/TDASansScreen-Medium.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/fonts/TDASansScreen-Light.woff2",
+		"oAP": "\/fonts\/TDASansScreen-Medium.ttf",
 		"oF": 0
 		},
-	"/fonts/TDASansScreen-Medium.ttf": {
+	"\/fonts\/TDASansScreen-Medium.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/fonts/TDASansScreen-Medium.ttf",
+		"oAP": "\/fonts\/TDASansScreen-Medium.woff",
 		"oF": 0
 		},
-	"/fonts/TDASansScreen-Medium.woff": {
+	"\/fonts\/TDASansScreen-Medium.woff2": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/fonts/TDASansScreen-Medium.woff",
+		"oAP": "\/fonts\/TDASansScreen-Medium.woff2",
 		"oF": 0
 		},
-	"/fonts/TDASansScreen-Medium.woff2": {
+	"\/fonts\/TDASansScreen-Roman.ttf": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/fonts/TDASansScreen-Medium.woff2",
+		"oAP": "\/fonts\/TDASansScreen-Roman.ttf",
 		"oF": 0
 		},
-	"/fonts/TDASansScreen-Roman.ttf": {
+	"\/fonts\/TDASansScreen-Roman.woff": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/fonts/TDASansScreen-Roman.ttf",
+		"oAP": "\/fonts\/TDASansScreen-Roman.woff",
 		"oF": 0
 		},
-	"/fonts/TDASansScreen-Roman.woff": {
+	"\/fonts\/TDASansScreen-Roman.woff2": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/fonts/TDASansScreen-Roman.woff",
+		"oAP": "\/fonts\/TDASansScreen-Roman.woff2",
 		"oF": 0
 		},
-	"/fonts/TDASansScreen-Roman.woff2": {
+	"\/footer.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/fonts/TDASansScreen-Roman.woff2",
+		"oAP": "\/footer.php",
 		"oF": 0
 		},
-	"/footer.php": {
+	"\/functions.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/footer.php",
+		"oAP": "\/functions.php",
 		"oF": 0
 		},
-	"/functions.php": {
+	"\/header.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/functions.php",
+		"oAP": "\/header.php",
 		"oF": 0
 		},
-	"/header.php": {
+	"\/humans.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/header.php",
+		"oAP": "\/humans.txt",
 		"oF": 0
 		},
-	"/humans.txt": {
+	"\/index.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/humans.txt",
+		"oAP": "\/index.php",
 		"oF": 0
 		},
-	"/index.php": {
+	"\/interior.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/index.php",
+		"oAP": "\/interior.php",
 		"oF": 0
 		},
-	"/interior.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/interior.php",
-		"oF": 0
-		},
-	"/js/compiled/agenda.min.js": {
+	"\/js\/compiled\/agenda.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/agenda.min.min.js",
+		"oAP": "\/js\/compiled\/agenda.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/compiled/babel-poly.min.js": {
+	"\/js\/compiled\/babel-poly.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/babel-poly.min.min.js",
+		"oAP": "\/js\/compiled\/babel-poly.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/compiled/homeHacks.min.js": {
+	"\/js\/compiled\/homeHacks.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/homeHacks.min.min.js",
+		"oAP": "\/js\/compiled\/homeHacks.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/compiled/ie_helper.min.js": {
+	"\/js\/compiled\/ie_helper.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/ie_helper.min.min.js",
+		"oAP": "\/js\/compiled\/ie_helper.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/compiled/site.min.js": {
+	"\/js\/compiled\/site.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/site.min.min.js",
+		"oAP": "\/js\/compiled\/site.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/compiled/site.min.js.map": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/js/compiled/site.min.js.map",
-		"oF": 0
-		},
-	"/js/compiled/slider.min.js": {
+	"\/js\/compiled\/slider.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/slider.min.min.js",
+		"oAP": "\/js\/compiled\/slider.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/compiled/speakers.min.js": {
+	"\/js\/compiled\/speakers.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/speakers.min.min.js",
+		"oAP": "\/js\/compiled\/speakers.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/compiled/test.min.js": {
+	"\/js\/compiled\/test.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/test.min.min.js",
+		"oAP": "\/js\/compiled\/test.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/compiled/topics.min.js": {
+	"\/js\/compiled\/topics.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/topics.min.min.js",
+		"oAP": "\/js\/compiled\/topics.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/compiled/vendors.min.js": {
+	"\/js\/compiled\/vendors.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/vendors.min.min.js",
+		"oAP": "\/js\/compiled\/vendors.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/site/agenda.js": {
+	"\/js\/site\/agenda.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/js/compiled/agenda.min.js",
+		"oAP": "\/js\/compiled\/agenda.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
 		},
-	"/js/site/babel-poly.js": {
+	"\/js\/site\/babel-poly.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/babel-poly.min.js",
+		"oAP": "\/js\/compiled\/babel-poly.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/site/helper.js": {
+	"\/js\/site\/helper.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/helper.min.js",
+		"oAP": "\/js\/compiled\/helper.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/site/homeCellSlider.js": {
+	"\/js\/site\/homeCellSlider.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/js/compiled/homeCellSlider.min.js",
+		"oAP": "\/js\/compiled\/homeCellSlider.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
 		},
-	"/js/site/homeHacks.js": {
+	"\/js\/site\/homeHacks.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/homeHacks.min.js",
+		"oAP": "\/js\/compiled\/homeHacks.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
 		},
-	"/js/site/ie_helper.js": {
+	"\/js\/site\/ie_helper.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/ie_helper.min.js",
+		"oAP": "\/js\/compiled\/ie_helper.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/site/site.js": {
+	"\/js\/site\/site.js": {
 		"ft": 64,
 		"ma": 1,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/site.min.js",
+		"oAP": "\/js\/compiled\/site.min.js",
 		"oF": 3,
 		"sC": 3,
 		"tS": 1
 		},
-	"/js/site/slider.js": {
+	"\/js\/site\/slider.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/js/compiled/slider.min.js",
+		"oAP": "\/js\/compiled\/slider.min.js",
 		"oF": 1,
 		"sC": 3,
 		"tS": 1
 		},
-	"/js/site/speakers.js": {
+	"\/js\/site\/speakers.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/speakers.min.js",
+		"oAP": "\/js\/compiled\/speakers.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
 		},
-	"/js/site/test.js": {
+	"\/js\/site\/test.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 0,
 		"oA": 0,
-		"oAP": "/js/compiled/test.min.js",
+		"oAP": "\/js\/compiled\/test.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
 		},
-	"/js/site/topics.js": {
+	"\/js\/site\/topics.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/topics.min.js",
+		"oAP": "\/js\/compiled\/topics.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
 		},
-	"/js/vendor/barba.min.js": {
+	"\/js\/vendor\/barba.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/js/vendor/barba.min.min.js",
+		"oAP": "\/js\/vendor\/barba.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/vendor/charming.js": {
+	"\/js\/vendor\/charming.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/js/compiled/charming.min.js",
+		"oAP": "\/js\/compiled\/charming.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/vendor/classList.js": {
+	"\/js\/vendor\/classList.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/js/compiled/classList.min.js",
+		"oAP": "\/js\/compiled\/classList.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/vendor/flickity.min.js": {
+	"\/js\/vendor\/flickity.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/flickity.min.min.js",
+		"oAP": "\/js\/compiled\/flickity.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/vendor/imagesLoaded.js": {
+	"\/js\/vendor\/imagesLoaded.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/imagesLoaded.min.js",
+		"oAP": "\/js\/compiled\/imagesLoaded.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/vendor/isotope.min.js": {
+	"\/js\/vendor\/isotope.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/js/compiled/isotope.min.min.js",
+		"oAP": "\/js\/compiled\/isotope.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/vendor/masonry.js": {
+	"\/js\/vendor\/masonry.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/masonry.min.js",
+		"oAP": "\/js\/compiled\/masonry.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/vendor/smoothScroll.js": {
+	"\/js\/vendor\/smoothScroll.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/js/compiled/smoothScroll.min.js",
+		"oAP": "\/js\/compiled\/smoothScroll.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/vendor/tingle.min.js": {
+	"\/js\/vendor\/tingle.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/js/compiled/tingle.min.min.js",
+		"oAP": "\/js\/compiled\/tingle.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/vendor/TweenMax.min.js": {
+	"\/js\/vendor\/TweenMax.min.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/js/vendor/TweenMax.min.min.js",
+		"oAP": "\/js\/vendor\/TweenMax.min.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
-	"/js/vendor/vendors.js": {
+	"\/js\/vendor\/vendors.js": {
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/js/compiled/vendors.min.js",
+		"oAP": "\/js\/compiled\/vendors.min.js",
 		"oF": 2,
 		"sC": 0,
 		"tS": 0
 		},
-	"/LICENSE": {
+	"\/LICENSE": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/LICENSE",
+		"oAP": "\/LICENSE",
 		"oF": 0
 		},
-	"/package-lock.json": {
+	"\/package-lock.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "/package-lock-min.json",
+		"oAP": "\/package-lock-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"/package.json": {
+	"\/package.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "/package-min.json",
+		"oAP": "\/package-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"/page-home.php": {
+	"\/page-home.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/page-home.php",
+		"oAP": "\/page-home.php",
 		"oF": 0
 		},
-	"/page.php": {
+	"\/page.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/page.php",
+		"oAP": "\/page.php",
 		"oF": 0
 		},
-	"/phpunit.xml": {
+	"\/phpunit.xml": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/phpunit.xml",
+		"oAP": "\/phpunit.xml",
 		"oF": 0
 		},
-	"/README.md": {
+	"\/README.md": {
 		"cB": 0,
 		"cS": 0,
 		"eF": 1,
@@ -633,7 +619,7 @@
 		"eSQ": 1,
 		"ft": 4096,
 		"oA": 0,
-		"oAP": "/README.html",
+		"oAP": "\/README.html",
 		"oF": 0,
 		"oFM": 0,
 		"oS": 0,
@@ -642,53 +628,18 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"/screenshot.png": {
+	"\/screenshot.png": {
 		"ft": 32768,
 		"iS": 149431,
 		"oA": 0,
-		"oAP": "/screenshot.png",
+		"oAP": "\/screenshot.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
 		"q": 100
 		},
-	"/scss/.sass-cache/737732b6a975a52e44ffef1a5938d9a680f0c195/_global.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "/scss/.sass-cache/737732b6a975a52e44ffef1a5938d9a680f0c195/_global.scssc",
-		"oF": 0
-		},
-	"/scss/.sass-cache/737732b6a975a52e44ffef1a5938d9a680f0c195/_mixins.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "/scss/.sass-cache/737732b6a975a52e44ffef1a5938d9a680f0c195/_mixins.scssc",
-		"oF": 0
-		},
-	"/scss/.sass-cache/737732b6a975a52e44ffef1a5938d9a680f0c195/_normalize.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "/scss/.sass-cache/737732b6a975a52e44ffef1a5938d9a680f0c195/_normalize.scssc",
-		"oF": 0
-		},
-	"/scss/.sass-cache/737732b6a975a52e44ffef1a5938d9a680f0c195/_variables.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "/scss/.sass-cache/737732b6a975a52e44ffef1a5938d9a680f0c195/_variables.scssc",
-		"oF": 0
-		},
-	"/scss/.sass-cache/737732b6a975a52e44ffef1a5938d9a680f0c195/style.scssc": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "/scss/.sass-cache/737732b6a975a52e44ffef1a5938d9a680f0c195/style.scssc",
-		"oF": 0
-		},
-	"/scss/_agenda.scss": {
+	"\/scss\/_agenda.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -696,12 +647,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_agenda.css",
+		"oAP": "\/scss\/_agenda.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_bcl.scss": {
+	"\/scss\/_bcl.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -709,12 +660,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_bcl.css",
+		"oAP": "\/scss\/_bcl.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_flickity.scss": {
+	"\/scss\/_flickity.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -722,12 +673,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_flickity.css",
+		"oAP": "\/scss\/_flickity.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_fonts.scss": {
+	"\/scss\/_fonts.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -735,12 +686,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_fonts.css",
+		"oAP": "\/scss\/_fonts.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_footer.scss": {
+	"\/scss\/_footer.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -748,12 +699,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_footer.css",
+		"oAP": "\/scss\/_footer.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_global.scss": {
+	"\/scss\/_global.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -761,12 +712,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/scss/_global.css",
+		"oAP": "\/scss\/_global.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_header.scss": {
+	"\/scss\/_header.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -774,12 +725,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_header.css",
+		"oAP": "\/scss\/_header.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_home-carousel.scss": {
+	"\/scss\/_home-carousel.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -787,12 +738,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_home-carousel.css",
+		"oAP": "\/scss\/_home-carousel.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_home.scss": {
+	"\/scss\/_home.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -800,12 +751,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_home.css",
+		"oAP": "\/scss\/_home.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_hotel.scss": {
+	"\/scss\/_hotel.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -813,12 +764,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_hotel.css",
+		"oAP": "\/scss\/_hotel.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_hours.scss": {
+	"\/scss\/_hours.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -826,12 +777,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_hours.css",
+		"oAP": "\/scss\/_hours.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_interior-hero.scss": {
+	"\/scss\/_interior-hero.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -839,12 +790,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_interior-hero.css",
+		"oAP": "\/scss\/_interior-hero.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_kv.scss": {
+	"\/scss\/_kv.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -852,12 +803,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_kv.css",
+		"oAP": "\/scss\/_kv.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_large-menu.scss": {
+	"\/scss\/_large-menu.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -865,12 +816,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_large-menu.css",
+		"oAP": "\/scss\/_large-menu.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_mixins.scss": {
+	"\/scss\/_mixins.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -878,12 +829,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/scss/_mixins.css",
+		"oAP": "\/scss\/_mixins.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_mobile-menu.scss": {
+	"\/scss\/_mobile-menu.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -891,12 +842,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_mobile-menu.css",
+		"oAP": "\/scss\/_mobile-menu.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_normalize.scss": {
+	"\/scss\/_normalize.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -904,12 +855,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/scss/_normalize.css",
+		"oAP": "\/scss\/_normalize.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_overlap.scss": {
+	"\/scss\/_overlap.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -917,12 +868,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_overlap.css",
+		"oAP": "\/scss\/_overlap.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_preloader.scss": {
+	"\/scss\/_preloader.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -930,12 +881,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_preloader.css",
+		"oAP": "\/scss\/_preloader.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_slide-menu.scss": {
+	"\/scss\/_slide-menu.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -943,12 +894,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_slide-menu.css",
+		"oAP": "\/scss\/_slide-menu.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_slider.scss": {
+	"\/scss\/_slider.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -956,12 +907,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_slider.css",
+		"oAP": "\/scss\/_slider.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_speakers.scss": {
+	"\/scss\/_speakers.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -969,12 +920,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_speakers.css",
+		"oAP": "\/scss\/_speakers.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_tingle.scss": {
+	"\/scss\/_tingle.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -982,12 +933,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_tingle.css",
+		"oAP": "\/scss\/_tingle.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_typography.scss": {
+	"\/scss\/_typography.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -995,12 +946,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_typography.css",
+		"oAP": "\/scss\/_typography.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_variables.scss": {
+	"\/scss\/_variables.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -1008,12 +959,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/scss/_variables.css",
+		"oAP": "\/scss\/_variables.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/_veo.scss": {
+	"\/scss\/_veo.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -1021,12 +972,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/_veo.css",
+		"oAP": "\/scss\/_veo.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/flag.scss": {
+	"\/scss\/flag.scss": {
 		"aP": 1,
 		"bl": 0,
 		"dP": 10,
@@ -1034,12 +985,12 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/scss/flag.css",
+		"oAP": "\/scss\/flag.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"/scss/style.scss": {
+	"\/scss\/style.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,
@@ -1047,574 +998,581 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 0,
-		"oAP": "/style.css",
+		"oAP": "\/style.css",
 		"oF": 2,
 		"oS": 3,
 		"uL": 1
 		},
-	"/search.php": {
+	"\/search.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/search.php",
+		"oAP": "\/search.php",
 		"oF": 0
 		},
-	"/sidebar.php": {
+	"\/sidebar.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/sidebar.php",
+		"oAP": "\/sidebar.php",
 		"oF": 0
 		},
-	"/single-the_speakers.php": {
+	"\/single-the_speakers.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/single-the_speakers.php",
+		"oAP": "\/single-the_speakers.php",
 		"oF": 0
 		},
-	"/single.php": {
+	"\/single.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/single.php",
+		"oAP": "\/single.php",
 		"oF": 0
 		},
-	"/static/no-timber.html": {
+	"\/static\/no-timber.html": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/static/no-timber.html",
+		"oAP": "\/static\/no-timber.html",
 		"oF": 0
 		},
-	"/style.css": {
+	"\/style.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/style-min.css",
+		"oAP": "\/style-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/style.css.map": {
+	"\/style.css.map": {
 		"cB": 0,
 		"ft": 8192,
-		"oA": 1,
-		"oAP": "/style.css.map",
+		"oA": 0,
+		"oAP": "\/style.css.map",
 		"oF": 0
 		},
-	"/style.min.css": {
+	"\/style.min.css": {
 		"aP": 1,
 		"bl": 0,
 		"ft": 16,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/style.min-min.css",
+		"oAP": "\/style.min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
-	"/templates/404.twig": {
+	"\/templates\/404.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/404.twig",
+		"oAP": "\/templates\/404.twig",
 		"oF": 0
 		},
-	"/templates/author.twig": {
+	"\/templates\/author.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/author.twig",
+		"oAP": "\/templates\/author.twig",
 		"oF": 0
 		},
-	"/templates/base.twig": {
+	"\/templates\/base.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/base.twig",
+		"oAP": "\/templates\/base.twig",
 		"oF": 0
 		},
-	"/templates/comment-form.twig": {
+	"\/templates\/comment-form.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/comment-form.twig",
+		"oAP": "\/templates\/comment-form.twig",
 		"oF": 0
 		},
-	"/templates/comment.twig": {
+	"\/templates\/comment.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/comment.twig",
+		"oAP": "\/templates\/comment.twig",
 		"oF": 0
 		},
-	"/templates/footer.twig": {
+	"\/templates\/footer.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/footer.twig",
+		"oAP": "\/templates\/footer.twig",
 		"oF": 0
 		},
-	"/templates/html-header.twig": {
+	"\/templates\/html-header.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/html-header.twig",
+		"oAP": "\/templates\/html-header.twig",
 		"oF": 0
 		},
-	"/templates/index.twig": {
+	"\/templates\/index.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/index.twig",
+		"oAP": "\/templates\/index.twig",
 		"oF": 0
 		},
-	"/templates/interior.twig": {
+	"\/templates\/interior.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/interior.twig",
+		"oAP": "\/templates\/interior.twig",
 		"oF": 0
 		},
-	"/templates/page-home.twig": {
+	"\/templates\/page-home.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/page-home.twig",
+		"oAP": "\/templates\/page-home.twig",
 		"oF": 0
 		},
-	"/templates/page-plugin.twig": {
+	"\/templates\/page-plugin.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/page-plugin.twig",
+		"oAP": "\/templates\/page-plugin.twig",
 		"oF": 0
 		},
-	"/templates/page-test.twig": {
+	"\/templates\/page-test.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/page-test.twig",
+		"oAP": "\/templates\/page-test.twig",
 		"oF": 0
 		},
-	"/templates/page.twig": {
+	"\/templates\/page.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/page.twig",
+		"oAP": "\/templates\/page.twig",
 		"oF": 0
 		},
-	"/templates/partial/homeHero.twig": {
+	"\/templates\/partial\/homeHero.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/homeHero.twig",
+		"oAP": "\/templates\/partial\/homeHero.twig",
 		"oF": 0
 		},
-	"/templates/partial/hours.twig": {
+	"\/templates\/partial\/hours.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/hours.twig",
+		"oAP": "\/templates\/partial\/hours.twig",
 		"oF": 0
 		},
-	"/templates/partial/int/agenda.twig": {
+	"\/templates\/partial\/int\/agenda.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/int/agenda.twig",
+		"oAP": "\/templates\/partial\/int\/agenda.twig",
 		"oF": 0
 		},
-	"/templates/partial/int/bcl.twig": {
+	"\/templates\/partial\/int\/bcl.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/int/bcl.twig",
+		"oAP": "\/templates\/partial\/int\/bcl.twig",
 		"oF": 0
 		},
-	"/templates/partial/int/first.twig": {
+	"\/templates\/partial\/int\/first.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/int/first.twig",
+		"oAP": "\/templates\/partial\/int\/first.twig",
 		"oF": 0
 		},
-	"/templates/partial/int/hotel.twig": {
+	"\/templates\/partial\/int\/hotel.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/int/hotel.twig",
+		"oAP": "\/templates\/partial\/int\/hotel.twig",
 		"oF": 0
 		},
-	"/templates/partial/int/innovation.twig": {
+	"\/templates\/partial\/int\/innovation.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/int/innovation.twig",
+		"oAP": "\/templates\/partial\/int\/innovation.twig",
 		"oF": 0
 		},
-	"/templates/partial/int/lincx.twig": {
+	"\/templates\/partial\/int\/lincx.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/int/lincx.twig",
+		"oAP": "\/templates\/partial\/int\/lincx.twig",
 		"oF": 0
 		},
-	"/templates/partial/int/meet.twig": {
+	"\/templates\/partial\/int\/meet.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/int/meet.twig",
+		"oAP": "\/templates\/partial\/int\/meet.twig",
 		"oF": 0
 		},
-	"/templates/partial/int/speakers.twig": {
+	"\/templates\/partial\/int\/speakers.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/int/speakers.twig",
+		"oAP": "\/templates\/partial\/int\/speakers.twig",
 		"oF": 0
 		},
-	"/templates/partial/int/veo.twig": {
+	"\/templates\/partial\/int\/sponsors.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/int/veo.twig",
+		"oAP": "\/templates\/partial\/int\/sponsors.twig",
 		"oF": 0
 		},
-	"/templates/partial/large-menu.twig": {
+	"\/templates\/partial\/int\/veo.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/large-menu.twig",
+		"oAP": "\/templates\/partial\/int\/veo.twig",
 		"oF": 0
 		},
-	"/templates/partial/large-nav.twig": {
+	"\/templates\/partial\/large-menu.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/large-nav.twig",
+		"oAP": "\/templates\/partial\/large-menu.twig",
 		"oF": 0
 		},
-	"/templates/partial/mobile-menu.twig": {
+	"\/templates\/partial\/large-nav.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/mobile-menu.twig",
+		"oAP": "\/templates\/partial\/large-nav.twig",
 		"oF": 0
 		},
-	"/templates/partial/mobile-nav.twig": {
+	"\/templates\/partial\/mobile-menu.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/mobile-nav.twig",
+		"oAP": "\/templates\/partial\/mobile-menu.twig",
 		"oF": 0
 		},
-	"/templates/partial/pagination.twig": {
+	"\/templates\/partial\/mobile-nav.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/pagination.twig",
+		"oAP": "\/templates\/partial\/mobile-nav.twig",
 		"oF": 0
 		},
-	"/templates/partial/slide-menu.twig": {
+	"\/templates\/partial\/pagination.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/slide-menu.twig",
+		"oAP": "\/templates\/partial\/pagination.twig",
 		"oF": 0
 		},
-	"/templates/partial/svg/arrow-down.svg": {
+	"\/templates\/partial\/slide-menu.twig": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/templates\/partial\/slide-menu.twig",
+		"oF": 0
+		},
+	"\/templates\/partial\/svg\/arrow-down.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/arrow-down.svg",
+		"oAP": "\/templates\/partial\/svg\/arrow-down.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/arrow-forward.svg": {
+	"\/templates\/partial\/svg\/arrow-forward.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/arrow-forward.svg",
+		"oAP": "\/templates\/partial\/svg\/arrow-forward.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/back-arrow.svg": {
+	"\/templates\/partial\/svg\/back-arrow.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/back-arrow.svg",
+		"oAP": "\/templates\/partial\/svg\/back-arrow.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/chevron-right.svg": {
+	"\/templates\/partial\/svg\/chevron-right.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/chevron-right.svg",
+		"oAP": "\/templates\/partial\/svg\/chevron-right.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/facebook.svg": {
+	"\/templates\/partial\/svg\/facebook.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/facebook.svg",
+		"oAP": "\/templates\/partial\/svg\/facebook.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/filter-content.svg": {
+	"\/templates\/partial\/svg\/filter-content.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/filter-content.svg",
+		"oAP": "\/templates\/partial\/svg\/filter-content.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/instagram.svg": {
+	"\/templates\/partial\/svg\/instagram.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/instagram.svg",
+		"oAP": "\/templates\/partial\/svg\/instagram.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/knockout.svg": {
+	"\/templates\/partial\/svg\/knockout.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/knockout.svg",
+		"oAP": "\/templates\/partial\/svg\/knockout.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/large-logo-new.svg": {
+	"\/templates\/partial\/svg\/large-logo-new.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/large-logo-new.svg",
+		"oAP": "\/templates\/partial\/svg\/large-logo-new.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/large-logo.svg": {
+	"\/templates\/partial\/svg\/large-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/large-logo.svg",
+		"oAP": "\/templates\/partial\/svg\/large-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/left-arrow.svg": {
+	"\/templates\/partial\/svg\/left-arrow.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/left-arrow.svg",
+		"oAP": "\/templates\/partial\/svg\/left-arrow.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/linkedin.svg": {
+	"\/templates\/partial\/svg\/linkedin.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/linkedin.svg",
+		"oAP": "\/templates\/partial\/svg\/linkedin.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/location.svg": {
+	"\/templates\/partial\/svg\/location.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/location.svg",
+		"oAP": "\/templates\/partial\/svg\/location.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/mobile-logo.svg": {
+	"\/templates\/partial\/svg\/mobile-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/mobile-logo.svg",
+		"oAP": "\/templates\/partial\/svg\/mobile-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/play-btn.svg": {
+	"\/templates\/partial\/svg\/play-btn.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/play-btn.svg",
+		"oAP": "\/templates\/partial\/svg\/play-btn.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/plus.svg": {
+	"\/templates\/partial\/svg\/plus.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/plus.svg",
+		"oAP": "\/templates\/partial\/svg\/plus.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/right-arrow.svg": {
+	"\/templates\/partial\/svg\/right-arrow.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/right-arrow.svg",
+		"oAP": "\/templates\/partial\/svg\/right-arrow.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/search.svg": {
+	"\/templates\/partial\/svg\/search.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/search.svg",
+		"oAP": "\/templates\/partial\/svg\/search.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/speaker.svg": {
+	"\/templates\/partial\/svg\/speaker.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/speaker.svg",
+		"oAP": "\/templates\/partial\/svg\/speaker.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/tdai-logo-2.svg": {
+	"\/templates\/partial\/svg\/tdai-logo-2.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/tdai-logo-2.svg",
+		"oAP": "\/templates\/partial\/svg\/tdai-logo-2.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/tdai-logo.svg": {
+	"\/templates\/partial\/svg\/tdai-logo.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/tdai-logo.svg",
+		"oAP": "\/templates\/partial\/svg\/tdai-logo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/twitter.svg": {
+	"\/templates\/partial\/svg\/twitter.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/twitter.svg",
+		"oAP": "\/templates\/partial\/svg\/twitter.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/svg/youtube.svg": {
+	"\/templates\/partial\/svg\/youtube.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
-		"oAP": "/templates/partial/svg/youtube.svg",
+		"oAP": "\/templates\/partial\/svg\/youtube.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"/templates/partial/the-flag.twig": {
+	"\/templates\/partial\/the-flag.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/partial/the-flag.twig",
+		"oAP": "\/templates\/partial\/the-flag.twig",
 		"oF": 0
 		},
-	"/templates/sidebar.twig": {
+	"\/templates\/sidebar.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/sidebar.twig",
+		"oAP": "\/templates\/sidebar.twig",
 		"oF": 0
 		},
-	"/templates/single-password.twig": {
+	"\/templates\/single-password.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/single-password.twig",
+		"oAP": "\/templates\/single-password.twig",
 		"oF": 0
 		},
-	"/templates/single-the_speakers.twig": {
+	"\/templates\/single-the_speakers.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/single-the_speakers.twig",
+		"oAP": "\/templates\/single-the_speakers.twig",
 		"oF": 0
 		},
-	"/templates/single.twig": {
+	"\/templates\/single.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/single.twig",
+		"oAP": "\/templates\/single.twig",
 		"oF": 0
 		},
-	"/templates/tease-post.twig": {
+	"\/templates\/tease-post.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/tease-post.twig",
+		"oAP": "\/templates\/tease-post.twig",
 		"oF": 0
 		},
-	"/templates/tease.twig": {
+	"\/templates\/tease.twig": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/templates/tease.twig",
+		"oAP": "\/templates\/tease.twig",
 		"oF": 0
 		},
-	"/tests/bootstrap.php": {
+	"\/tests\/bootstrap.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/tests/bootstrap.php",
+		"oAP": "\/tests\/bootstrap.php",
 		"oF": 0
 		},
-	"/tests/test-timber-starter-theme.php": {
+	"\/tests\/test-timber-starter-theme.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
-		"oAP": "/tests/test-timber-starter-theme.php",
+		"oAP": "\/tests\/test-timber-starter-theme.php",
 		"oF": 0
 		}
 	},
@@ -1624,7 +1582,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 544646882,
-	"displayValue": "linc2019",
+	"displayValue": "national2019",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "brackets_purple",
 	"iconImageWasSetByUser": 0
@@ -1634,94 +1592,141 @@
 	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
+	"autoprefixerBrowserString": "> 1%, last 2 versions, Firefox ESR, Opera 12.1",
 	"autoprefixerEnableIEGrid": 0,
-	"babel7PresetType": 1,
-	"babelAllowRCFiles": 0,
 	"babelAuxiliaryCommentAfter": "",
 	"babelAuxiliaryCommentBefore": "",
-	"babelConfigType": 0,
+	"babelConfigFileHandlingType": 0,
 	"babelCustomPluginsList": "",
 	"babelCustomPresetsList": "",
 	"babelInsertModuleIDs": 0,
 	"babelModuleID": "",
 	"babelNoComments": 0,
 	"babelPlugins": {
-		"arrow-functions": {
-			"active": 0
-			},
 		"async-generator-functions": {
 			"active": 0
 			},
 		"async-to-generator": {
 			"active": 0
 			},
-		"block-scoped-functions": {
-			"active": 0
-			},
-		"block-scoping": {
+		"async-to-module-method": {
 			"active": 0
 			},
 		"class-properties": {
 			"active": 0
 			},
-		"classes": {
-			"active": 0
-			},
-		"computed-properties": {
-			"active": 0
-			},
 		"decorators": {
 			"active": 0
 			},
-		"destructuring": {
+		"decorators-legacy": {
 			"active": 0
 			},
 		"do-expressions": {
 			"active": 0
 			},
-		"dotall-regex": {
+		"es2015-arrow-functions": {
 			"active": 0
 			},
-		"duplicate-keys": {
+		"es2015-block-scoped-functions": {
+			"active": 0
+			},
+		"es2015-block-scoping": {
+			"active": 0
+			},
+		"es2015-classes": {
+			"active": 0
+			},
+		"es2015-computed-properties": {
+			"active": 0
+			},
+		"es2015-constants": {
+			"active": 0
+			},
+		"es2015-destructuring": {
+			"active": 0
+			},
+		"es2015-duplicate-keys": {
+			"active": 0
+			},
+		"es2015-for-of": {
+			"active": 0
+			},
+		"es2015-function-name": {
+			"active": 0
+			},
+		"es2015-literals": {
+			"active": 0
+			},
+		"es2015-modules-amd": {
+			"active": 0
+			},
+		"es2015-modules-commonjs": {
+			"active": 0
+			},
+		"es2015-modules-systemjs": {
+			"active": 0
+			},
+		"es2015-modules-umd": {
+			"active": 0
+			},
+		"es2015-object-super": {
+			"active": 0
+			},
+		"es2015-parameters": {
+			"active": 0
+			},
+		"es2015-shorthand-properties": {
+			"active": 0
+			},
+		"es2015-spread": {
+			"active": 0
+			},
+		"es2015-sticky-regex": {
+			"active": 0
+			},
+		"es2015-template-literals": {
+			"active": 0
+			},
+		"es2015-typeof-symbol": {
+			"active": 0
+			},
+		"es2015-unicode-regex": {
+			"active": 0
+			},
+		"es3-member-expression-literals": {
+			"active": 0
+			},
+		"es3-property-literals": {
+			"active": 0
+			},
+		"es5-property-mutators": {
+			"active": 0
+			},
+		"eval": {
 			"active": 0
 			},
 		"exponentiation-operator": {
 			"active": 0
 			},
-		"export-default-from": {
-			"active": 0
-			},
-		"export-namespace-from": {
+		"export-extensions": {
 			"active": 0
 			},
 		"external-helpers": {
 			"active": 0
 			},
-		"flow-strip-types": {
+		"flow-comments": {
 			"active": 0
 			},
-		"for-of": {
+		"flow-strip-types": {
 			"active": 0
 			},
 		"function-bind": {
 			"active": 0
 			},
-		"function-name": {
-			"active": 0
-			},
-		"function-sent": {
-			"active": 0
-			},
-		"instanceof": {
+		"inline-environment-variables": {
 			"active": 0
 			},
 		"jscript": {
-			"active": 0
-			},
-		"literals": {
-			"active": 0
-			},
-		"logical-assignment-operators": {
 			"active": 0
 			},
 		"member-expression-literals": {
@@ -1733,28 +1738,7 @@
 		"minify-booleans": {
 			"active": 0
 			},
-		"modules-amd": {
-			"active": 0
-			},
-		"modules-commonjs": {
-			"active": 0
-			},
-		"modules-systemjs": {
-			"active": 0
-			},
-		"modules-umd": {
-			"active": 0
-			},
-		"new-target": {
-			"active": 0
-			},
 		"node-env-inline": {
-			"active": 0
-			},
-		"nullish-coalescing-operator": {
-			"active": 0
-			},
-		"numeric-separator": {
 			"active": 0
 			},
 		"object-assign": {
@@ -1766,25 +1750,7 @@
 		"object-set-prototype-of-to-assign": {
 			"active": 0
 			},
-		"object-super": {
-			"active": 0
-			},
-		"optional-catch-binding": {
-			"active": 0
-			},
-		"optional-chaining": {
-			"active": 0
-			},
-		"parameters": {
-			"active": 0
-			},
-		"pipeline-operator": {
-			"active": 0
-			},
 		"property-literals": {
-			"active": 0
-			},
-		"property-mutators": {
 			"active": 0
 			},
 		"proto-to-assign": {
@@ -1820,46 +1786,53 @@
 		"remove-debugger": {
 			"active": 0
 			},
-		"reserved-words": {
-			"active": 0
-			},
 		"runtime": {
-			"active": 0
-			},
-		"shorthand-properties": {
 			"active": 0
 			},
 		"simplify-comparison-operators": {
 			"active": 0
 			},
-		"spread": {
-			"active": 0
-			},
-		"sticky-regex": {
-			"active": 0
-			},
 		"strict-mode": {
 			"active": 0
 			},
-		"template-literals": {
+		"syntax-async-generators": {
 			"active": 0
 			},
-		"throw-expressions": {
+		"syntax-class-properties": {
 			"active": 0
 			},
-		"typeof-symbol": {
+		"syntax-decorators": {
+			"active": 0
+			},
+		"syntax-do-expressions": {
+			"active": 0
+			},
+		"syntax-export-extensions": {
+			"active": 0
+			},
+		"syntax-flow": {
+			"active": 0
+			},
+		"syntax-function-bind": {
+			"active": 0
+			},
+		"syntax-function-sent": {
+			"active": 0
+			},
+		"syntax-jsx": {
+			"active": 0
+			},
+		"syntax-object-rest-spread": {
+			"active": 0
+			},
+		"undeclared-variables-check": {
 			"active": 0
 			},
 		"undefined-to-void": {
 			"active": 0
-			},
-		"unicode-property-regex": {
-			"active": 0
-			},
-		"unicode-regex": {
-			"active": 0
 			}
 		},
+	"babelPresetType": 193,
 	"babelRetainLines": 0,
 	"bowerAbbreviatedPath": "bower_components",
 	"bowerAutoCreateInfoFile": 1,
@@ -1868,7 +1841,6 @@
 	"bowerSaveDevDependencies": 0,
 	"bowerUseExactVersion": 0,
 	"browserRefreshDelay": 0,
-	"browserslistString": ">0.2%, last 3 versions, Firefox ESR, not dead, IE 10, IE 9",
 	"buildFolderActive": 0,
 	"buildFolderName": "build",
 	"cleanBuild": 1,
@@ -2226,10 +2198,6 @@
 			"active": 0,
 			"optionString": "'always', {exceptAfterSingleLine: false}"
 			},
-		"max-classes-per-file": {
-			"active": 0,
-			"optionString": "1"
-			},
 		"max-depth": {
 			"active": 0,
 			"optionString": "{'max': 4}"
@@ -2241,10 +2209,6 @@
 		"max-lines": {
 			"active": 0,
 			"optionString": "{'max': 300, 'skipBlankLines': true, 'skipComments': true}"
-			},
-		"max-lines-per-function": {
-			"active": 0,
-			"optionString": "{'max': 50, 'skipBlankLines': true, 'skipComments': true, 'IIFEs': false}"
 			},
 		"max-nested-callbacks": {
 			"active": 0,
@@ -2290,10 +2254,6 @@
 			"active": 0,
 			"optionString": ""
 			},
-		"no-async-promise-executor": {
-			"active": 0,
-			"optionString": ""
-			},
 		"no-await-in-loop": {
 			"active": 0,
 			"optionString": ""
@@ -2312,6 +2272,10 @@
 			},
 		"no-case-declarations": {
 			"active": 1,
+			"optionString": ""
+			},
+		"no-catch-shadow": {
+			"active": 0,
 			"optionString": ""
 			},
 		"no-class-assign": {
@@ -2510,13 +2474,9 @@
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
 			},
-		"no-misleading-character-class": {
-			"active": 0,
-			"optionString": ""
-			},
 		"no-mixed-operators": {
 			"active": 0,
-			"optionString": "{'groups': [['+', '-', '*', '/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
+			"optionString": "{'groups': [['+', '-', '*', '\/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
 			},
 		"no-mixed-requires": {
 			"active": 0,
@@ -2870,10 +2830,6 @@
 			"active": 0,
 			"optionString": ""
 			},
-		"prefer-object-spread": {
-			"active": 0,
-			"optionString": ""
-			},
 		"prefer-promise-reject-errors": {
 			"active": 0,
 			"optionString": "{'allowEmptyReject': false}"
@@ -2902,10 +2858,6 @@
 			"active": 0,
 			"optionString": "'always'"
 			},
-		"require-atomic-updates": {
-			"active": 0,
-			"optionString": ""
-			},
 		"require-await": {
 			"active": 0,
 			"optionString": ""
@@ -2913,10 +2865,6 @@
 		"require-jsdoc": {
 			"active": 0,
 			"optionString": "{'require': {'FunctionDeclaration': true, 'MethodDefinition': false, 'ClassDeclaration': false, 'ArrowFunctionExpression': false}}"
-			},
-		"require-unicode-regexp": {
-			"active": 0,
-			"optionString": ""
 			},
 		"require-yield": {
 			"active": 1,
@@ -2972,7 +2920,7 @@
 			},
 		"spaced-comment": {
 			"active": 0,
-			"optionString": "'always', {'line': {'markers': ['/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
+			"optionString": "'always', {'line': {'markers': ['\/'], 'exceptions': ['-', '+']}, 'block': {'markers': ['!'], 'exceptions': ['*'], 'balanced': false}}"
 			},
 		"strict": {
 			"active": 0,
@@ -3427,6 +3375,7 @@
 		"escapeHTMLCharacters": 0,
 		"noEscapeInAttributes": 0,
 		"outputFormat": 2,
+		"outputStyle": 0,
 		"shouldRunCacheBuster": 0,
 		"useCDATA": 0,
 		"useDoubleQuotes": 0,
@@ -3445,7 +3394,7 @@
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.min.js",
-		"autoOutputPathRelativePath": "/js/compiled",
+		"autoOutputPathRelativePath": "\/js\/compiled",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 1,
@@ -3477,19 +3426,19 @@
 		"allowInsecureImports": 0,
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "../css",
+		"autoOutputPathRelativePath": "..\/css",
 		"autoOutputPathReplace1": "less",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 1,
-		"enableJavascript": 0,
+		"disableJavascript": 0,
 		"ieCompatibility": 1,
-		"mathStyle": 0,
 		"outputStyle": 0,
-		"rewriteURLStyle": 0,
+		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 0,
 		"shouldRunBless": 0,
 		"strictImports": 0,
+		"strictMath": 0,
 		"strictUnits": 0
 		},
 	"languageDefaultsMARKDOWN": {
@@ -3545,7 +3494,7 @@
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "../css",
+		"autoOutputPathRelativePath": "..\/css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 0,
@@ -3574,7 +3523,7 @@
 	"languageDefaultsSTYLUS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "../css",
+		"autoOutputPathRelativePath": "..\/css",
 		"autoOutputPathReplace1": "stylus",
 		"autoOutputPathReplace2": "css",
 		"autoOutputPathStyle": 0,
@@ -3598,70 +3547,36 @@
 	"languageDefaultsTS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "/js",
+		"autoOutputPathRelativePath": "\/js",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"createDeclarationFile": 0,
 		"createSourceMap": 0,
+		"jsxMode": 0,
 		"minifyOutput": 0,
 		"moduleResolutionType": 0,
 		"moduleType": 2,
+		"noImplicitAny": 0,
+		"preserveConstEnums": 0,
 		"removeComments": 0,
+		"suppressImplicitAnyIndexErrors": 0,
 		"targetECMAVersion": 0
 		},
 	"languageDefaultsUserDefined": [
 		],
 	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
-	"skippedFoldersString": "log, _logs, logs, _cache, cache, /storage/framework/sessions, node_modules",
+	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
 	"susyVersion": 3,
-	"tsAllowSyntheticDefaultImports": 0,
-	"tsAllowUnreachableCode": 0,
-	"tsAllowUnusedLabels": 0,
-	"tsAlwaysStrict": 0,
-	"tsDownlevelIteration": 0,
-	"tsEmitBOM": 0,
-	"tsEmitDecoratorMetadata": 0,
-	"tsESModuleInterop": 0,
-	"tsForceConsistentCasingInFileNames": 0,
-	"tsImportHelpers": 0,
-	"tsIsolatedModules": 0,
-	"tsJSXFactory": "React.createElement",
-	"tsKeyofStringsOnly": 0,
-	"tsNoEmitHelpers": 0,
-	"tsNoFallthroughCasesInSwitch": 0,
-	"tsNoImplicitAny": 0,
-	"tsNoImplicitReturns": 0,
-	"tsNoImplicitThis": 0,
-	"tsNoImplicitUseStrict": 0,
-	"tsNoLib": 0,
-	"tsNoResolve": 0,
-	"tsNoStrictGenericChecks": 0,
-	"tsNoUnusedLocals": 0,
-	"tsNoUnusedParameters": 0,
-	"tsPreserveConstEnums": 0,
-	"tsPreserveSymlinks": 0,
-	"tsResolveJsonModule": 0,
-	"tsSkipLibCheck": 0,
-	"tsStrictFunctionTypes": 0,
-	"tsStrictNullChecks": 0,
-	"tsStrictPropertyInitialization": 0,
-	"tsStripInternal": 0,
-	"tsSuppressExcessPropertyErrors": 0,
-	"tsSuppressImplicitAnyIndexErrors": 0,
 	"uglifyDefinesString": "",
 	"uglifyFlags2": {
-		"arguments": {
-			"active": 1,
-			"flagValue": -1
-			},
-		"ascii_only": {
+		"ascii-only": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"bare_returns": {
+		"bare-returns": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -3669,11 +3584,11 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"braces": {
+		"bracketize": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"collapse_vars": {
+		"cascade": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -3697,10 +3612,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"directives": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"drop_console": {
 			"active": 0,
 			"flagValue": -1
@@ -3717,15 +3628,7 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"expression": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"hoist_funs": {
-			"active": 1,
-			"flagValue": -1
-			},
-		"hoist_props": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -3733,32 +3636,20 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"html5_comments": {
-			"active": 1,
-			"flagValue": -1
-			},
-		"ie8": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"if_return": {
 			"active": 1,
 			"flagValue": -1
+			},
+		"indent-level": {
+			"active": 0,
+			"flagValue": 4
 			},
 		"indent-start": {
 			"active": 0,
 			"flagValue": 0
 			},
-		"indent_level": {
+		"inline-script": {
 			"active": 0,
-			"flagValue": 4
-			},
-		"inline": {
-			"active": 1,
-			"flagValue": 3
-			},
-		"inline_script": {
-			"active": 1,
 			"flagValue": -1
 			},
 		"join_vars": {
@@ -3773,14 +3664,6 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"keep_infinity": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"keep_quoted_props": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"loops": {
 			"active": 1,
 			"flagValue": -1
@@ -3789,20 +3672,12 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"max_line_len": {
+		"max-line-len": {
 			"active": 1,
 			"flagValue": 32000
 			},
 		"negate_iife": {
 			"active": 1,
-			"flagValue": -1
-			},
-		"passes": {
-			"active": 1,
-			"flagValue": 1
-			},
-		"preserve_line": {
-			"active": 0,
 			"flagValue": -1
 			},
 		"properties": {
@@ -3813,19 +3688,11 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"quote_keys": {
+		"quote-keys": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"quote_style": {
-			"active": 1,
-			"flagValue": 0
-			},
-		"reduce_funcs": {
-			"active": 1,
-			"flagValue": -1
-			},
-		"reduce_vars": {
+		"screw-ie8": {
 			"active": 1,
 			"flagValue": -1
 			},
@@ -3837,51 +3704,23 @@
 			"active": 1,
 			"flagValue": -1
 			},
-		"shebang": {
+		"sort": {
+			"active": 0,
+			"flagValue": -1
+			},
+		"space-colon": {
 			"active": 1,
 			"flagValue": -1
 			},
-		"side_effects": {
-			"active": 1,
-			"flagValue": -1
-			},
-		"switches": {
-			"active": 1,
+		"support-ie8": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"toplevel": {
 			"active": 0,
 			"flagValue": -1
 			},
-		"typeofs": {
-			"active": 1,
-			"flagValue": -1
-			},
 		"unsafe": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"unsafe_comps": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"unsafe_Function": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"unsafe_math": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"unsafe_proto": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"unsafe_regexp": {
-			"active": 0,
-			"flagValue": -1
-			},
-		"unsafe_undefined": {
 			"active": 0,
 			"flagValue": -1
 			},
@@ -3893,17 +3732,9 @@
 			"active": 0,
 			"flagValue": -1
 			},
-		"webkit": {
-			"active": 0,
-			"flagValue": -1
-			},
 		"width": {
 			"active": 1,
 			"flagValue": 80
-			},
-		"wrap_iife": {
-			"active": 0,
-			"flagValue": -1
 			}
 		},
 	"uglifyReservedNamesString": "$",

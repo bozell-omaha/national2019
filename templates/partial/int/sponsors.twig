@@ -1,0 +1,147 @@
+        
+<section class="speaker-wrap home-sponsors">
+ 
+ <h2 class="sponsor-heading">Premier Sponsors</h1>
+ <div class="home-sponsors__wrapper">
+    {% for sponsor in sponsors['premier'].Sponsors %}
+        <div class="home-sponsors__sponsor">
+            <img src="{{sponsor.LogoPath}}" alt="">
+             <div class="tippy-template">
+                <a class="tippy-close" href="javascript:;">&times;</a>
+                <p class="sponsor-name">{{sponsor.Name}}</p>
+                <p class="sponsor-description">{{sponsor.Description}}</p>
+                {% if (sponsor.Url) %}
+                    <p class="sponsor-url"><a target="_blank" href="{{sponsor.Url}}">{{sponsor.Url}}</a></p>
+                {% endif %}
+            </div>
+        </div>
+     {% endfor %}
+</div>
+
+     <h2 class="sponsor-heading">Diamond Sponsors</h1>
+ 
+ <div class="home-sponsors__wrapper">
+    {% for sponsor in sponsors['diamond'].Sponsors %}
+        <div class="home-sponsors__sponsor">
+            <img src="{{sponsor.LogoPath}}" alt="">
+             <div class="tippy-template">
+                <a class="tippy-close" href="javascript:;">&times;</a>
+                <p class="sponsor-name">{{sponsor.Name}}</p>
+                <p class="sponsor-description">{{sponsor.Description}}</p>
+                {% if (sponsor.Url) %}
+                    <p class="sponsor-url"><a target="_blank" href="{{sponsor.Url}}">{{sponsor.Url}}</a></p>
+                {% endif %}
+            </div>
+        </div>
+     {% endfor %}
+</div>
+
+     <h2 class="sponsor-heading">Platinum Sponsors</h1>
+<div class="home-sponsors__wrapper">
+    {% for sponsor in sponsors['platinum'].Sponsors %}
+        <div class="home-sponsors__sponsor">
+            <img src="{{sponsor.LogoPath}}" alt="">
+             <div class="tippy-template">
+                <a class="tippy-close" href="javascript:;">&times;</a>
+                <p class="sponsor-name">{{sponsor.Name}}</p>
+                <p class="sponsor-description">{{sponsor.Description}}</p>
+                {% if (sponsor.Url) %}
+                    <p class="sponsor-url"><a target="_blank" href="{{sponsor.Url}}">{{sponsor.Url}}</a></p>
+                {% endif %}
+            </div>
+        </div>
+     {% endfor %}
+  </div>
+
+     <h2 class="sponsor-heading">Gold Sponsors</h1>
+<div class="home-sponsors__wrapper">
+    {% for sponsor in sponsors['gold'].Sponsors %}
+        <div class="home-sponsors__sponsor">
+            <img src="{{sponsor.LogoPath}}" alt="">
+             <div class="tippy-template">
+                <a class="tippy-close" href="javascript:;">&times;</a>
+                <p class="sponsor-name">{{sponsor.Name}}</p>
+                <p class="sponsor-description">{{sponsor.Description}}</p>
+                {% if (sponsor.Url) %}
+                    <p class="sponsor-url"><a target="_blank" href="{{sponsor.Url}}">{{sponsor.Url}}</a></p>
+                {% endif %}
+            </div>
+        </div>
+     {% endfor %}
+  </div>
+
+     <h2 class="sponsor-heading">Silver Sponsors</h1>
+
+<div class="home-sponsors__wrapper">
+    {% for sponsor in sponsors['silver'].Sponsors %}
+        <div class="home-sponsors__sponsor">
+            <img src="{{sponsor.LogoPath}}" alt="">
+            <div class="tippy-template">
+                <a class="tippy-close" href="javascript:;">&times;</a>
+                <p class="sponsor-name">{{sponsor.Name}}</p>
+                <p class="sponsor-description">{{sponsor.Description}}</p>
+                {% if (sponsor.Url) %}
+                    <p class="sponsor-url"><a target="_blank" href="{{sponsor.Url}}">{{sponsor.Url}}</a></p>
+                {% endif %}
+            </div>
+        </div>
+     {% endfor %}
+     </div>
+   
+    <h2 class="sponsor-heading">Bronze Sponsors</h1>
+    <div class="home-sponsors__wrapper">
+    {% for sponsor in sponsors['bronze'].Sponsors %}
+        <div class="home-sponsors__sponsor">
+            <img src="{{sponsor.LogoPath}}" alt="">
+             <div class="tippy-template">
+                <a class="tippy-close" href="javascript:;">&times;</a>
+                <p class="sponsor-name">{{sponsor.Name}}</p>
+                <p class="sponsor-description">{{sponsor.Description}}</p>
+                {% if (sponsor.Url) %}
+                    <p class="sponsor-url"><a target="_blank" href="{{sponsor.Url}}">{{sponsor.Url}}</a></p>
+                {% endif %}
+            </div>
+        </div>
+     {% endfor %}
+   </div>
+
+     <h2 class="sponsor-heading">Affinity Sponsors</h1>
+   <div class="home-sponsors__wrapper">
+    {% for sponsor in sponsors['affinity'].Sponsors %}
+        <div class="home-sponsors__sponsor">
+            <img src="{{sponsor.LogoPath}}" alt="">
+             <div class="tippy-template">
+                <a class="tippy-close" href="javascript:;">&times;</a>
+                <p class="sponsor-name">{{sponsor.Name}}</p>
+                <p class="sponsor-description">{{sponsor.Description}}</p>
+                {% if (sponsor.Url) %}
+                    <p class="sponsor-url"><a target="_blank" href="{{sponsor.Url}}">{{sponsor.Url}}</a></p>
+                {% endif %}
+            </div>
+        </div>
+     {% endfor %}
+   </div>
+
+     <h2 class="sponsor-heading">Veo Sponsors</h1>
+   <div class="home-sponsors__wrapper">
+    {% for sponsor in sponsors['veo'].Sponsors %}
+        <div class="home-sponsors__sponsor">
+            <img src="{{sponsor.LogoPath}}" alt="">
+             <div class="tippy-template">
+                <a class="tippy-close" href="javascript:;">&times;</a>
+                <p class="sponsor-name">{{sponsor.Name}}</p>
+                <p class="sponsor-description">{{sponsor.Description}}</p>
+                {% if (sponsor.Url) %}
+                    <p class="sponsor-url"><a target="_blank" href="{{sponsor.Url}}">{{sponsor.Url}}</a></p>
+                {% endif %}
+            </div>
+        </div>
+     {% endfor %}
+   </div>
+
+   
+</div>
+
+</section>
+
+

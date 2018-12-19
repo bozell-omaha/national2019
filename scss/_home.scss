@@ -104,6 +104,10 @@
         z-index: -1;
     }
 
+    h2.sponsor-heading {
+        font-size:40px;
+    }
+
     &__heading {
 
         @include media-query($large-up) {
@@ -115,25 +119,32 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
+        padding-bottom:40px;
         @include media-query($large-up) {
             width: 90%;
-            margin-left: 10%;
         }
     }
 
     &__sponsor {
         position: relative;
-        width: 45%;
-        text-align: center;
+        text-align: left;
+        width: 25%;
+        margin: 24px 0;
+        cursor:pointer;
         @include media-query($large-up) {
-            width: 30%;
+            width: 25;
         }
+        
+
+       
 
         img {
             height: auto;
             width: 80%;
+            -o-object-fit: cover;
             object-fit: cover;
-            margin: 24px;
+            max-width: 175px;
+            filter: grayscale(100);
         }
     }
 
@@ -141,12 +152,27 @@
         display: flex;
         justify-content: center;
         padding: 48px;
-    }
+    } 
 
     .guide-wrapper {
         text-align: left;
         @include media-query($large-up) {
             padding-left: 13%;
         }
+    }
+}
+
+
+.tippy-template {
+    .tippy-close {
+        position:absolute;
+        right:15px;
+        top:0;
+        font-size:32px;
+        color:#fff;
+        text-decoration:none;
+    }
+    .sponsor-name {
+        font-size:24px;
     }
 }
